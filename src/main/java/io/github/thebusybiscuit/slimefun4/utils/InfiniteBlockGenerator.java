@@ -21,7 +21,6 @@ import org.bukkit.event.block.BlockFormEvent;
  * We use this enum for performance optimizations for the {@link MinerAndroid}.
  *
  * @author TheBusyBiscuit
- *
  */
 public enum InfiniteBlockGenerator implements Predicate<Block> {
 
@@ -65,9 +64,7 @@ public enum InfiniteBlockGenerator implements Predicate<Block> {
      * Similar to {@link #test(Block)} this tests whether this {@link InfiniteBlockGenerator}
      * exists at the given {@link Block}.
      *
-     * @param b
-     *            The {@link Block}
-     *
+     * @param b The {@link Block}
      * @return Whether this {@link InfiniteBlockGenerator} exists at the given {@link Block}
      */
     @Override
@@ -135,9 +132,7 @@ public enum InfiniteBlockGenerator implements Predicate<Block> {
      * There are a few plugins who catch these events to inject custom {@link Material Materials} into
      * Cobblestone Generators, so we wanna give them the oppurtunity to catch this as well.
      *
-     * @param block
-     *            The {@link Block} where the liquid has solidified
-     *
+     * @param block The {@link Block} where the liquid has solidified
      * @return Our called {@link BlockFormEvent}
      */
     @Nonnull
@@ -152,9 +147,7 @@ public enum InfiniteBlockGenerator implements Predicate<Block> {
     /**
      * This will attempt to find an {@link InfiniteBlockGenerator} at the given {@link Block}.
      *
-     * @param b
-     *            The {@link Block}
-     *
+     * @param b The {@link Block}
      * @return An {@link InfiniteBlockGenerator} or null if none was found.
      */
     @Nullable public static InfiniteBlockGenerator findAt(@Nonnull Block b) {

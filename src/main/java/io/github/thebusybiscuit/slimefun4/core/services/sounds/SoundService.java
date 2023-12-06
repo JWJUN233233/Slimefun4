@@ -44,8 +44,7 @@ public class SoundService {
     /**
      * This method reloads every {@link SoundConfiguration}.
      *
-     * @param save
-     *            Whether to save the defaults to disk
+     * @param save Whether to save the defaults to disk
      */
     public void reload(boolean save) {
         config.reload();
@@ -108,9 +107,7 @@ public class SoundService {
     /**
      * This returns the currently used (immutable) {@link SoundConfiguration} for the given {@link SoundEffect}.
      *
-     * @param sound
-     *            The {@link SoundEffect}
-     *
+     * @param sound The {@link SoundEffect}
      * @return The corresponding {@link SoundConfiguration}. This may be null if something went wrong
      */
     public @Nullable SoundConfiguration getConfiguration(@Nonnull SoundEffect sound) {

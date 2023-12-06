@@ -21,7 +21,6 @@ import org.bukkit.potion.PotionEffectType;
  *
  * @author TheBusyBiscuit
  * @author martinbrom
- *
  */
 public class IcyBow extends SlimefunBow {
 

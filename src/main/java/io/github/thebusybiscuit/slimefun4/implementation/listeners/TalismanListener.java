@@ -62,9 +62,7 @@ import org.bukkit.util.Vector;
  * @author svr333
  * @author martinbrom
  * @author Sfiguz7
- *
  * @see Talisman
- *
  */
 public class TalismanListener implements Listener {
 
@@ -126,10 +124,8 @@ public class TalismanListener implements Listener {
      * This method is used for the {@link Talisman} of the whirlwind, it returns a copy
      * of a {@link Projectile} that was fired at a {@link Player}.
      *
-     * @param p
-     *            The {@link Player} who was hit
-     * @param projectile
-     *            The {@link Projectile} that hit this {@link Player}
+     * @param p          The {@link Player} who was hit
+     * @param projectile The {@link Projectile} that hit this {@link Player}
      */
     private void returnProjectile(@Nonnull Player p, @Nonnull Projectile projectile) {
         Vector direction = p.getEyeLocation().getDirection().multiply(2.0);

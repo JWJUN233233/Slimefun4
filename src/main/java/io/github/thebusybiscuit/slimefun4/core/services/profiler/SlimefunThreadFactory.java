@@ -9,9 +9,7 @@ import javax.annotation.Nonnull;
  * and provides a naming convention for our {@link Thread Threads}.
  *
  * @author TheBusyBiscuit
- *
  * @see SlimefunProfiler
- *
  */
 final class SlimefunThreadFactory implements ThreadFactory {
 

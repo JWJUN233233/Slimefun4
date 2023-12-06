@@ -13,9 +13,7 @@ import org.bukkit.inventory.ItemStack;
  * to which everyone has access.
  *
  * @author TheBusyBiscuit
- *
  * @see PersonalActivationPlate
- *
  */
 public class SharedActivationPlate extends AbstractTeleporterPlate {
 

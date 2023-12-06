@@ -37,7 +37,6 @@ import org.bukkit.inventory.ItemStack;
  *
  * @author TheBusyBiscuit
  * @author Sfiguz7
- *
  */
 public class Crucible extends SimpleSlimefunItem<BlockUseHandler> implements RecipeDisplayItem {
 
@@ -157,10 +156,8 @@ public class Crucible extends SimpleSlimefunItem<BlockUseHandler> implements Rec
     /**
      * This method starts the process of generating liquids.
      *
-     * @param block
-     *            The {@link Block} where to generate the liquid
-     * @param isWater
-     *            Whether we generate water or lava.
+     * @param block   The {@link Block} where to generate the liquid
+     * @param isWater Whether we generate water or lava.
      */
     private void generateLiquid(@Nonnull Block block, boolean isWater) {
         // Fixes #2877 - If water in the nether is disabled, abort and play an effect.

@@ -19,10 +19,8 @@ import org.bukkit.inventory.ItemStack;
  * to display to any of his waypoints he set via his {@link GPSNetwork}.
  *
  * @author TheBusyBiscuit
- *
  * @see GPSNetwork
  * @see TeleportationManager
- *
  */
 public class Teleporter extends SimpleSlimefunItem<BlockPlaceHandler> {
 

@@ -15,7 +15,6 @@ import org.bukkit.entity.Player;
  * It also supports {@link TextComponent TextComponents} for rich text messages.
  *
  * @author TheBusyBiscuit
- *
  */
 public class PlayerPerformanceInspector implements PerformanceInspector {
 
@@ -32,10 +31,8 @@ public class PlayerPerformanceInspector implements PerformanceInspector {
     /**
      * This creates a new {@link PlayerPerformanceInspector} for the given {@link Player}.
      *
-     * @param player
-     *            The {@link Player}
-     * @param orderType
-     *            The {@link SummaryOrderType} of the timings
+     * @param player    The {@link Player}
+     * @param orderType The {@link SummaryOrderType} of the timings
      */
     public PlayerPerformanceInspector(@Nonnull Player player, @Nonnull SummaryOrderType orderType) {
         Validate.notNull(player, "Player cannot be null");

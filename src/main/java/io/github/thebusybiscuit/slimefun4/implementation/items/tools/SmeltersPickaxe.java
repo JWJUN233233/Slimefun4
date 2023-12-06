@@ -21,7 +21,6 @@ import org.bukkit.inventory.ItemStack;
  * The {@link SmeltersPickaxe} automatically smelts any ore you mine.
  *
  * @author TheBusyBiscuit
- *
  */
 public class SmeltersPickaxe extends SimpleSlimefunItem<ToolUseHandler> implements DamageableItem {
 

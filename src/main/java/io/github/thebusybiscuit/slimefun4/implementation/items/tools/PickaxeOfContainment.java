@@ -28,10 +28,8 @@ import org.bukkit.inventory.ItemStack;
  * But it also allows you to break a {@link RepairedSpawner}.
  *
  * @author TheBusyBiscuit
- *
  * @see BrokenSpawner
  * @see RepairedSpawner
- *
  */
 public class PickaxeOfContainment extends SimpleSlimefunItem<ToolUseHandler> {
 

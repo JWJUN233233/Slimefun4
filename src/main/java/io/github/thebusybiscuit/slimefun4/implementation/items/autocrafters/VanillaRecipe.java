@@ -23,9 +23,7 @@ import org.bukkit.inventory.ShapelessRecipe;
  * {@link ShapedRecipe} or {@link ShapelessRecipe}.
  *
  * @author TheBusyBiscuit
- *
  * @see VanillaAutoCrafter
- *
  */
 class VanillaRecipe extends AbstractRecipe {
 

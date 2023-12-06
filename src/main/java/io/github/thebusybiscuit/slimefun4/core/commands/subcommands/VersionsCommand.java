@@ -24,7 +24,6 @@ import org.bukkit.plugin.Plugin;
  *
  * @author TheBusyBiscuit
  * @author Walshy
- *
  */
 class VersionsCommand extends SubCommand {
 

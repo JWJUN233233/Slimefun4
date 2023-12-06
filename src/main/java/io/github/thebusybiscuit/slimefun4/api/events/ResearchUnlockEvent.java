@@ -13,9 +13,7 @@ import org.bukkit.event.HandlerList;
  * This {@link Event} is called whenever a {@link Player} unlocks a {@link Research}.
  *
  * @author TheBusyBiscuit
- *
  * @see Research
- *
  */
 public class ResearchUnlockEvent extends Event implements Cancellable {
 

@@ -17,7 +17,6 @@ import org.bukkit.potion.PotionEffectType;
  * the {@link PotionEffect} will be applied.
  *
  * @author Semisol
- *
  * @see RadiationUtils
  */
 public enum RadiationSymptom {
@@ -43,8 +42,7 @@ public enum RadiationSymptom {
     /**
      * This method applies the symptom to a player.
      *
-     * @param p
-     *            The player
+     * @param p The player
      */
     public void apply(@Nonnull Player p) {
         Preconditions.checkNotNull(p, "The player cannot be null");
@@ -55,9 +53,7 @@ public enum RadiationSymptom {
      * This method returns if this symptom
      * should be applied.
      *
-     * @param exposure
-     *            Exposure level
-     *
+     * @param exposure Exposure level
      * @return If the symptom should be applied
      */
     public boolean shouldApply(int exposure) {

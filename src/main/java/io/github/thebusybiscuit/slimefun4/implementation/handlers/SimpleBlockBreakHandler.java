@@ -16,9 +16,7 @@ import org.bukkit.inventory.ItemStack;
  * By default, both androids and explosions are allowed.
  *
  * @author TheBusyBiscuit
- *
  * @see BlockBreakHandler
- *
  */
 public abstract class SimpleBlockBreakHandler extends BlockBreakHandler {
 
@@ -33,8 +31,7 @@ public abstract class SimpleBlockBreakHandler extends BlockBreakHandler {
      * This method is called when a {@link Block} of this type is broken by a {@link Player},
      * by a {@link MinerAndroid} or through an explosion.
      *
-     * @param b
-     *            The broken {@link Block}
+     * @param b The broken {@link Block}
      */
     public abstract void onBlockBreak(@Nonnull Block b);
 

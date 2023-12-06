@@ -29,10 +29,8 @@ import org.bukkit.inventory.ItemStack;
  * @author Linox
  * @author Walshy
  * @author TheBusyBiscuit
- *
  * @see ItemDropHandler
  * @see Soulbound
- *
  */
 public class SoulboundRune extends SimpleSlimefunItem<ItemDropHandler> {
 
@@ -109,9 +107,7 @@ public class SoulboundRune extends SimpleSlimefunItem<ItemDropHandler> {
      * be bound to a soul. We exclude the {@link SoulboundRune} itself and any already
      * {@link Soulbound} {@link Item}.
      *
-     * @param entity
-     *            The {@link Entity} to check
-     *
+     * @param entity The {@link Entity} to check
      * @return Whether this {@link Entity} is compatible
      */
     private boolean findCompatibleItem(@Nonnull Entity entity) {

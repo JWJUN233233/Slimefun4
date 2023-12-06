@@ -39,7 +39,6 @@ import org.bukkit.inventory.ItemStack;
  * @author TheBusyBiscuit
  * @author svr333
  * @author JustAHuman
- *
  * @see NetherGoldPan
  * @see AutomatedPanningMachine
  * @see ElectricGoldPan
@@ -61,7 +60,7 @@ public class GoldPan extends SimpleSlimefunItem<ItemUseHandler> implements Recip
 
     /**
      * @deprecated since RC-36
-     *
+     * <p>
      * Use {@link GoldPan#getInputMaterials()} instead.
      */
     @Deprecated(since = "RC-36")
@@ -201,9 +200,7 @@ public class GoldPan extends SimpleSlimefunItem<ItemUseHandler> implements Recip
     /**
      * This returns whether the {@link GoldPan} accepts the {@link ItemStack} as an input
      *
-     * @param itemStack
-     *            The {@link ItemStack} to check
-     *
+     * @param itemStack The {@link ItemStack} to check
      * @return If the {@link ItemStack} is valid
      */
     public boolean isValidInput(@Nullable ItemStack itemStack) {
@@ -219,9 +216,7 @@ public class GoldPan extends SimpleSlimefunItem<ItemUseHandler> implements Recip
     /**
      * This returns whether the {@link GoldPan} accepts the {@link Material} as an input
      *
-     * @param material
-     *            The {@link Material} to check
-     *
+     * @param material The {@link Material} to check
      * @return If the {@link Material} is valid
      */
     public boolean isValidInputMaterial(@Nonnull Material material) {

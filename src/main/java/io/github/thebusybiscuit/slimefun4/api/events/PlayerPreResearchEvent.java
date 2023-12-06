@@ -18,9 +18,7 @@ import org.bukkit.event.HandlerList;
  * The {@link Event} is not called for {@link CheatSheetSlimefunGuide}.
  *
  * @author uiytt
- *
  * @see SurvivalSlimefunGuide
- *
  */
 public class PlayerPreResearchEvent extends Event implements Cancellable {
 

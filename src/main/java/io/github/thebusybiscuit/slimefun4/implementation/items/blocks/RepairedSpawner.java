@@ -22,9 +22,7 @@ import org.bukkit.inventory.ItemStack;
  * A {@link RepairedSpawner} is the repaired variant of a {@link BrokenSpawner}.
  *
  * @author TheBusyBiscuit
- *
  * @see BrokenSpawner
- *
  */
 public class RepairedSpawner extends AbstractMonsterSpawner {
 

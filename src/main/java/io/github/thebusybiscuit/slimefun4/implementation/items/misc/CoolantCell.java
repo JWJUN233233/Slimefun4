@@ -16,12 +16,10 @@ import org.bukkit.inventory.ItemStack;
  * A {@link CoolantCell} is an {@link ItemStack} that is used to cool a {@link Reactor}.
  *
  * @author TheBusyBiscuit
- *
  * @see Reactor
  * @see ReactorAccessPort
  * @see NuclearReactor
  * @see NetherStarReactor
- *
  */
 public class CoolantCell extends UnplaceableBlock {
 

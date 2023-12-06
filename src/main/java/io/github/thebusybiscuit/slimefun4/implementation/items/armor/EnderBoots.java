@@ -13,7 +13,6 @@ import org.bukkit.inventory.ItemStack;
  * by throwing an {@link EnderPearl}.
  *
  * @author TheBusyBiscuit
- *
  */
 public class EnderBoots extends SlimefunItem {
 

@@ -17,9 +17,7 @@ import org.bukkit.inventory.ItemStack;
  * Without repairing, the block will be unplaceable.
  *
  * @author TheBusyBiscuit
- *
  * @see RepairedSpawner
- *
  */
 public class BrokenSpawner extends AbstractMonsterSpawner implements NotPlaceable {
 

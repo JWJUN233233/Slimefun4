@@ -16,9 +16,7 @@ import org.bukkit.event.inventory.InventoryType;
  * and from {@link AContainer} using a hopper.
  *
  * @author CURVX
- *
  * @see NotHopperable
- *
  */
 public class HopperListener implements Listener {
 

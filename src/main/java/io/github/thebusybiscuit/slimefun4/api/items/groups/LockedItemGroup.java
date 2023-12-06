@@ -24,10 +24,8 @@ import org.bukkit.inventory.ItemStack;
  * See {@link ItemGroup} for the complete documentation.
  *
  * @author TheBusyBiscuit
- *
  * @see ItemGroup
  * @see SeasonalItemGroup
- *
  */
 public class LockedItemGroup extends ItemGroup {
 
@@ -38,13 +36,9 @@ public class LockedItemGroup extends ItemGroup {
      * The basic constructor for a LockedItemGroup.
      * Like {@link ItemGroup}, the default tier is automatically set to 3.
      *
-     * @param key
-     *            A unique identifier for this group
-     * @param item
-     *            The display item for this group
-     * @param parents
-     *            The parent categories for this group
-     *
+     * @param key     A unique identifier for this group
+     * @param item    The display item for this group
+     * @param parents The parent categories for this group
      */
     @ParametersAreNonnullByDefault
     public LockedItemGroup(NamespacedKey key, ItemStack item, NamespacedKey... parents) {
@@ -54,15 +48,10 @@ public class LockedItemGroup extends ItemGroup {
     /**
      * The constructor for a LockedItemGroup.
      *
-     * @param key
-     *            A unique identifier for this group
-     * @param item
-     *            The display item for this group
-     * @param tier
-     *            The tier of this group
-     * @param parents
-     *            The parent categories for this group
-     *
+     * @param key     A unique identifier for this group
+     * @param item    The display item for this group
+     * @param tier    The tier of this group
+     * @param parents The parent categories for this group
      */
     @ParametersAreNonnullByDefault
     public LockedItemGroup(NamespacedKey key, ItemStack item, int tier, NamespacedKey... parents) {
@@ -103,7 +92,6 @@ public class LockedItemGroup extends ItemGroup {
      * Gets the list of parent item groups for this {@link LockedItemGroup}.
      *
      * @return the list of parent item groups
-     *
      * @see #addParent(ItemGroup)
      * @see #removeParent(ItemGroup)
      */
@@ -114,9 +102,7 @@ public class LockedItemGroup extends ItemGroup {
     /**
      * Adds a parent {@link ItemGroup} to this {@link LockedItemGroup}.
      *
-     * @param group
-     *            The {@link ItemGroup} to add as a parent
-     *
+     * @param group The {@link ItemGroup} to add as a parent
      * @see #getParents()
      * @see #removeParent(ItemGroup)
      */
@@ -133,9 +119,7 @@ public class LockedItemGroup extends ItemGroup {
     /**
      * Removes a {@link ItemGroup} from the parents of this {@link LockedItemGroup}.
      *
-     * @param group
-     *            The {@link ItemGroup} to remove from the parents of this {@link LockedItemGroup}
-     *
+     * @param group The {@link ItemGroup} to remove from the parents of this {@link LockedItemGroup}
      * @see #getParents()
      * @see #addParent(ItemGroup)
      */
@@ -146,11 +130,8 @@ public class LockedItemGroup extends ItemGroup {
     /**
      * Checks if the {@link Player} has fully unlocked all parent categories.
      *
-     * @param p
-     *            The {@link Player} to check
-     * @param profile
-     *            The {@link PlayerProfile} that belongs to the given {@link Player}
-     *
+     * @param p       The {@link Player} to check
+     * @param profile The {@link PlayerProfile} that belongs to the given {@link Player}
      * @return Whether the {@link Player} has fully completed all parent categories, otherwise false
      */
     public boolean hasUnlocked(@Nonnull Player p, @Nonnull PlayerProfile profile) {

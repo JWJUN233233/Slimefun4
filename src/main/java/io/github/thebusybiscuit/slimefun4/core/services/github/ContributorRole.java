@@ -8,10 +8,8 @@ import javax.annotation.Nonnull;
  * The actual {@link ContributorRole} type itself is not used anywhere.
  *
  * @author TheBusyBiscuit
- *
  * @see Contributor
  * @see GitHubService
- *
  */
 enum ContributorRole {
     DEVELOPER("developer"),

@@ -18,9 +18,7 @@ import org.bukkit.inventory.ItemStack;
  * Therefore making this an {@link UnplaceableBlock}.
  *
  * @author TheBusyBiscuit
- *
  * @see NotPlaceable
- *
  */
 public class UnplaceableBlock extends SimpleSlimefunItem<ItemUseHandler> implements NotPlaceable {
 

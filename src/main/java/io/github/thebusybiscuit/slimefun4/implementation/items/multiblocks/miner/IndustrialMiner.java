@@ -96,7 +96,7 @@ public class IndustrialMiner extends MultiBlockMachine {
      * This method returns the range of the {@link IndustrialMiner}.
      * The total area will be determined by the range multiplied by 2 plus the actual center
      * of the machine.
-     *
+     * <p>
      * So a range of 3 will make the {@link IndustrialMiner} affect an area of 7x7 blocks.
      * 3 on all axis, plus the center of the machine itself.
      *
@@ -128,9 +128,7 @@ public class IndustrialMiner extends MultiBlockMachine {
     /**
      * This method returns the outcome that mining certain ores yields.
      *
-     * @param material
-     *            The {@link Material} of the ore that was mined
-     *
+     * @param material The {@link Material} of the ore that was mined
      * @return The outcome when mining this ore
      */
     public @Nonnull ItemStack getOutcome(@Nonnull Material material) {
@@ -145,10 +143,8 @@ public class IndustrialMiner extends MultiBlockMachine {
     /**
      * This registers a new fuel type for this {@link IndustrialMiner}.
      *
-     * @param ores
-     *            The amount of ores this allows you to mine
-     * @param item
-     *            The item that shall be consumed
+     * @param ores The amount of ores this allows you to mine
+     * @param item The item that shall be consumed
      */
     public void addFuelType(int ores, @Nonnull ItemStack item) {
         Validate.isTrue(ores > 1 && ores % 2 == 0, "矿石的数量必须 >= 2 且为 2 的倍数.");
@@ -210,9 +206,7 @@ public class IndustrialMiner extends MultiBlockMachine {
     /**
      * This returns whether this {@link IndustrialMiner} can mine the given {@link Block}.
      *
-     * @param block
-     *            The {@link Block} to check
-     *
+     * @param block The {@link Block} to check
      * @return Whether this {@link IndustrialMiner} is capable of mining this {@link Block}
      */
     public boolean canMine(@Nonnull Block block) {

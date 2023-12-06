@@ -27,10 +27,8 @@ import org.bukkit.inventory.ItemStack;
  * calls the explosive part of the {@link BlockBreakHandler}.
  *
  * @author TheBusyBiscuit
- *
  * @see BlockBreakHandler
  * @see WitherProof
- *
  */
 public class ExplosionsListener implements Listener {
 

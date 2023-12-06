@@ -19,9 +19,7 @@ import javax.annotation.Nonnull;
  * A translator is equivalent to the class {@link Contributor} as it also uses that internally.
  *
  * @author TheBusyBiscuit
- *
  * @see Contributor
- *
  */
 final class TranslatorsReader {
 

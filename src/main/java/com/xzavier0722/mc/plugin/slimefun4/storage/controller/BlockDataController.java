@@ -246,7 +246,7 @@ public class BlockDataController extends ADataController {
     /**
      * Get slimefun block data at specific location async
      *
-     * @param l slimefun block location {@link Location}
+     * @param l        slimefun block location {@link Location}
      * @param callback operation when block data fetched {@link IAsyncReadCallback}
      */
     public void getBlockDataAsync(Location l, IAsyncReadCallback<SlimefunBlockData> callback) {

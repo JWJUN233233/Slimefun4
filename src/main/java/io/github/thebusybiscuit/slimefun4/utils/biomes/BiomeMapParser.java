@@ -22,11 +22,8 @@ import org.bukkit.block.Biome;
 /**
  * The {@link BiomeMapParser} allows you to parse json data into a {@link BiomeMap}.
  *
+ * @param <T> The data type of the resulting {@link BiomeMap}
  * @author TheBusyBiscuit
- *
- * @param <T>
- *            The data type of the resulting {@link BiomeMap}
- *
  * @see BiomeMap
  */
 public class BiomeMapParser<T> {
@@ -51,10 +48,8 @@ public class BiomeMapParser<T> {
      * <p>
      * To parse data, use the {@link #read(JsonArray)} or {@link #read(String)} method.
      *
-     * @param key
-     *            The {@link NamespacedKey} for the resulting {@link BiomeMap}
-     * @param valueConverter
-     *            A function to convert {@link JsonElement}s into your desired data type
+     * @param key            The {@link NamespacedKey} for the resulting {@link BiomeMap}
+     * @param valueConverter A function to convert {@link JsonElement}s into your desired data type
      */
     @ParametersAreNonnullByDefault
     public BiomeMapParser(NamespacedKey key, BiomeDataConverter<T> valueConverter) {
@@ -73,8 +68,7 @@ public class BiomeMapParser<T> {
      * could not be found.
      * The default value is false.
      *
-     * @param isLenient
-     *            Whether this parser should be lenient or not.
+     * @param isLenient Whether this parser should be lenient or not.
      */
     public void setLenient(boolean isLenient) {
         this.isLenient = isLenient;
@@ -118,8 +112,7 @@ public class BiomeMapParser<T> {
                 readEntry(element.getAsJsonObject());
             } else {
                 throw new BiomeMapException(
-                        key,
-                        "Unexpected array element: " + element.getClass().getSimpleName() + " - " + element.toString());
+                        key, "Unexpected array element: " + element.getClass().getSimpleName() + " - " + element);
             }
         }
     }
@@ -184,8 +177,7 @@ public class BiomeMapParser<T> {
                 }
             } else {
                 throw new BiomeMapException(
-                        key,
-                        "Unexpected array element: " + element.getClass().getSimpleName() + " - " + element.toString());
+                        key, "Unexpected array element: " + element.getClass().getSimpleName() + " - " + element);
             }
         }
 

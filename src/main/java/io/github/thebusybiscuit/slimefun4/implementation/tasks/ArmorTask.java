@@ -31,7 +31,6 @@ import org.bukkit.potion.PotionEffectType;
  * It also handles the prevention of radiation through a Hazmat Suit
  *
  * @author TheBusyBiscuit
- *
  */
 public class ArmorTask implements Runnable {
 
@@ -41,8 +40,7 @@ public class ArmorTask implements Runnable {
     /**
      * This creates a new {@link ArmorTask}.
      *
-     * @param radioactiveFire
-     *            Whether radiation also causes a {@link Player} to burn
+     * @param radioactiveFire Whether radiation also causes a {@link Player} to burn
      */
     public ArmorTask(boolean radioactiveFire) {
         this.radioactiveFire = radioactiveFire;

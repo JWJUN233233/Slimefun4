@@ -18,7 +18,6 @@ import org.bukkit.inventory.ItemStack;
  * {@link Location}.
  *
  * @author TheBusyBiscuit
- *
  */
 public class GPSMarkerTool extends SimpleSlimefunItem<ItemUseHandler> implements NotPlaceable {
 

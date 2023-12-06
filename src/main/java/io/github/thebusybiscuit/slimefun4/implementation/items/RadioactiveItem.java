@@ -18,14 +18,12 @@ import org.bukkit.inventory.ItemStack;
  * A quick and easy implementation of {@link SlimefunItem} that also implements the
  * interface {@link Radioactive}.
  * This implementation is {@link NotPlaceable}!
- *
+ * <p>
  * Simply specify a level of {@link Radioactivity} in the constructor.
  *
  * @author TheBusyBiscuit
- *
  * @see Radioactive
  * @see Radioactivity
- *
  */
 public class RadioactiveItem extends SlimefunItem implements Radioactive, NotPlaceable {
 
@@ -37,16 +35,11 @@ public class RadioactiveItem extends SlimefunItem implements Radioactive, NotPla
     /**
      * This will create a new {@link RadioactiveItem} with the given level of {@link Radioactivity}
      *
-     * @param itemGroup
-     *            The {@link ItemGroup} of this {@link SlimefunItem}
-     * @param radioactivity
-     *            the level of {@link Radioactivity}
-     * @param item
-     *            the {@link SlimefunItemStack} this {@link SlimefunItem} represents
-     * @param recipeType
-     *            The {@link RecipeType} for this item
-     * @param recipe
-     *            The recipe of how to craft this {@link SlimefunItem}
+     * @param itemGroup     The {@link ItemGroup} of this {@link SlimefunItem}
+     * @param radioactivity the level of {@link Radioactivity}
+     * @param item          the {@link SlimefunItemStack} this {@link SlimefunItem} represents
+     * @param recipeType    The {@link RecipeType} for this item
+     * @param recipe        The recipe of how to craft this {@link SlimefunItem}
      */
     @ParametersAreNonnullByDefault
     public RadioactiveItem(
@@ -61,18 +54,12 @@ public class RadioactiveItem extends SlimefunItem implements Radioactive, NotPla
     /**
      * This will create a new {@link RadioactiveItem} with the given level of {@link Radioactivity}
      *
-     * @param itemGroup
-     *            The {@link ItemGroup} of this {@link SlimefunItem}
-     * @param radioactivity
-     *            the level of {@link Radioactivity}
-     * @param item
-     *            the {@link SlimefunItemStack} this {@link SlimefunItem} represents
-     * @param recipeType
-     *            The {@link RecipeType} for this item
-     * @param recipe
-     *            The recipe of how to craft this {@link SlimefunItem}
-     * @param recipeOutput
-     *            The recipe output
+     * @param itemGroup     The {@link ItemGroup} of this {@link SlimefunItem}
+     * @param radioactivity the level of {@link Radioactivity}
+     * @param item          the {@link SlimefunItemStack} this {@link SlimefunItem} represents
+     * @param recipeType    The {@link RecipeType} for this item
+     * @param recipe        The recipe of how to craft this {@link SlimefunItem}
+     * @param recipeOutput  The recipe output
      */
     @ParametersAreNonnullByDefault
     public RadioactiveItem(

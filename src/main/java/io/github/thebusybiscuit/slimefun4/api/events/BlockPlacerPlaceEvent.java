@@ -16,7 +16,6 @@ import org.bukkit.inventory.ItemStack;
  * This {@link Event} is fired whenever a {@link BlockPlacer} wants to place a {@link Block}.
  *
  * @author TheBusyBiscuit
- *
  */
 public class BlockPlacerPlaceEvent extends BlockEvent implements Cancellable {
 
@@ -31,12 +30,9 @@ public class BlockPlacerPlaceEvent extends BlockEvent implements Cancellable {
     /**
      * This creates a new {@link BlockPlacerPlaceEvent}.
      *
-     * @param blockPlacer
-     *            The {@link BlockPlacer}
-     * @param placedItem
-     *            The {@link ItemStack} of the {@link Block} that was placed
-     * @param block
-     *            The placed {@link Block}
+     * @param blockPlacer The {@link BlockPlacer}
+     * @param placedItem  The {@link ItemStack} of the {@link Block} that was placed
+     * @param block       The placed {@link Block}
      */
     @ParametersAreNonnullByDefault
     public BlockPlacerPlaceEvent(Block blockPlacer, ItemStack placedItem, Block block) {
@@ -69,8 +65,7 @@ public class BlockPlacerPlaceEvent extends BlockEvent implements Cancellable {
     /**
      * This sets the placed {@link ItemStack}.
      *
-     * @param item
-     *            The {@link ItemStack} to be placed
+     * @param item The {@link ItemStack} to be placed
      */
     public void setItemStack(@Nonnull ItemStack item) {
         Validate.notNull(item, "The ItemStack must not be null!");

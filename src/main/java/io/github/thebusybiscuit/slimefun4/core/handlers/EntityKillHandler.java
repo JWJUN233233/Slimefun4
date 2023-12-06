@@ -14,10 +14,8 @@ import org.bukkit.inventory.ItemStack;
  * the {@link SlimefunItem} this {@link EntityKillHandler} was linked to.
  *
  * @author TheBusyBiscuit
- *
  * @see ItemHandler
  * @see SimpleSlimefunItem
- *
  */
 @FunctionalInterface
 public interface EntityKillHandler extends ItemHandler {

@@ -19,7 +19,6 @@ import org.bukkit.event.inventory.InventoryType.SlotType;
  * the {@link InventoryCreativeEvent}.
  *
  * @author svr333
- *
  */
 public class MiddleClickListener implements Listener {
 

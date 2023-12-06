@@ -21,7 +21,6 @@ import org.bukkit.inventory.ItemStack;
  * items that enter it.
  *
  * @author TheBusyBiscuit
- *
  */
 public class TrashCan extends SlimefunItem implements InventoryBlock {
 

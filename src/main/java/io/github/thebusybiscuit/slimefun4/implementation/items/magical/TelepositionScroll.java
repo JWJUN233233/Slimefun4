@@ -21,7 +21,6 @@ import org.bukkit.inventory.ItemStack;
  * The radius is configurable.
  *
  * @author TheBusyBiscuit
- *
  */
 public class TelepositionScroll extends SimpleSlimefunItem<ItemUseHandler> {
 

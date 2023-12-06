@@ -27,12 +27,11 @@ import org.bukkit.persistence.PersistentDataType;
 /**
  * This class represents the instance of a {@link SlimefunBackpack} that is ready to
  * be opened.
- *
+ * <p>
  * It holds an actual {@link Inventory} and represents the backpack on the
  * level of an individual {@link ItemStack} as opposed to the class {@link SlimefunBackpack}.
  *
  * @author TheBusyBiscuit
- *
  * @see SlimefunBackpack
  * @see BackpackListener
  */
@@ -274,8 +273,7 @@ public class PlayerBackpack extends SlimefunInventoryHolder {
     /**
      * This will change the current size of this Backpack to the specified size.
      *
-     * @param size
-     *            The new size for this Backpack
+     * @param size The new size for this Backpack
      */
     public void setSize(int size) {
         if (size < 9 || size > 54 || size % 9 != 0) {

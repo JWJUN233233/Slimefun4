@@ -8,7 +8,6 @@ import io.github.thebusybiscuit.slimefun4.api.SlimefunBranch;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.services.LocalizationService;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
@@ -37,9 +36,7 @@ import org.bukkit.inventory.ItemStack;
  * There is not really much more I can say besides that...
  *
  * @author TheBusyBiscuit
- *
  * @see LocalizationService
- *
  */
 public abstract class SlimefunLocalization implements Keyed {
 
@@ -75,9 +72,7 @@ public abstract class SlimefunLocalization implements Keyed {
      * This method attempts to return the {@link Language} with the given
      * language code.
      *
-     * @param id
-     *            The language code
-     *
+     * @param id The language code
      * @return A {@link Language} with the given id or null
      */
     public abstract @Nullable Language getLanguage(@Nonnull String id);
@@ -85,9 +80,7 @@ public abstract class SlimefunLocalization implements Keyed {
     /**
      * This method returns the currently selected {@link Language} of a {@link Player}.
      *
-     * @param p
-     *            The {@link Player} to query
-     *
+     * @param p The {@link Player} to query
      * @return The {@link Language} that was selected by the given {@link Player}
      */
     public abstract @Nullable Language getLanguage(@Nonnull Player p);
@@ -103,9 +96,7 @@ public abstract class SlimefunLocalization implements Keyed {
      * This returns whether a {@link Language} with the given id exists within
      * the project resources.
      *
-     * @param id
-     *            The {@link Language} id
-     *
+     * @param id The {@link Language} id
      * @return Whether the project contains a {@link Language} with that id
      */
     protected abstract boolean hasLanguage(@Nonnull String id);
@@ -121,10 +112,8 @@ public abstract class SlimefunLocalization implements Keyed {
     /**
      * This method adds a new {@link Language} with the given id and texture.
      *
-     * @param id
-     *            The {@link Language} id
-     * @param texture
-     *            The texture of how this {@link Language} should be displayed
+     * @param id      The {@link Language} id
+     * @param texture The texture of how this {@link Language} should be displayed
      */
     protected abstract void addLanguage(@Nonnull String id, @Nonnull String texture);
 
@@ -183,7 +172,7 @@ public abstract class SlimefunLocalization implements Keyed {
         String defaultValue = defaults.getString(path);
 
         // Return the default value or an error message
-        return defaultValue != null ? defaultValue : null;
+        return defaultValue;
     }
 
     @ParametersAreNonnullByDefault
@@ -199,7 +188,7 @@ public abstract class SlimefunLocalization implements Keyed {
 
         if (language == null) {
             // Unit-Test scenario (or something went horribly wrong)
-            return Arrays.asList("Error: No language present");
+            return List.of("Error: No language present");
         }
 
         FileConfiguration config = language.getFile(file);
@@ -224,7 +213,7 @@ public abstract class SlimefunLocalization implements Keyed {
     @ParametersAreNonnullByDefault
     private @Nonnull List<String> getStringList(@Nullable Language language, LanguageFile file, String path) {
         List<String> list = getStringListOrNull(language, file, path);
-        return list != null ? list : Arrays.asList("! Missing string \"" + path + '"');
+        return list != null ? list : List.of("! Missing string \"" + path + '"');
     }
 
     public @Nonnull String getMessage(@Nonnull String key) {
@@ -253,8 +242,7 @@ public abstract class SlimefunLocalization implements Keyed {
     /**
      * Returns the Strings referring to the specified Key
      *
-     * @param key
-     *            The Key of those Messages
+     * @param key The Key of those Messages
      * @return The List this key is referring to
      */
     public @Nonnull List<String> getDefaultMessages(@Nonnull String key) {

@@ -31,10 +31,8 @@ import org.bukkit.potion.PotionEffectType;
  * only current uses is the recipe for crafting the {@link VillagerRune}.
  *
  * @author dNiym
- *
  * @see VillagerRune
  * @see PiglinBarterDrop
- *
  */
 public class StrangeNetherGoo extends SimpleSlimefunItem<ItemUseHandler> implements PiglinBarterDrop {
 

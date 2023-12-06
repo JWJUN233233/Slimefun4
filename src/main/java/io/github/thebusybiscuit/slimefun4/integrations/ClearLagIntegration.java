@@ -16,7 +16,6 @@ import org.bukkit.event.Listener;
  * We don't want it to clear our altar items.
  *
  * @author TheBusyBiscuit
- *
  */
 class ClearLagIntegration implements Listener {
 

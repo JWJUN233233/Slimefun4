@@ -7,11 +7,8 @@ import javax.annotation.Nonnull;
  * A simple functional interface for converting a {@link JsonElement} into the desired data type
  * needed for your {@link BiomeMap}.
  *
+ * @param <T> Your target data type
  * @author TheBusyBiscuit
- *
- * @param <T>
- *            Your target data type
- *
  * @see BiomeMap
  */
 @FunctionalInterface
@@ -31,12 +28,10 @@ public interface BiomeDataConverter<T> {
      * <li>JsonElement::getAsLong</li>
      * <li>JsonElement::getAsBoolean</li>
      * </ul>
-     *
+     * <p>
      * or similar.
      *
-     * @param jsonElement
-     *            The {@link JsonElement} to convert
-     *
+     * @param jsonElement The {@link JsonElement} to convert
      * @return Your desired data type.
      */
     @Nonnull

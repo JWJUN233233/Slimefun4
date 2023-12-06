@@ -11,7 +11,6 @@ import org.bukkit.block.Biome;
  * It can only be found in the nether.
  *
  * @author TheBusyBiscuit
- *
  */
 class NetherIceResource extends AbstractResource {
 

@@ -10,7 +10,6 @@ import javax.annotation.Nonnull;
  * Some helper methods for dealing with Json data.
  *
  * @author TheBusyBiscuit
- *
  */
 public final class JsonUtils {
 
@@ -23,9 +22,7 @@ public final class JsonUtils {
      * Little helper method to provide {@link JsonParser} functionality across different
      * versions of Gson.
      *
-     * @param json
-     *            The {@link String} to parse
-     *
+     * @param json The {@link String} to parse
      * @return The parsed {@link JsonElement}
      */
     @SuppressWarnings("deprecation")

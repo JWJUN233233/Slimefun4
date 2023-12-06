@@ -12,7 +12,6 @@ import org.bukkit.block.Biome;
  * A {@link GEOResource} which consists of small chunks of Uranium.
  *
  * @author TheBusyBiscuit
- *
  */
 class UraniumResource extends AbstractResource {
 

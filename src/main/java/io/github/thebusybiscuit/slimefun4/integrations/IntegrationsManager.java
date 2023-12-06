@@ -23,13 +23,11 @@ import org.bukkit.plugin.Plugin;
 /**
  * This Service holds all interactions and hooks with third-party {@link Plugin Plugins}
  * that are not necessarily a dependency or a {@link SlimefunAddon}.
- *
+ * <p>
  * Integration with these plugins happens inside Slimefun itself.
  *
  * @author TheBusyBiscuit
- *
  * @see Slimefun
- *
  */
 public class IntegrationsManager {
 
@@ -59,8 +57,7 @@ public class IntegrationsManager {
     /**
      * This initializes the {@link IntegrationsManager}
      *
-     * @param plugin
-     *            Our instance of {@link Slimefun}
+     * @param plugin Our instance of {@link Slimefun}
      */
     public IntegrationsManager(@Nonnull Slimefun plugin) {
         this.plugin = plugin;
@@ -156,10 +153,8 @@ public class IntegrationsManager {
      * Calling this method will probably log the error and provide the version of this {@link Plugin}
      * for error analysis.
      *
-     * @param name
-     *            The name of the {@link Plugin}
-     * @param throwable
-     *            The {@link Throwable} to throw
+     * @param name      The name of the {@link Plugin}
+     * @param throwable The {@link Throwable} to throw
      */
     @ParametersAreNonnullByDefault
     protected void logError(String name, Throwable throwable) {
@@ -190,10 +185,8 @@ public class IntegrationsManager {
      * This method loads an integration with a {@link Plugin} of the specified name.
      * If that {@link Plugin} is installed and enabled, the provided callback will be run.
      *
-     * @param pluginName
-     *            The name of this {@link Plugin}
-     * @param consumer
-     *            The callback to run if that {@link Plugin} is installed and enabled
+     * @param pluginName The name of this {@link Plugin}
+     * @param consumer   The callback to run if that {@link Plugin} is installed and enabled
      */
     private void load(@Nonnull String pluginName, @Nonnull Consumer<Plugin> consumer) {
         Plugin integration = plugin.getServer().getPluginManager().getPlugin(pluginName);
@@ -226,9 +219,7 @@ public class IntegrationsManager {
      * This checks if one of our third party integrations faked an {@link Event}.
      * Faked {@link Event Events} should be ignored in our logic.
      *
-     * @param event
-     *            The {@link Event} to test
-     *
+     * @param event The {@link Event} to test
      * @return Whether this is a fake event
      */
     public boolean isEventFaked(@Nonnull Event event) {
@@ -240,9 +231,7 @@ public class IntegrationsManager {
      * This checks if one of our third party integrations has placed a custom
      * {@link Block} at this {@link Location}.
      *
-     * @param block
-     *            The {@link Block} to check
-     *
+     * @param block The {@link Block} to check
      * @return Whether a different custom {@link Block} exists at that {@link Location}
      */
     @SuppressWarnings("deprecation")
@@ -262,9 +251,7 @@ public class IntegrationsManager {
      * This checks if one of our third party integrations defines a given
      * {@link ItemStack} as custom.
      *
-     * @param item
-     *            The {@link ItemStack} to check
-     *
+     * @param item The {@link ItemStack} to check
      * @return Whether this {@link ItemStack} is a custom item
      */
     @SuppressWarnings("deprecation")
@@ -286,8 +273,7 @@ public class IntegrationsManager {
      * We don't want these items to be exploited using an {@link AutoDisenchanter} for example,
      * so we want to be able to strip those temporary enchantments in advance.
      *
-     * @param item
-     *            The {@link ItemStack}
+     * @param item The {@link ItemStack}
      */
     public void removeTemporaryEnchantments(@Nonnull ItemStack item) {
         if (isMcMMOInstalled) {

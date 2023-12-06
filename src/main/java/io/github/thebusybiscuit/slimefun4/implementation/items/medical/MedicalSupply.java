@@ -51,8 +51,7 @@ public abstract class MedicalSupply<T extends ItemHandler> extends SimpleSlimefu
     /**
      * This method clears any negative {@link PotionEffect} from the given {@link LivingEntity}.
      *
-     * @param n
-     *            The {@link LivingEntity} to clear the effects from.
+     * @param n The {@link LivingEntity} to clear the effects from.
      */
     public void clearNegativeEffects(@Nonnull LivingEntity n) {
         for (PotionEffectType effect : curedEffects) {
@@ -65,8 +64,7 @@ public abstract class MedicalSupply<T extends ItemHandler> extends SimpleSlimefu
     /**
      * This method heals the given {@link LivingEntity} by the amount provided via the constructor.
      *
-     * @param n
-     *            The {@link LivingEntity} to heal
+     * @param n The {@link LivingEntity} to heal
      */
     public void heal(@Nonnull LivingEntity n) {
         double health = n.getHealth() + healAmount;

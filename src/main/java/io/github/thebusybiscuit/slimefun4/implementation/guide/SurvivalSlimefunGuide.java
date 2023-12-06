@@ -55,11 +55,9 @@ import org.bukkit.inventory.RecipeChoice.MaterialChoice;
  * It uses an {@link Inventory} to display {@link SlimefunGuide} contents.
  *
  * @author TheBusyBiscuit
- *
  * @see SlimefunGuide
  * @see SlimefunGuideImplementation
  * @see CheatSheetSlimefunGuide
- *
  */
 public class SurvivalSlimefunGuide implements SlimefunGuideImplementation {
 
@@ -95,11 +93,8 @@ public class SurvivalSlimefunGuide implements SlimefunGuideImplementation {
     /**
      * Returns a {@link List} of visible {@link ItemGroup} instances that the {@link SlimefunGuide} would display.
      *
-     * @param p
-     *            The {@link Player} who opened his {@link SlimefunGuide}
-     * @param profile
-     *            The {@link PlayerProfile} of the {@link Player}
-     *
+     * @param p       The {@link Player} who opened his {@link SlimefunGuide}
+     * @param profile The {@link PlayerProfile} of the {@link Player}
      * @return a {@link List} of visible {@link ItemGroup} instances
      */
     protected @Nonnull List<ItemGroup> getVisibleItemGroups(@Nonnull Player p, @Nonnull PlayerProfile profile) {

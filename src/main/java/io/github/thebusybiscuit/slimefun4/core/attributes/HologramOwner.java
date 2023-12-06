@@ -13,21 +13,16 @@ import org.bukkit.util.Vector;
  * This {@link ItemAttribute} manages holograms.
  *
  * @author TheBusyBiscuit
- *
  * @see HologramProjector
  * @see HologramsService
- *
  */
 public interface HologramOwner extends ItemAttribute {
 
     /**
      * This will update the hologram text for the given {@link Block}.
      *
-     * @param b
-     *            The {@link Block} to which the hologram belongs
-     *
-     * @param text
-     *            The nametag for the hologram
+     * @param b    The {@link Block} to which the hologram belongs
+     * @param text The nametag for the hologram
      */
     default void updateHologram(@Nonnull Block b, @Nonnull String text) {
         Location loc = b.getLocation().add(getHologramOffset(b));
@@ -37,8 +32,7 @@ public interface HologramOwner extends ItemAttribute {
     /**
      * This will remove the hologram for the given {@link Block}.
      *
-     * @param b
-     *            The {@link Block} to which the hologram blocks
+     * @param b The {@link Block} to which the hologram blocks
      */
     default void removeHologram(@Nonnull Block b) {
         Location loc = b.getLocation().add(getHologramOffset(b));
@@ -50,9 +44,7 @@ public interface HologramOwner extends ItemAttribute {
      * This offset is applied to {@link Block#getLocation()} when spawning
      * the hologram.
      *
-     * @param block
-     *            The {@link Block} which serves as the origin point
-     *
+     * @param block The {@link Block} which serves as the origin point
      * @return The hologram offset
      */
     @Nonnull

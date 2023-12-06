@@ -21,7 +21,6 @@ import org.bukkit.inventory.ItemStack;
  * who damages another {@link LivingEntity} with this sword.
  *
  * @author TheBusyBiscuit
- *
  */
 public class VampireBlade extends SimpleSlimefunItem<WeaponUseHandler> {
 

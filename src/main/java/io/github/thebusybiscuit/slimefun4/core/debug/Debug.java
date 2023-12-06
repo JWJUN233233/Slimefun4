@@ -24,10 +24,8 @@ public final class Debug {
     /**
      * Log a message if the {@link TestCase} is currently enabled.
      *
-     * @param testCase
-     *            The {@link TestCase} to use
-     * @param msg
-     *            The message to log
+     * @param testCase The {@link TestCase} to use
+     * @param msg      The message to log
      */
     public static void log(@Nonnull TestCase testCase, @Nonnull String msg) {
         log(testCase.toString(), msg, new Object[0]);
@@ -36,12 +34,9 @@ public final class Debug {
     /**
      * Log a variable message if the {@link TestCase} is currently enabled.
      *
-     * @param testCase
-     *            The {@link TestCase} to use
-     * @param msg
-     *            The message to log
-     * @param vars
-     *            The variables to replace, use "{}" in the message and have it replaced with a specified thing
+     * @param testCase The {@link TestCase} to use
+     * @param msg      The message to log
+     * @param vars     The variables to replace, use "{}" in the message and have it replaced with a specified thing
      */
     public static void log(@Nonnull TestCase testCase, @Nonnull String msg, @Nonnull Object... vars) {
         log(testCase.toString(), msg, vars);
@@ -50,10 +45,8 @@ public final class Debug {
     /**
      * Log a message if the test case is currently enabled.
      *
-     * @param test
-     *            The test case to use
-     * @param msg
-     *            The message to log
+     * @param test The test case to use
+     * @param msg  The message to log
      */
     public static void log(@Nonnull String test, @Nonnull String msg) {
         log(test, msg, new Object[0]);
@@ -62,12 +55,9 @@ public final class Debug {
     /**
      * Log a message if the test case is currently enabled.
      *
-     * @param test
-     *            The test case to use
-     * @param msg
-     *            The message to log
-     * @param vars
-     *            The variables to replace, use "{}" in the message and have it replaced with a specified thing
+     * @param test The test case to use
+     * @param msg  The message to log
+     * @param vars The variables to replace, use "{}" in the message and have it replaced with a specified thing
      */
     public static void log(@Nonnull String test, @Nonnull String msg, @Nonnull Object... vars) {
         if (testCase == null || !testCase.contains(test)) {
@@ -91,11 +81,8 @@ public final class Debug {
      * MyBenchmark.whileFindChars  thrpt    5  3319022.018 ± 45663.898  ops/s
      * </code>
      *
-     * @param msg
-     *            The message to send. For variables, you can pass "{}"
-     * @param vars
-     *            A varargs of the variables you wish to use
-     *
+     * @param msg  The message to send. For variables, you can pass "{}"
+     * @param vars A varargs of the variables you wish to use
      * @return The resulting String
      */
     private static @Nonnull String formatMessage(@Nonnull String msg, @Nonnull Object... vars) {

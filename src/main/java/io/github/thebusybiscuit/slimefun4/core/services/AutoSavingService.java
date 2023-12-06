@@ -13,7 +13,6 @@ import org.bukkit.entity.Player;
  * data.
  *
  * @author TheBusyBiscuit
- *
  */
 public class AutoSavingService {
 
@@ -22,10 +21,8 @@ public class AutoSavingService {
     /**
      * This method starts the {@link AutoSavingService} with the given interval.
      *
-     * @param plugin
-     *            The current instance of Slimefun
-     * @param interval
-     *            The interval in which to run this task
+     * @param plugin   The current instance of Slimefun
+     * @param interval The interval in which to run this task
      */
     public void start(@Nonnull Slimefun plugin, int interval) {
         this.interval = interval;

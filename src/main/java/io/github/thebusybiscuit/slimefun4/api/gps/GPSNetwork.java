@@ -42,10 +42,8 @@ import org.bukkit.inventory.ItemStack;
  * It is also responsible for teleportation and resource management.
  *
  * @author TheBusyBiscuit
- *
  * @see TeleportationManager
  * @see ResourceManager
- *
  */
 public class GPSNetwork {
 
@@ -64,8 +62,7 @@ public class GPSNetwork {
      * This constructs a new {@link GPSNetwork}.
      * Note that this network is per {@link Server} and not per {@link Player}.
      *
-     * @param plugin
-     *            Our {@link Slimefun} instance
+     * @param plugin Our {@link Slimefun} instance
      */
     public GPSNetwork(@Nonnull Slimefun plugin) {
         resourceManager = new ResourceManager(plugin);
@@ -74,12 +71,9 @@ public class GPSNetwork {
     /**
      * This method updates the status of a {@link GPSTransmitter}.
      *
-     * @param l
-     *            The {@link Location} of the {@link GPSTransmitter}
-     * @param uuid
-     *            The {@link UUID} who the {@link GPSTransmitter} belongs to
-     * @param online
-     *            Whether that {@link GPSTransmitter} is online
+     * @param l      The {@link Location} of the {@link GPSTransmitter}
+     * @param uuid   The {@link UUID} who the {@link GPSTransmitter} belongs to
+     * @param online Whether that {@link GPSTransmitter} is online
      */
     public void updateTransmitter(@Nonnull Location l, @Nonnull UUID uuid, boolean online) {
         Set<Location> set = transmitters.computeIfAbsent(uuid, id -> new HashSet<>());
@@ -96,9 +90,7 @@ public class GPSNetwork {
      * The complexity is determined by the Y level of each {@link GPSTransmitter}
      * multiplied by the multiplier of that transmitter.
      *
-     * @param uuid
-     *            The {@link UUID} who to calculate it for
-     *
+     * @param uuid The {@link UUID} who to calculate it for
      * @return The network complexity for that {@link UUID}
      */
     public int getNetworkComplexity(@Nonnull UUID uuid) {
@@ -124,9 +116,7 @@ public class GPSNetwork {
      * This method returns the amount of {@link GPSTransmitter Transmitters} for the
      * given {@link UUID}.
      *
-     * @param uuid
-     *            The {@link UUID} who these transmitters belong to
-     *
+     * @param uuid The {@link UUID} who these transmitters belong to
      * @return The amount of transmitters
      */
     public int countTransmitters(@Nonnull UUID uuid) {
@@ -138,8 +128,7 @@ public class GPSNetwork {
      * This method opens the {@link GPSTransmitter} control panel to the given
      * {@link Player}.
      *
-     * @param p
-     *            The {@link Player}
+     * @param p The {@link Player}
      */
     public void openTransmitterControlPanel(@Nonnull Player p) {
         ChestMenu menu = new ChestMenu(
@@ -219,14 +208,11 @@ public class GPSNetwork {
      * The icon is dependent on the {@link Environment} of the waypoint's {@link World}.
      * However if the name of this waypoint indicates that this is actually a deathmarker
      * then a different texture will be used.
-     *
+     * <p>
      * Otherwise it will return a globe, a nether or end sphere according to the {@link Environment}.
      *
-     * @param name
-     *            The name of a waypoint
-     * @param environment
-     *            The {@link Environment} of the waypoint's {@link World}
-     *
+     * @param name        The name of a waypoint
+     * @param environment The {@link Environment} of the waypoint's {@link World}
      * @return An icon for this waypoint
      */
     @ParametersAreNonnullByDefault
@@ -331,10 +317,8 @@ public class GPSNetwork {
      * This method will prompt the given {@link Player} to enter a name for a waypoint.
      * After entering the name, it will be added to his waypoint list.
      *
-     * @param p
-     *            The {@link Player} who should get a new waypoint
-     * @param l
-     *            The {@link Location} of the new waypoint
+     * @param p The {@link Player} who should get a new waypoint
+     * @param l The {@link Location} of the new waypoint
      */
     public void createWaypoint(@Nonnull Player p, @Nonnull Location l) {
         Validate.notNull(p, "Player cannot be null!");
@@ -356,12 +340,9 @@ public class GPSNetwork {
     /**
      * This method adds a new waypoint with the given name and {@link Location} for that {@link Player}.
      *
-     * @param p
-     *            The {@link Player} to get the new waypoint
-     * @param name
-     *            The name of this waypoint
-     * @param l
-     *            The {@link Location} of this waypoint
+     * @param p    The {@link Player} to get the new waypoint
+     * @param name The name of this waypoint
+     * @param l    The {@link Location} of this waypoint
      */
     public void addWaypoint(@Nonnull Player p, @Nonnull String name, @Nonnull Location l) {
         Validate.notNull(p, "Player cannot be null!");
@@ -408,9 +389,7 @@ public class GPSNetwork {
      * This method returns a {@link Set} of {@link Location Locations} for all {@link GPSTransmitter Transmitters}
      * owned by the given {@link UUID}.
      *
-     * @param uuid
-     *            The {@link UUID} owning those transmitters
-     *
+     * @param uuid The {@link UUID} owning those transmitters
      * @return A {@link Set} with all {@link Location Locations} of transmitters for this {@link UUID}
      */
     @Nonnull

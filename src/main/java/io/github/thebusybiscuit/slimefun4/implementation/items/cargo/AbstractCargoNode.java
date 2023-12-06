@@ -31,7 +31,6 @@ import org.bukkit.inventory.ItemStack;
  * This abstract class is the super class of all cargo nodes.
  *
  * @author TheBusyBiscuit
- *
  */
 abstract class AbstractCargoNode extends SimpleSlimefunItem<BlockPlaceHandler> implements CargoNode {
 

@@ -29,10 +29,8 @@ import org.bukkit.inventory.ItemStack;
  * | Explosions   | Delete contents.         |
  * </pre>
  *
+ * @param <T> The type of {@link BlockState} and {@link InventoryHolder} we are dealing with
  * @author TheBusyBiscuit
- *
- * @param <T>
- *            The type of {@link BlockState} and {@link InventoryHolder} we are dealing with
  */
 public class VanillaInventoryDropHandler<T extends BlockState & InventoryHolder> extends BlockBreakHandler {
 
@@ -41,8 +39,7 @@ public class VanillaInventoryDropHandler<T extends BlockState & InventoryHolder>
     /**
      * This creates a new {@link VanillaInventoryDropHandler} for the given {@link BlockState} {@link Class}.
      *
-     * @param blockStateClass
-     *            The class of the block's {@link BlockState}
+     * @param blockStateClass The class of the block's {@link BlockState}
      */
     public VanillaInventoryDropHandler(@Nonnull Class<T> blockStateClass) {
         super(false, true);

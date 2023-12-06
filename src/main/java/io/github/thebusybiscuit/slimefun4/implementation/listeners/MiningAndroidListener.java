@@ -15,9 +15,7 @@ import org.bukkit.event.Listener;
  * If that block is a {@link SlimefunItem} of course.
  *
  * @author TheBusyBiscuit
- *
  * @see BlockBreakHandler
- *
  */
 public class MiningAndroidListener implements Listener {
 

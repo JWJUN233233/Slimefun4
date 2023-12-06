@@ -12,14 +12,13 @@ import org.bukkit.inventory.meta.ItemMeta;
 /**
  * This {@link ItemStack}, which is <b>not intended for actual usage</b>, caches its {@link ItemMeta}.
  * This significantly speeds up any {@link ItemStack} comparisons a lot.
- *
+ * <p>
  * You cannot invoke {@link #equals(Object)}, {@link #hashCode()} or any of its setter on an
  * {@link ItemStackWrapper}.<br>
  * Please be very careful when using this.
  *
  * @author TheBusyBiscuit
  * @author md5sha256
- *
  */
 public final class ItemStackWrapper extends ItemStack {
 
@@ -108,8 +107,7 @@ public final class ItemStackWrapper extends ItemStack {
      * Creates an {@link ItemStackWrapper} of an {@link ItemStack}. This method
      * will not check if the passed {@link ItemStack} has already been wrapped
      *
-     * @param itemStack
-     *            The {@link ItemStack} to wrap
+     * @param itemStack The {@link ItemStack} to wrap
      * @return Returns an {@link ItemStackWrapper} of the passed {@link ItemStack}
      * @see #wrap(ItemStack)
      */
@@ -124,8 +122,7 @@ public final class ItemStackWrapper extends ItemStack {
      * will return the the casted reference of the passed {@link ItemStack} if it
      * is already an {@link ItemStackWrapper}
      *
-     * @param itemStack
-     *            The {@link ItemStack} to wrap
+     * @param itemStack The {@link ItemStack} to wrap
      * @return Returns an {@link ItemStackWrapper} of the passed {@link ItemStack}
      * @see #forceWrap(ItemStack)
      */
@@ -142,9 +139,7 @@ public final class ItemStackWrapper extends ItemStack {
     /**
      * This creates an {@link ItemStackWrapper} array from a given {@link ItemStack} array.
      *
-     * @param items
-     *            The array of {@link ItemStack ItemStacks} to transform
-     *
+     * @param items The array of {@link ItemStack ItemStacks} to transform
      * @return An {@link ItemStackWrapper} array
      */
     public static @Nonnull ItemStackWrapper[] wrapArray(@Nonnull ItemStack[] items) {
@@ -164,9 +159,7 @@ public final class ItemStackWrapper extends ItemStack {
     /**
      * This creates an {@link ItemStackWrapper} {@link List} from a given {@link ItemStack} {@link List} *
      *
-     * @param items
-     *            The {@link List} of {@link ItemStack ItemStacks} to transform
-     *
+     * @param items The {@link List} of {@link ItemStack ItemStacks} to transform
      * @return An {@link ItemStackWrapper} array
      */
     public static @Nonnull List<ItemStackWrapper> wrapList(@Nonnull List<ItemStack> items) {

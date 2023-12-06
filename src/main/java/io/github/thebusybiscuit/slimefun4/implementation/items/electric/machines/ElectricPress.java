@@ -18,7 +18,6 @@ import org.bukkit.inventory.ItemStack;
  * It allows you to compact items into their block variant, e.g. 9 diamonds into a diamond block.
  *
  * @author TheBusyBiscuit
- *
  */
 public class ElectricPress extends AContainer implements RecipeDisplayItem {
 

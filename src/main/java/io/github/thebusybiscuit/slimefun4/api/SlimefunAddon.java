@@ -12,16 +12,15 @@ import org.bukkit.plugin.java.JavaPlugin;
 /**
  * This is a very basic interface that will be used to identify
  * the {@link Plugin} that registered a {@link SlimefunItem}.
- *
+ * <p>
  * It will also contain some utility methods such as {@link SlimefunAddon#getBugTrackerURL()}
  * to provide some context when bugs arise.
- *
+ * <p>
  * It is recommended to implement this interface if you are developing
  * an Addon.
  *
  * @author TheBusyBiscuit
  * @author ybw0014
- *
  */
 public interface SlimefunAddon {
 
@@ -77,9 +76,7 @@ public interface SlimefunAddon {
      * It specifically checks whether the given String can be found in {@link PluginDescriptionFile#getDepend()}
      * or {@link PluginDescriptionFile#getSoftDepend()}
      *
-     * @param dependency
-     *            The dependency to check for
-     *
+     * @param dependency The dependency to check for
      * @return Whether this {@link SlimefunAddon} depends on the given {@link Plugin}
      */
     default boolean hasDependency(@Nonnull String dependency) {

@@ -16,9 +16,7 @@ import org.bukkit.inventory.ItemStack;
  * be used to fuel an {@link AnimalGrowthAccelerator}.
  *
  * @author TheBusyBiscuit
- *
  * @see AnimalGrowthAccelerator
- *
  */
 public class OrganicFood extends SlimefunItem {
 

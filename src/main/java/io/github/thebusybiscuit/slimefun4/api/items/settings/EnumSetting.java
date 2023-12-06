@@ -11,13 +11,9 @@ import javax.annotation.ParametersAreNonnullByDefault;
  * This variation of {@link ItemSetting} allows you to allow {@link Enum} constants to be
  * used for {@link ItemSetting} validation.
  *
- * @param <T>
- *            The {@link Enum} type
- *
+ * @param <T> The {@link Enum} type
  * @author TheBusyBiscuit
- *
  * @see ItemSetting
- *
  */
 public class EnumSetting<T extends Enum<T>> extends ItemSetting<String> {
 

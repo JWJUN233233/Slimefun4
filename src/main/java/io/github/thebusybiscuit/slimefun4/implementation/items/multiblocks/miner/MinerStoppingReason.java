@@ -11,7 +11,6 @@ import org.bukkit.entity.Player;
  * may stop mining.
  *
  * @author TheBusyBiscuit
- *
  */
 enum MinerStoppingReason {
 

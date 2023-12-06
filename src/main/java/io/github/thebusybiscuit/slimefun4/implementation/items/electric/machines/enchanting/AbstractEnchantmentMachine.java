@@ -24,10 +24,8 @@ import org.bukkit.inventory.meta.ItemMeta;
  *
  * @author TheBusyBiscuit
  * @author Rothes
- *
  * @see AutoEnchanter
  * @see AutoDisenchanter
- *
  */
 abstract class AbstractEnchantmentMachine extends AContainer {
 

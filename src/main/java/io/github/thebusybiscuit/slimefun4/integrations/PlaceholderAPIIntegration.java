@@ -17,7 +17,6 @@ import org.bukkit.entity.Player;
  * This is our integration for {@link PlaceholderAPI}.
  *
  * @author TheBusyBiscuit
- *
  */
 class PlaceholderAPIIntegration extends PlaceholderExpansion {
 

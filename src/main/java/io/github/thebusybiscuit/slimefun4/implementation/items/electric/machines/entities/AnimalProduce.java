@@ -12,9 +12,7 @@ import org.bukkit.inventory.ItemStack;
  * An {@link AnimalProduce} can be obtained via the {@link ProduceCollector}.
  *
  * @author TheBusyBiscuit
- *
  * @see ProduceCollector
- *
  */
 public class AnimalProduce extends MachineRecipe implements Predicate<LivingEntity> {
 

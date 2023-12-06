@@ -21,7 +21,6 @@ import org.bukkit.potion.PotionEffectType;
  * fire.
  *
  * @author TheBusyBiscuit
- *
  */
 public class Bandage extends SimpleSlimefunItem<ItemUseHandler> {
 

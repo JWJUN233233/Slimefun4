@@ -16,7 +16,6 @@ import org.bukkit.inventory.ItemStack;
  * whenever an {@link Arrow} fired from this {@link SlimefunBow} hits a target.
  *
  * @author TheBusyBiscuit
- *
  */
 public abstract class SlimefunBow extends SlimefunItem {
 

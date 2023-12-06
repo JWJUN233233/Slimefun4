@@ -28,7 +28,6 @@ import org.bukkit.inventory.Recipe;
  *
  * @author TheBusyBiscuit
  * @author LilBC
- *
  * @see VanillaAutoCrafter
  * @see EnhancedAutoCrafter
  */

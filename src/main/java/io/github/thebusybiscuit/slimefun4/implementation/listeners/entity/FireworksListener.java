@@ -16,7 +16,6 @@ import org.bukkit.inventory.meta.FireworkMeta;
  * unlocking a {@link Research} does not cause damage to be dealt.
  *
  * @author TheBusyBiscuit
- *
  */
 public class FireworksListener implements Listener {
 

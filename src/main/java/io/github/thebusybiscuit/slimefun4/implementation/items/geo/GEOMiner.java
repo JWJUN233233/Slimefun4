@@ -48,7 +48,6 @@ import org.bukkit.inventory.ItemStack;
  * The {@link GEOMiner} is an electrical machine that allows you to obtain a {@link GEOResource}.
  *
  * @author TheBusyBiscuit
- *
  * @see GEOResource
  */
 public class GEOMiner extends SlimefunItem
@@ -121,9 +120,7 @@ public class GEOMiner extends SlimefunItem
      * This method <strong>must</strong> be called before registering the item
      * and only before registering.
      *
-     * @param capacity
-     *            The amount of energy this machine can store
-     *
+     * @param capacity The amount of energy this machine can store
      * @return This method will return the current instance of {@link GEOMiner}, so that can be chained.
      */
     public final GEOMiner setCapacity(int capacity) {
@@ -140,9 +137,7 @@ public class GEOMiner extends SlimefunItem
     /**
      * This sets the speed of this machine.
      *
-     * @param speed
-     *            The speed multiplier for this machine, must be above zero
-     *
+     * @param speed The speed multiplier for this machine, must be above zero
      * @return This method will return the current instance of {@link GEOMiner}, so that can be chained.
      */
     public final GEOMiner setProcessingSpeed(int speed) {
@@ -155,9 +150,7 @@ public class GEOMiner extends SlimefunItem
     /**
      * This method sets the energy consumed by this machine per tick.
      *
-     * @param energyConsumption
-     *            The energy consumed per tick
-     *
+     * @param energyConsumption The energy consumed per tick
      * @return This method will return the current instance of {@link GEOMiner}, so that can be chained.
      */
     public final GEOMiner setEnergyConsumption(int energyConsumption) {

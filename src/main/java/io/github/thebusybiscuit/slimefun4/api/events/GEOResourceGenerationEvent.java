@@ -17,15 +17,13 @@ import org.bukkit.event.HandlerList;
  * This {@link Event} is fired whenever a {@link GEOResource} is being freshly generated.
  * This only occurs when a {@link GEOScanner} queries the {@link Chunk} for a {@link GEOResource}
  * but cannot find it.
- *
+ * <p>
  * You can modify this {@link Event} by listening to it.
  *
  * @author TheBusyBiscuit
- *
  * @see ResourceManager
  * @see GEOResource
  * @see GEOScanner
- *
  */
 public class GEOResourceGenerationEvent extends Event {
 

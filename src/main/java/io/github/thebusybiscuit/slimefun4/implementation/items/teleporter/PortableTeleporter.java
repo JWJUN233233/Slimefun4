@@ -20,7 +20,6 @@ import org.bukkit.inventory.ItemStack;
  * from anywhere.
  *
  * @author martinbrom
- *
  * @see Teleporter
  */
 public class PortableTeleporter extends SimpleSlimefunItem<ItemUseHandler> implements Rechargeable {

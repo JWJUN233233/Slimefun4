@@ -11,7 +11,6 @@ import java.util.regex.Pattern;
  *
  * @author Walshy
  * @author TheBusyBiscuit
- *
  */
 public final class PatternUtils {
 

@@ -17,11 +17,9 @@ import org.bukkit.entity.Player;
  * A {@link PlayerResearchTask} is run when a {@link Player} unlocks a {@link Research}.
  *
  * @author TheBusyBiscuit
- *
  * @see Research
  * @see ResearchUnlockEvent
  * @see PlayerProfile
- *
  */
 public class PlayerResearchTask implements Consumer<PlayerProfile> {
 
@@ -35,12 +33,9 @@ public class PlayerResearchTask implements Consumer<PlayerProfile> {
     /**
      * This constructs a new {@link PlayerResearchTask}.
      *
-     * @param research
-     *            The {@link Research} to unlock
-     * @param isInstant
-     *            Whether to unlock this {@link Research} instantaneously
-     * @param callback
-     *            The callback to run when the task has completed
+     * @param research  The {@link Research} to unlock
+     * @param isInstant Whether to unlock this {@link Research} instantaneously
+     * @param callback  The callback to run when the task has completed
      */
     PlayerResearchTask(@Nonnull Research research, boolean isInstant, @Nullable Consumer<Player> callback) {
         Validate.notNull(research, "The Research must not be null");
@@ -133,8 +128,7 @@ public class PlayerResearchTask implements Consumer<PlayerProfile> {
     /**
      * This method is called when the {@link Research} successfully finished to unlock.
      *
-     * @param p
-     *            The {@link Player} who has unlocked this {@link Research}
+     * @param p The {@link Player} who has unlocked this {@link Research}
      */
     private void onFinish(@Nonnull Player p) {
         if (callback != null) {

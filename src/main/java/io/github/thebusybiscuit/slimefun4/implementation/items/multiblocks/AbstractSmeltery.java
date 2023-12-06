@@ -26,7 +26,6 @@ import org.bukkit.inventory.ItemStack;
  * An abstract super class for the {@link Smeltery} and {@link MakeshiftSmeltery}.
  *
  * @author TheBusyBiscuit
- *
  */
 abstract class AbstractSmeltery extends MultiBlockMachine {
 

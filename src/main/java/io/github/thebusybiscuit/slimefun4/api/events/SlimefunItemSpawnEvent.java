@@ -16,7 +16,6 @@ import org.bukkit.inventory.ItemStack;
  * compatibility with auto-pickup options or similar.
  *
  * @author TheBusyBiscuit
- *
  * @see ItemSpawnReason
  */
 public class SlimefunItemSpawnEvent extends Event implements Cancellable {
@@ -57,8 +56,7 @@ public class SlimefunItemSpawnEvent extends Event implements Cancellable {
     /**
      * This sets the {@link Location} on where to drop this item.
      *
-     * @param location
-     *            The {@link Location} where to drop the {@link ItemStack}
+     * @param location The {@link Location} where to drop the {@link ItemStack}
      */
     public void setLocation(@Nonnull Location location) {
         Validate.notNull(location, "The Location cannot be null!");
@@ -78,8 +76,7 @@ public class SlimefunItemSpawnEvent extends Event implements Cancellable {
     /**
      * This method sets the {@link ItemStack} that should be dropped.
      *
-     * @param itemStack
-     *            The {@link ItemStack} to drop
+     * @param itemStack The {@link ItemStack} to drop
      */
     public void setItemStack(@Nonnull ItemStack itemStack) {
         Validate.notNull(itemStack, "Cannot drop null.");

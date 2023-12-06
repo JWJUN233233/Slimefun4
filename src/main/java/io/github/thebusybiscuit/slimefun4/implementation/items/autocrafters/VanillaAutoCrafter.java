@@ -41,11 +41,9 @@ import org.bukkit.persistence.PersistentDataType;
  * Only {@link ShapedRecipe} and {@link ShapelessRecipe} are therefore supported.
  *
  * @author TheBusyBiscuit
- *
  * @see AbstractAutoCrafter
  * @see EnhancedAutoCrafter
  * @see VanillaRecipe
- *
  */
 public class VanillaAutoCrafter extends AbstractAutoCrafter {
 

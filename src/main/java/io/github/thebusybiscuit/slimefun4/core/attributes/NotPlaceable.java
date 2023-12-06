@@ -13,6 +13,5 @@ import org.bukkit.event.block.BlockPlaceEvent;
  * as a placed {@link Block}.
  *
  * @author TheBusyBiscuit
- *
  */
 public interface NotPlaceable extends ItemAttribute {}

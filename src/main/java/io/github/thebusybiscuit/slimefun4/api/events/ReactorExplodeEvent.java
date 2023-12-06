@@ -12,7 +12,6 @@ import org.bukkit.event.HandlerList;
  * The {@link ReactorExplodeEvent} is called whenever a reactor explodes.
  *
  * @author TheBusyBiscuit
- *
  */
 public class ReactorExplodeEvent extends Event {
 

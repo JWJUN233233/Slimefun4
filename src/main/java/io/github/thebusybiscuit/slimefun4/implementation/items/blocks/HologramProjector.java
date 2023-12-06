@@ -36,10 +36,8 @@ import org.bukkit.inventory.ItemStack;
  * @author TheBusyBiscuit
  * @author Kry-Vosa
  * @author SoSeDiK
- *
  * @see HologramOwner
  * @see HologramsService
- *
  */
 public class HologramProjector extends SlimefunItem implements HologramOwner {
 

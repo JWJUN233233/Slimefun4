@@ -42,7 +42,6 @@ import org.bukkit.inventory.ItemStack;
  *
  * @author TheBusyBiscuit
  * @author Walshy
- *
  */
 public class ProduceCollector extends AContainer implements RecipeDisplayItem {
 
@@ -82,8 +81,7 @@ public class ProduceCollector extends AContainer implements RecipeDisplayItem {
     /**
      * This method adds a new {@link AnimalProduce} to this machine.
      *
-     * @param produce
-     *            The {@link AnimalProduce} to add
+     * @param produce The {@link AnimalProduce} to add
      */
     public void addProduce(@Nonnull AnimalProduce produce) {
         Validate.notNull(produce, "A produce cannot be null");

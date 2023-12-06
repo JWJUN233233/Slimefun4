@@ -23,7 +23,6 @@ import org.apache.commons.lang.Validate;
  * This Service creates a Backup of your Slimefun world data on every server shutdown.
  *
  * @author TheBusyBiscuit
- *
  */
 public class BackupService implements Runnable {
 
@@ -123,11 +122,8 @@ public class BackupService implements Runnable {
     /**
      * This method will delete old backups.
      *
-     * @param backups
-     *            The {@link List} of all backups
-     *
-     * @throws IOException
-     *             An {@link IOException} is thrown if a {@link File} could not be deleted
+     * @param backups The {@link List} of all backups
+     * @throws IOException An {@link IOException} is thrown if a {@link File} could not be deleted
      */
     private void purgeBackups(@Nonnull List<File> backups) throws IOException {
         Collections.sort(backups, (a, b) -> {

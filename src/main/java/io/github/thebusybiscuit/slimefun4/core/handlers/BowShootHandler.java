@@ -14,10 +14,8 @@ import org.bukkit.event.entity.EntityDamageByEntityEvent;
  * is a {@link SlimefunBow} and an Arrow fired from this bow hit a {@link LivingEntity}.
  *
  * @author TheBusyBiscuit
- *
  * @see ItemHandler
  * @see SlimefunBow
- *
  */
 @FunctionalInterface
 public interface BowShootHandler extends ItemHandler {

@@ -15,9 +15,7 @@ import org.bukkit.inventory.ItemStack;
  * This enum holds the different reasons as to why we may need to spawn an item.
  *
  * @author TheBusyBiscuit
- *
  * @see SlimefunItemSpawnEvent
- *
  */
 public enum ItemSpawnReason {
 
@@ -63,5 +61,5 @@ public enum ItemSpawnReason {
     /**
      * Other reasons we did not account for.
      */
-    MISC;
+    MISC
 }

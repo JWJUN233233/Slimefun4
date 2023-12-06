@@ -10,9 +10,7 @@ import org.bukkit.inventory.ItemStack;
  * for the {@link ItemStack} to display.
  *
  * @author TheBusyBiscuit
- *
  * @see Language
- *
  */
 public enum LanguagePreset {
     ENGLISH("en", "a1701f21835a898b20759fb30a583a38b994abf60d3912ab4ce9f2311e74f72"),

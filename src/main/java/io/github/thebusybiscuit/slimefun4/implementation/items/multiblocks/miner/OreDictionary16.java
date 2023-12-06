@@ -10,7 +10,6 @@ import org.bukkit.inventory.ItemStack;
  * Our {@link OreDictionary} implementation for MC 1.16 or higher.
  *
  * @author TheBusyBiscuit
- *
  */
 class OreDictionary16 implements OreDictionary {
 

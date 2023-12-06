@@ -19,9 +19,7 @@ import org.bukkit.inventory.ItemStack;
  * is crafted using any {@link RecipeType}.
  *
  * @author TheBusyBiscuit
- *
  * @see SlimefunAutoCrafter
- *
  */
 class SlimefunItemRecipe extends AbstractRecipe {
 

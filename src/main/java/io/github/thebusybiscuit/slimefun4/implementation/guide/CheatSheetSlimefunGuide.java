@@ -23,7 +23,6 @@ import org.bukkit.inventory.Recipe;
  * to spawn in a {@link SlimefunItem} via click rather than showing their {@link Recipe}.
  *
  * @author TheBusyBiscuit
- *
  */
 public class CheatSheetSlimefunGuide extends SurvivalSlimefunGuide {
 
@@ -36,11 +35,8 @@ public class CheatSheetSlimefunGuide extends SurvivalSlimefunGuide {
     /**
      * Returns a {@link List} of visible {@link ItemGroup} instances that the {@link SlimefunGuide} would display.
      *
-     * @param p
-     *            The {@link Player} who opened his {@link SlimefunGuide}
-     * @param profile
-     *            The {@link PlayerProfile} of the {@link Player}
-     *
+     * @param p       The {@link Player} who opened his {@link SlimefunGuide}
+     * @param profile The {@link PlayerProfile} of the {@link Player}
      * @return a {@link List} of visible {@link ItemGroup} instances
      */
     @Override

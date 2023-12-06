@@ -10,7 +10,6 @@ import org.bukkit.inventory.ItemStack;
  * This {@link MachineOperation} represents a crafting process.
  *
  * @author TheBusyBiscuit
- *
  */
 public class CraftingOperation implements MachineOperation {
 

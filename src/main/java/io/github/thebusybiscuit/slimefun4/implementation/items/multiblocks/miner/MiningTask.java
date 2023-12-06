@@ -35,10 +35,8 @@ import org.bukkit.inventory.ItemStack;
  * This represents a running instance of an {@link IndustrialMiner}.
  *
  * @author TheBusyBiscuit
- *
  * @see IndustrialMiner
  * @see AdvancedIndustrialMiner
- *
  */
 class MiningTask implements Runnable {
 
@@ -78,8 +76,7 @@ class MiningTask implements Runnable {
     /**
      * This starts the {@link IndustrialMiner} at the given {@link Block}.
      *
-     * @param b
-     *            The {@link Block} which marks the center of this {@link IndustrialMiner}
+     * @param b The {@link Block} which marks the center of this {@link IndustrialMiner}
      */
     void start(@Nonnull Block b) {
         miner.activeMiners.put(b.getLocation(), this);
@@ -100,8 +97,7 @@ class MiningTask implements Runnable {
      * This method stops the {@link IndustrialMiner} with an error message.
      * The error message is a path to the location in Slimefun's localization files.
      *
-     * @param reason
-     *            The reason why we stop
+     * @param reason The reason why we stop
      */
     void stop(@Nonnull MinerStoppingReason reason) {
         Player p = Bukkit.getPlayer(owner);
@@ -140,7 +136,6 @@ class MiningTask implements Runnable {
             if (fuelLevel <= 0) {
                 // This Miner has not got enough fuel to run.
                 stop(MinerStoppingReason.NO_FUEL);
-                return;
             }
         });
 
@@ -262,9 +257,7 @@ class MiningTask implements Runnable {
      * This refuels the {@link IndustrialMiner} and pushes the given {@link ItemStack} to
      * its {@link Chest}.
      *
-     * @param item
-     *            The {@link ItemStack} to push to the {@link Chest}.
-     *
+     * @param item The {@link ItemStack} to push to the {@link Chest}.
      * @return Whether the operation was successful
      */
     private boolean push(@Nonnull ItemStack item) {

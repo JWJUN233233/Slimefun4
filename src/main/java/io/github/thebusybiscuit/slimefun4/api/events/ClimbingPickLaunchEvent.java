@@ -56,8 +56,7 @@ public class ClimbingPickLaunchEvent extends PlayerEvent implements Cancellable 
     /**
      * Use this to change the velocity {@link Vector} applied to the {@link Player}.
      *
-     * @param velocity
-     *            The {@link Vector} velocity to apply
+     * @param velocity The {@link Vector} velocity to apply
      */
     public void setVelocity(@Nonnull Vector velocity) {
         Validate.notNull(velocity);

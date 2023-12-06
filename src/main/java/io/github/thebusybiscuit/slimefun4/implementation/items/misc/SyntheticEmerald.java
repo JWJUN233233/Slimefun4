@@ -14,9 +14,7 @@ import org.bukkit.inventory.ItemStack;
  * It can even be used to trade with {@link Villager Villagers}.
  *
  * @author TheBusyBiscuit
- *
  * @see VillagerTradingListener
- *
  */
 public class SyntheticEmerald extends SlimefunItem {
 

@@ -17,9 +17,7 @@ import org.bukkit.inventory.ItemStack;
  * a {@link Wither} if the required ingredients have been provided.
  *
  * @author TheBusyBiscuit
- *
  * @see IronGolemAssembler
- *
  */
 public class WitherAssembler extends AbstractEntityAssembler<Wither> {
 

@@ -14,7 +14,6 @@ import org.bukkit.inventory.ItemStack;
  *
  * @see Research
  * @see SlimefunItems
- *
  */
 public final class ResearchSetup {
 

@@ -19,7 +19,6 @@ import org.bukkit.ChatColor;
  *
  * @author TheBusyBiscuit
  * @author Walshy
- *
  */
 public final class NumberUtils {
 
@@ -41,9 +40,7 @@ public final class NumberUtils {
      * {@code 1000000} for example will return {@code "1,000,000"} as a {@link String}.
      * It uses the american (US) {@link Locale} for this transformation.
      *
-     * @param number
-     *            Your {@link Integer}
-     *
+     * @param number Your {@link Integer}
      * @return The formatted String
      */
     public static @Nonnull String formatBigNumber(int number) {
@@ -81,9 +78,7 @@ public final class NumberUtils {
      * This method transforms a String representation of a {@link LocalDateTime}
      * from GitHub's API back into a {@link LocalDateTime} object
      *
-     * @param date
-     *            The formatted String version of a date from GitHub
-     *
+     * @param date The formatted String version of a date from GitHub
      * @return The {@link LocalDateTime} for the given input
      */
     public static @Nonnull LocalDateTime parseGitHubDate(@Nonnull String date) {
@@ -96,9 +91,7 @@ public final class NumberUtils {
      * Lower levels will result in a darker tone of red, higher levels will
      * result in more brighter shades of green.
      *
-     * @param percentage
-     *            The amount of percentage as a float
-     *
+     * @param percentage The amount of percentage as a float
      * @return A representative {@link ChatColor}
      */
     public static @Nonnull ChatColor getColorFromPercentage(float percentage) {
@@ -121,14 +114,12 @@ public final class NumberUtils {
      * This returns the elapsed time since the given {@link LocalDateTime}.
      * The output will be nicely formatted based on the elapsed hours or days since the
      * given {@link LocalDateTime}.
-     *
+     * <p>
      * If a {@link LocalDateTime} from yesterday was passed it will return {@code "1d"}.
      * One hour later it will read {@code "1d 1h"}. For values smaller than an hour {@code "< 1h"}
      * will be returned instead.
      *
-     * @param date
-     *            The {@link LocalDateTime}.
-     *
+     * @param date The {@link LocalDateTime}.
      * @return The elapsed time as a {@link String}
      */
     public static @Nonnull String getElapsedTime(@Nonnull LocalDateTime date) {
@@ -139,17 +130,14 @@ public final class NumberUtils {
      * This returns the elapsed time between the two given {@link LocalDateTime LocalDateTimes}.
      * The output will be nicely formatted based on the elapsed hours or days between the
      * given {@link LocalDateTime LocalDateTime}.
-     *
+     * <p>
      * If a {@link LocalDateTime} from today and yesterday (exactly 24h apart) was passed it
      * will return {@code "1d"}.
      * One hour later it will read {@code "1d 1h"}. For values smaller than an hour {@code "< 1h"}
      * will be returned instead.
      *
-     * @param current
-     *            The current {@link LocalDateTime}.
-     * @param priorDate
-     *            The {@link LocalDateTime} in the past.
-     *
+     * @param current   The current {@link LocalDateTime}.
+     * @param priorDate The {@link LocalDateTime} in the past.
      * @return The elapsed time as a {@link String}
      */
     public static @Nonnull String getElapsedTime(@Nonnull LocalDateTime current, @Nonnull LocalDateTime priorDate) {
@@ -187,11 +175,8 @@ public final class NumberUtils {
      * If the {@link String} could not be parsed correctly, the provided
      * default value will be returned instead.
      *
-     * @param str
-     *            The {@link String} to parse
-     * @param defaultValue
-     *            The default value for when the {@link String} could not be parsed
-     *
+     * @param str          The {@link String} to parse
+     * @param defaultValue The default value for when the {@link String} could not be parsed
      * @return The resulting {@link Integer}
      */
     public static int getInt(@Nonnull String str, int defaultValue) {
@@ -241,13 +226,9 @@ public final class NumberUtils {
      * This method is a combination of Math.min and Math.max, it clamps the given value
      * between a minimum and a maximum.
      *
-     * @param min
-     *            The minimum value
-     * @param value
-     *            The value to clamp
-     * @param max
-     *            The maximum value
-     *
+     * @param min   The minimum value
+     * @param value The value to clamp
+     * @param max   The maximum value
      * @return The clamped value
      */
     public static int clamp(int min, int value, int max) {
@@ -282,6 +263,7 @@ public final class NumberUtils {
 
     /**
      * This detects if 2 integers will overflow/underflow and if they will, returns the corresponding value
+     *
      * @param a the first integer
      * @param b the second integer
      * @return {@link Integer#MAX_VALUE} if overflow detected, {@link Integer#MIN_VALUE} if underflow detected, otherwise the sum of a and b
@@ -292,8 +274,9 @@ public final class NumberUtils {
 
     /**
      * This detects if 2 integers will overflow/underflow past a maximum or minimum value and if they will, returns the corresponding value
-     * @param a the first integer
-     * @param b the second integer
+     *
+     * @param a   the first integer
+     * @param b   the second integer
      * @param min the minimum value for the operation
      * @param max the maximum value for the operation
      * @return max if overflow detected, min if underflow detected, otherwise the sum of a and b

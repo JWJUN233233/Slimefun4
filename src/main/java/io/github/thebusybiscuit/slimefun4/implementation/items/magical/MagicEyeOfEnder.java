@@ -20,7 +20,6 @@ import org.bukkit.inventory.PlayerInventory;
  * out of thin air as long as you are wearing Ender Armor.
  *
  * @author TheBusyBiscuit
- *
  */
 public class MagicEyeOfEnder extends SimpleSlimefunItem<ItemUseHandler> {
 

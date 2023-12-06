@@ -10,7 +10,6 @@ import org.bukkit.enchantments.Enchantment;
  * depending if it is a tool or an armor
  *
  * @author RobotHanzo
- *
  * @see DamageableItem
  */
 public enum UnbreakingAlgorithm {
@@ -37,11 +36,8 @@ public enum UnbreakingAlgorithm {
      * based on the internal formula of this {@link UnbreakingAlgorithm}.
      * If this method returns true, the item should not take damage.
      *
-     * @param unbreakingLevel
-     *            The {@link Integer} level of the unbreaking {@link Enchantment}
-     *
+     * @param unbreakingLevel The {@link Integer} level of the unbreaking {@link Enchantment}
      * @return Whether to save the item from taking damage
-     *
      */
     public boolean evaluate(int unbreakingLevel) {
         if (unbreakingLevel > 0) {

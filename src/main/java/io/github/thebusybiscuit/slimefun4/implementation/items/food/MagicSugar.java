@@ -21,7 +21,6 @@ import org.bukkit.potion.PotionEffectType;
  * kind of sugar which gives you the Speed {@link PotionEffect} when right clicked.
  *
  * @author TheBusyBiscuit
- *
  */
 public class MagicSugar extends SimpleSlimefunItem<ItemUseHandler> {
 

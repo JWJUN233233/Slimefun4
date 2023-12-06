@@ -17,21 +17,17 @@ import org.bukkit.inventory.meta.ItemMeta;
  * Any {@link SlimefunItem} which is supposed to be chargeable <b>must</b> implement this interface.
  *
  * @author TheBusyBiscuit
- *
  * @see ChargingBench
  * @see EnergyNet
  * @see Jetpack
  * @see MultiTool
- *
  */
 public interface Rechargeable extends ItemAttribute {
 
     /**
      * This method returns the maximum charge the given {@link ItemStack} is capable of holding.
      *
-     * @param item
-     *            The {@link ItemStack} for which to determine the maximum charge
-     *
+     * @param item The {@link ItemStack} for which to determine the maximum charge
      * @return The maximum energy charge for this {@link ItemStack}
      */
     float getMaxItemCharge(ItemStack item);
@@ -40,10 +36,8 @@ public interface Rechargeable extends ItemAttribute {
      * This method sets the stored energy charge for a given {@link ItemStack}.
      * The charge must be at least zero and at most {@link #getMaxItemCharge(ItemStack)}.
      *
-     * @param item
-     *            The {@link ItemStack} to charge
-     * @param charge
-     *            The amount of charge to store
+     * @param item   The {@link ItemStack} to charge
+     * @param charge The amount of charge to store
      */
     default void setItemCharge(ItemStack item, float charge) {
         if (item == null || item.getType() == Material.AIR) {
@@ -64,9 +58,7 @@ public interface Rechargeable extends ItemAttribute {
     /**
      * This method returns the currently stored energy charge on the provided {@link ItemStack}.
      *
-     * @param item
-     *            The {@link ItemStack} to get the charge from
-     *
+     * @param item The {@link ItemStack} to get the charge from
      * @return The charge stored on this {@link ItemStack}
      */
     default float getItemCharge(ItemStack item) {
@@ -82,11 +74,8 @@ public interface Rechargeable extends ItemAttribute {
      * The method will also return whether this operation was successful.
      * If the {@link ItemStack} is already at maximum charge, the method will return <code>false</code>.
      *
-     * @param item
-     *            The {@link ItemStack} to charge
-     * @param charge
-     *            The amount of charge to add
-     *
+     * @param item   The {@link ItemStack} to charge
+     * @param charge The amount of charge to add
      * @return Whether the given charge could be added successfully
      */
     default boolean addItemCharge(ItemStack item, float charge) {
@@ -117,11 +106,8 @@ public interface Rechargeable extends ItemAttribute {
      * The method will also return whether this operation was successful.
      * If the {@link ItemStack} does not have enough charge, the method will return <code>false</code>.
      *
-     * @param item
-     *            The {@link ItemStack} to remove the charge from
-     * @param charge
-     *            The amount of charge to remove
-     *
+     * @param item   The {@link ItemStack} to remove the charge from
+     * @param charge The amount of charge to remove
      * @return Whether the given charge could be removed successfully
      */
     default boolean removeItemCharge(ItemStack item, float charge) {

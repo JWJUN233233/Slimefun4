@@ -20,10 +20,8 @@ import org.bukkit.Particle;
  * An abstract Network class to manage networks in a stateful way
  *
  * @author meiamsome
- *
  * @see NetworkListener
  * @see NetworkManager
- *
  */
 public abstract class Network {
 
@@ -46,10 +44,8 @@ public abstract class Network {
     /**
      * This constructs a new {@link Network} at the given {@link Location}.
      *
-     * @param manager
-     *            The {@link NetworkManager} instance
-     * @param regulator
-     *            The {@link Location} marking the regulator of this {@link Network}.
+     * @param manager   The {@link NetworkManager} instance
+     * @param regulator The {@link Location} marking the regulator of this {@link Network}.
      */
     protected Network(@Nonnull NetworkManager manager, @Nonnull Location regulator) {
         Validate.notNull(manager, "A NetworkManager must be provided");
@@ -66,7 +62,7 @@ public abstract class Network {
      * This method returns the range of the {@link Network}.
      * The range determines how far the {@link Network} will search for
      * nearby nodes from any given node.
-     *
+     * <p>
      * It basically translates to the maximum distance between nodes.
      *
      * @return the range of this {@link Network}
@@ -77,9 +73,7 @@ public abstract class Network {
      * This method assigns the given {@link Location} a type of {@link NetworkComponent}
      * for classification.
      *
-     * @param l
-     *            The {@link Location} to classify
-     *
+     * @param l The {@link Location} to classify
      * @return The assigned type of {@link NetworkComponent} for this {@link Location}
      */
     @Nullable public abstract NetworkComponent classifyLocation(@Nonnull Location l);
@@ -88,12 +82,9 @@ public abstract class Network {
      * This method is called whenever a {@link Location} in this {@link Network} changes
      * its classification.
      *
-     * @param l
-     *            The {@link Location} that is changing its classification
-     * @param from
-     *            The {@link NetworkComponent} this {@link Location} was previously classified as
-     * @param to
-     *            The {@link NetworkComponent} this {@link Location} is changing to
+     * @param l    The {@link Location} that is changing its classification
+     * @param from The {@link NetworkComponent} this {@link Location} was previously classified as
+     * @param to   The {@link NetworkComponent} this {@link Location} is changing to
      */
     public abstract void onClassificationChange(Location l, NetworkComponent from, NetworkComponent to);
 
@@ -110,8 +101,7 @@ public abstract class Network {
     /**
      * This method adds the given {@link Location} to this {@link Network}.
      *
-     * @param l
-     *            The {@link Location} to add
+     * @param l The {@link Location} to add
      */
     protected void addLocationToNetwork(@Nonnull Location l) {
         if (connectedLocations.add(l.clone())) {
@@ -123,8 +113,7 @@ public abstract class Network {
      * This method marks the given {@link Location} as dirty and adds it to a {@link Queue}
      * to handle this update.
      *
-     * @param l
-     *            The {@link Location} to update
+     * @param l The {@link Location} to update
      */
     public void markDirty(@Nonnull Location l) {
         Debug.log(TestCase.ENERGYNET, "Mark location " + LocationUtils.locationToString(l) + " as dirty block");
@@ -139,9 +128,7 @@ public abstract class Network {
     /**
      * This method checks whether the given {@link Location} is part of this {@link Network}.
      *
-     * @param l
-     *            The {@link Location} to check for
-     *
+     * @param l The {@link Location} to check for
      * @return Whether the given {@link Location} is part of this {@link Network}
      */
     public boolean connectsTo(@Nonnull Location l) {

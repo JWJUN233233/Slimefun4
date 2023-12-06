@@ -34,7 +34,6 @@ import org.bukkit.inventory.ItemStack;
  * and crush some other {@link Material Materials} into various resources.
  *
  * @author TheBusyBiscuit
- *
  */
 public class OreCrusher extends MultiBlockMachine {
 

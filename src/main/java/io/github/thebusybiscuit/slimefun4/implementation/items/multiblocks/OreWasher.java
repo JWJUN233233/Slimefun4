@@ -31,7 +31,6 @@ import org.bukkit.inventory.ItemStack;
  *
  * @author TheBusyBiscuit
  * @author Sfiguz7
- *
  */
 public class OreWasher extends MultiBlockMachine {
 

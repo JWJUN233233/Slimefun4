@@ -15,9 +15,7 @@ import org.bukkit.inventory.ItemStack;
  * There are two variants of interfaces, fuel and items.
  *
  * @author TheBusyBiscuit
- *
  * @see ProgrammableAndroid
- *
  */
 public class AndroidInterface extends SimpleSlimefunItem<BlockDispenseHandler> {
 

@@ -29,15 +29,13 @@ import org.bukkit.inventory.ItemStack;
 /**
  * The {@link TableSaw} is an implementation of a {@link MultiBlockMachine} that allows
  * you to turn Logs into Wooden Planks.
- *
+ * <p>
  * It also replaced the old "Saw Mill" from earlier versions.
  *
  * @author dniym
  * @author svr333
  * @author TheBusyBiscuit
- *
  * @see MultiBlockMachine
- *
  */
 public class TableSaw extends MultiBlockMachine {
 
@@ -88,9 +86,7 @@ public class TableSaw extends MultiBlockMachine {
      * <p>
      * {@literal Material.OAK_LOG} for example will return {@literal Material.OAK_PLANKS}.
      *
-     * @param log
-     *            The log type.
-     *
+     * @param log The log type.
      * @return An {@link Optional} containing the corresponding plank type (or an empty {@link Optional})
      */
     private @Nonnull Optional<Material> getPlanks(@Nonnull Material log) {

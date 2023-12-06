@@ -12,9 +12,7 @@ import org.bukkit.inventory.ItemStack;
  * mining a {@link GEOResource}.
  *
  * @author TheBusyBiscuit
- *
  * @see GEOMiner
- *
  */
 public class MiningOperation implements MachineOperation {
 

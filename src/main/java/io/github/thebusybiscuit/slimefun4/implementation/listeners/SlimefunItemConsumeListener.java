@@ -15,7 +15,6 @@ import org.bukkit.inventory.ItemStack;
  * for any {@link SlimefunItem}.
  *
  * @author TheBusyBiscuit
- *
  */
 public class SlimefunItemConsumeListener implements Listener {
 

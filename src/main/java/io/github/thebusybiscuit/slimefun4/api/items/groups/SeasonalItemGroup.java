@@ -15,7 +15,6 @@ import org.bukkit.inventory.ItemStack;
  * a specified {@link Month}.
  *
  * @author TheBusyBiscuit
- *
  * @see ItemGroup
  * @see LockedItemGroup
  */
@@ -26,14 +25,10 @@ public class SeasonalItemGroup extends ItemGroup {
     /**
      * The constructor for a {@link SeasonalItemGroup}.
      *
-     * @param key
-     *            The {@link NamespacedKey} that is used to identify this {@link ItemGroup}
-     * @param month
-     *            The month when the {@link ItemGroup} should be displayed (from 1 = January ; to 12 = December)
-     * @param tier
-     *            The tier of this {@link ItemGroup}
-     * @param item
-     *            The display item for this {@link ItemGroup}
+     * @param key   The {@link NamespacedKey} that is used to identify this {@link ItemGroup}
+     * @param month The month when the {@link ItemGroup} should be displayed (from 1 = January ; to 12 = December)
+     * @param tier  The tier of this {@link ItemGroup}
+     * @param item  The display item for this {@link ItemGroup}
      */
     @ParametersAreNonnullByDefault
     public SeasonalItemGroup(NamespacedKey key, Month month, int tier, ItemStack item) {

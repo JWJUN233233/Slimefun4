@@ -22,9 +22,7 @@ import org.bukkit.inventory.ItemStack;
  * they will be handled via {@link RecipeType}.
  *
  * @author TheBusyBiscuit
- *
  * @see RandomMobDrop
- *
  */
 public class MobDropListener implements Listener {
 

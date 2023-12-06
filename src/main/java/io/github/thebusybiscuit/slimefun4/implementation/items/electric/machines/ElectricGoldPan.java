@@ -25,7 +25,6 @@ import org.bukkit.inventory.ItemStack;
  * @author TheBusyBiscuit
  * @author svr333
  * @author JustAHuman
- *
  * @see GoldPan
  * @see NetherGoldPan
  */

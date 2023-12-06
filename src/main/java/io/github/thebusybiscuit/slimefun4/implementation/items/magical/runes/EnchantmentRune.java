@@ -33,9 +33,7 @@ import org.bukkit.inventory.ItemStack;
  * {@link Enchantment}. It is also one of the very few utilisations of {@link ItemDropHandler}.
  *
  * @author Linox
- *
  * @see ItemDropHandler
- *
  */
 public class EnchantmentRune extends SimpleSlimefunItem<ItemDropHandler> {
 

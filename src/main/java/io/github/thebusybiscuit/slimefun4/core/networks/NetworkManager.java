@@ -29,10 +29,8 @@ import org.bukkit.Server;
  *
  * @author TheBusyBiscuit
  * @author meiamsome
- *
  * @see Network
  * @see NetworkListener
- *
  */
 public class NetworkManager {
 
@@ -42,7 +40,7 @@ public class NetworkManager {
 
     /**
      * Fixes #3041
-     *
+     * <p>
      * We use a {@link CopyOnWriteArrayList} here to ensure thread-safety.
      * This {@link List} is also much more frequently read than being written to.
      * Therefore a {@link CopyOnWriteArrayList} should be perfect for this, even
@@ -53,12 +51,9 @@ public class NetworkManager {
     /**
      * This creates a new {@link NetworkManager} with the given capacity.
      *
-     * @param maxStepSize
-     *            The maximum amount of nodes a {@link Network} can have
-     * @param enableVisualizer
-     *            Whether the {@link Network} visualizer is enabled
-     * @param deleteExcessItems
-     *            Whether excess items from a {@link CargoNet} should be voided
+     * @param maxStepSize       The maximum amount of nodes a {@link Network} can have
+     * @param enableVisualizer  Whether the {@link Network} visualizer is enabled
+     * @param deleteExcessItems Whether excess items from a {@link CargoNet} should be voided
      */
     public NetworkManager(int maxStepSize, boolean enableVisualizer, boolean deleteExcessItems) {
         Validate.isTrue(maxStepSize > 0, "The maximal Network size must be above zero!");
@@ -71,8 +66,7 @@ public class NetworkManager {
     /**
      * This creates a new {@link NetworkManager} with the given capacity.
      *
-     * @param maxStepSize
-     *            The maximum amount of nodes a {@link Network} can have
+     * @param maxStepSize The maximum amount of nodes a {@link Network} can have
      */
     public NetworkManager(int maxStepSize) {
         this(maxStepSize, true, false);
@@ -157,8 +151,7 @@ public class NetworkManager {
     /**
      * This registers a given {@link Network}.
      *
-     * @param network
-     *            The {@link Network} to register
+     * @param network The {@link Network} to register
      */
     public void registerNetwork(@Nonnull Network network) {
         Validate.notNull(network, "Cannot register a null Network");
@@ -172,8 +165,7 @@ public class NetworkManager {
     /**
      * This removes a {@link Network} from the network system.
      *
-     * @param network
-     *            The {@link Network} to remove
+     * @param network The {@link Network} to remove
      */
     public void unregisterNetwork(@Nonnull Network network) {
         Validate.notNull(network, "Cannot unregister a null Network");
@@ -189,8 +181,7 @@ public class NetworkManager {
      * This method updates every {@link Network} found at the given {@link Location}.
      * More precisely, {@link Network#markDirty(Location)} will be called.
      *
-     * @param l
-     *            The {@link Location} to update
+     * @param l The {@link Location} to update
      */
     public void updateAllNetworks(@Nonnull Location l) {
         Validate.notNull(l, "The Location cannot be null");

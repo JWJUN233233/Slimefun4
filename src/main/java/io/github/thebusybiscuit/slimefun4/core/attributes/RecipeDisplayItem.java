@@ -16,15 +16,13 @@ import org.bukkit.inventory.ItemStack;
  * appear in the {@link SlimefunGuide}.
  * These additional items can be used represent recipes or resources that are associated
  * with this {@link SlimefunItem}.
- *
+ * <p>
  * You can find a few examples below.
  *
  * @author TheBusyBiscuit
- *
  * @see GoldPan
  * @see GEOMiner
  * @see AGenerator
- *
  */
 public interface RecipeDisplayItem extends ItemAttribute {
 

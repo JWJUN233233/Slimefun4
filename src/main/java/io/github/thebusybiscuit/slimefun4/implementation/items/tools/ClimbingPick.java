@@ -45,7 +45,6 @@ import org.bukkit.util.Vector;
  *
  * @author Linox
  * @author TheBusyBiscuit
- *
  */
 public class ClimbingPick extends SimpleSlimefunItem<ItemUseHandler> implements DamageableItem, RecipeDisplayItem {
 
@@ -114,9 +113,7 @@ public class ClimbingPick extends SimpleSlimefunItem<ItemUseHandler> implements 
     /**
      * This returns the climbing speed for a given {@link Material}.
      *
-     * @param type
-     *            The {@link Material}
-     *
+     * @param type The {@link Material}
      * @return The climbing speed for this {@link Material} or 0.
      */
     public double getClimbingSpeed(@Nonnull Material type) {
@@ -133,11 +130,8 @@ public class ClimbingPick extends SimpleSlimefunItem<ItemUseHandler> implements 
     /**
      * This returns the climbing speed for a given {@link Material} and the used {@link ItemStack}.
      *
-     * @param item
-     *            the {@link ClimbingPick}'s {@link ItemStack}
-     * @param type
-     *            The {@link Material}
-     *
+     * @param item the {@link ClimbingPick}'s {@link ItemStack}
+     * @param type The {@link Material}
      * @return The climbing speed or 0.
      */
     public double getClimbingSpeed(@Nonnull ItemStack item, @Nonnull Material type) {

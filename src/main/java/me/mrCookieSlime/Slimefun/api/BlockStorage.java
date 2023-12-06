@@ -46,9 +46,7 @@ public class BlockStorage {
      * If the specified Block is registered in BlockStorage,
      * its data will be erased from it, regardless of the returned value.
      *
-     * @param block
-     *            the block to retrieve the ItemStack from
-     *
+     * @param block the block to retrieve the ItemStack from
      * @return the SlimefunItem's ItemStack corresponding to the block if it has one, otherwise null
      */
     @Nullable public static ItemStack retrieve(@Nonnull Block block) {

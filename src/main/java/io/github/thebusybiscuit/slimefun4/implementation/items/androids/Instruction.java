@@ -24,7 +24,6 @@ import org.bukkit.inventory.ItemStack;
  * added by Slimefun itself.
  *
  * @author TheBusyBiscuit
- *
  */
 public enum Instruction {
 
@@ -288,9 +287,7 @@ public enum Instruction {
      * your Java version. It also means that you can avoid an IllegalArgumentException which let's
      * face it is always good.
      *
-     * @param value
-     *            The value which you would like to look up.
-     *
+     * @param value The value which you would like to look up.
      * @return The {@link Instruction} or null if it does not exist.
      */
     @Nullable public static Instruction getInstruction(@Nonnull String value) {

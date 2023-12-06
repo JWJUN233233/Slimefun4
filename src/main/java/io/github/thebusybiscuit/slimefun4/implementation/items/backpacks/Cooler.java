@@ -16,10 +16,8 @@ import org.bukkit.inventory.ItemStack;
  * loses hunger while carrying a {@link Cooler} filled with {@link Juice}.
  *
  * @author TheBusyBiscuit
- *
  * @see Juice
  * @see CoolerListener
- *
  */
 public class Cooler extends SlimefunBackpack {
 

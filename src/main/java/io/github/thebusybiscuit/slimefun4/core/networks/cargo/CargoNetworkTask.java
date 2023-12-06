@@ -30,7 +30,7 @@ import org.bukkit.inventory.ItemStack;
 /**
  * The {@link CargoNetworkTask} is the actual {@link Runnable} responsible for moving {@link ItemStack ItemStacks}
  * around the {@link CargoNet}.
- *
+ * <p>
  * Inbefore this was just a method in the {@link CargoNet} class.
  * However for aesthetic reasons but mainly to prevent the Cargo Task from showing up as
  * "lambda:xyz-123" in timing reports... this was moved.
@@ -38,7 +38,6 @@ import org.bukkit.inventory.ItemStack;
  * @see CargoNet
  * @see CargoUtils
  * @see AbstractItemNetwork
- *
  */
 class CargoNetworkTask implements Runnable {
 
@@ -199,10 +198,8 @@ class CargoNetworkTask implements Runnable {
      * This method sorts a given {@link Deque} of output node locations using a semi-accurate
      * round-robin method.
      *
-     * @param index
-     *            The round-robin index of the input node
-     * @param outputNodes
-     *            A {@link Deque} of {@link Location Locations} of the output nodes
+     * @param index       The round-robin index of the input node
+     * @param outputNodes A {@link Deque} of {@link Location Locations} of the output nodes
      */
     private void roundRobinSort(int index, Deque<Location> outputNodes) {
         if (index < outputNodes.size()) {

@@ -25,7 +25,6 @@ import org.bukkit.World;
  * This Service is responsible for disabling a {@link SlimefunItem} in a certain {@link World}.
  *
  * @author TheBusyBiscuit
- *
  */
 public class PerWorldSettingsService {
 
@@ -42,8 +41,7 @@ public class PerWorldSettingsService {
     /**
      * This method will forcefully load all currently active Worlds to load up their settings.
      *
-     * @param worlds
-     *            An {@link Iterable} of {@link World Worlds} to load
+     * @param worlds An {@link Iterable} of {@link World Worlds} to load
      */
     public void load(@Nonnull Iterable<World> worlds) {
         for (World world : worlds) {
@@ -54,8 +52,7 @@ public class PerWorldSettingsService {
     /**
      * This method loads the given {@link World} if it was not loaded before.
      *
-     * @param world
-     *            The {@link World} to load
+     * @param world The {@link World} to load
      */
     public void load(@Nonnull World world) {
         Validate.notNull(world, "Cannot load a world that is null");
@@ -65,11 +62,8 @@ public class PerWorldSettingsService {
     /**
      * This method checks whether the given {@link SlimefunItem} is enabled in the given {@link World}.
      *
-     * @param world
-     *            The {@link World} to check
-     * @param item
-     *            The {@link SlimefunItem} that should be checked
-     *
+     * @param world The {@link World} to check
+     * @param item  The {@link SlimefunItem} that should be checked
      * @return Whether the given {@link SlimefunItem} is enabled in that {@link World}
      */
     public boolean isEnabled(@Nonnull World world, @Nonnull SlimefunItem item) {
@@ -88,12 +82,9 @@ public class PerWorldSettingsService {
     /**
      * This method enables or disables the given {@link SlimefunItem} in the specified {@link World}.
      *
-     * @param world
-     *            The {@link World} in which to disable or enable the given {@link SlimefunItem}
-     * @param item
-     *            The {@link SlimefunItem} to enable or disable
-     * @param enabled
-     *            Whether the given {@link SlimefunItem} should be enabled in that world
+     * @param world   The {@link World} in which to disable or enable the given {@link SlimefunItem}
+     * @param item    The {@link SlimefunItem} to enable or disable
+     * @param enabled Whether the given {@link SlimefunItem} should be enabled in that world
      */
     public void setEnabled(@Nonnull World world, @Nonnull SlimefunItem item, boolean enabled) {
         Validate.notNull(world, "The world cannot be null");
@@ -111,10 +102,8 @@ public class PerWorldSettingsService {
     /**
      * This method enables or disables the given {@link World}.
      *
-     * @param world
-     *            The {@link World} to enable or disable
-     * @param enabled
-     *            Whether this {@link World} should be enabled or not
+     * @param world   The {@link World} to enable or disable
+     * @param enabled Whether this {@link World} should be enabled or not
      */
     public void setEnabled(@Nonnull World world, boolean enabled) {
         Validate.notNull(world, "null is not a valid World");
@@ -130,9 +119,7 @@ public class PerWorldSettingsService {
     /**
      * This checks whether the given {@link World} is enabled or not.
      *
-     * @param world
-     *            The {@link World} to check
-     *
+     * @param world The {@link World} to check
      * @return Whether this {@link World} is enabled
      */
     public boolean isWorldEnabled(@Nonnull World world) {
@@ -145,11 +132,8 @@ public class PerWorldSettingsService {
     /**
      * This method checks whether the given {@link SlimefunAddon} is enabled in that {@link World}.
      *
-     * @param world
-     *            The {@link World} to check
-     * @param addon
-     *            The {@link SlimefunAddon} to check
-     *
+     * @param world The {@link World} to check
+     * @param addon The {@link SlimefunAddon} to check
      * @return Whether this addon is enabled in that {@link World}
      */
     public boolean isAddonEnabled(@Nonnull World world, @Nonnull SlimefunAddon addon) {
@@ -164,8 +148,7 @@ public class PerWorldSettingsService {
      * This should only be called if you altered the settings while the {@link Server} was still running.
      * This writes to a {@link File} so it can be a heavy operation.
      *
-     * @param world
-     *            The {@link World} to save
+     * @param world The {@link World} to save
      */
     public void save(@Nonnull World world) {
         Validate.notNull(world, "Cannot save a World that does not exist");
@@ -252,9 +235,7 @@ public class PerWorldSettingsService {
     /**
      * This method returns the relevant {@link Config} for the given {@link World}
      *
-     * @param world
-     *            Our {@link World}
-     *
+     * @param world Our {@link World}
      * @return The corresponding {@link Config}
      */
     @Nonnull

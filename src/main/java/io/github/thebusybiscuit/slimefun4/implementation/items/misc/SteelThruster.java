@@ -18,7 +18,6 @@ import org.bukkit.inventory.ItemStack;
  * Cows cannot be milked using it.
  *
  * @author TheBusyBiscuit
- *
  */
 public class SteelThruster extends SlimefunItem {
 

@@ -27,14 +27,10 @@ public class SlimefunBlockBreakEvent extends Event implements Cancellable {
     private boolean cancelled = false;
 
     /**
-     * @param player
-     *        The {@link Player} who broke this {@link SlimefunItem}
-     * @param heldItem
-     *        The {@link ItemStack} held by the {@link Player}
-     * @param blockBroken
-     *        The {@link Block} broken by the {@link Player}
-     * @param slimefunItem
-     *        The {@link SlimefunItem} within the {@link ItemStack}
+     * @param player       The {@link Player} who broke this {@link SlimefunItem}
+     * @param heldItem     The {@link ItemStack} held by the {@link Player}
+     * @param blockBroken  The {@link Block} broken by the {@link Player}
+     * @param slimefunItem The {@link SlimefunItem} within the {@link ItemStack}
      */
     @ParametersAreNonnullByDefault
     public SlimefunBlockBreakEvent(Player player, ItemStack heldItem, Block blockBroken, SlimefunItem slimefunItem) {

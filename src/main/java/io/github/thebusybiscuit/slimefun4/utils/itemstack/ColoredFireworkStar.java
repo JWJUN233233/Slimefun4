@@ -18,7 +18,6 @@ import org.bukkit.inventory.meta.FireworkEffectMeta;
  * a colored {@code Material.FIREWORK_STAR} {@link ItemStack} quickly.
  *
  * @author TheBusyBiscuit
- *
  */
 public class ColoredFireworkStar extends CustomItemStack {
 

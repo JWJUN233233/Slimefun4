@@ -13,7 +13,6 @@ import org.bukkit.entity.Player;
  * status effect.
  *
  * @author Semisol
- *
  * @see RadiationSymptom
  */
 public final class RadiationUtils {

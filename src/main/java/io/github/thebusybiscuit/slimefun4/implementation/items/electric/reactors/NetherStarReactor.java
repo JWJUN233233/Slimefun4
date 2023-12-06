@@ -21,9 +21,7 @@ import org.bukkit.potion.PotionEffectType;
  * Nether Stars and adds Withering to any nearby {@link LivingEntity}
  *
  * @author John000708
- *
  * @see NuclearReactor
- *
  */
 public abstract class NetherStarReactor extends Reactor {
 

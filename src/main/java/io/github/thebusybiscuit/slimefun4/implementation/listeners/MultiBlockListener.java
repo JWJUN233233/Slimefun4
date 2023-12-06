@@ -25,11 +25,9 @@ import org.bukkit.inventory.EquipmentSlot;
  * triggering any {@link MultiBlockInteractionHandler}.
  *
  * @author TheBusyBiscuit
- *
  * @see MultiBlock
  * @see MultiBlockInteractionHandler
  * @see MultiBlockInteractEvent
- *
  */
 public class MultiBlockListener implements Listener {
 

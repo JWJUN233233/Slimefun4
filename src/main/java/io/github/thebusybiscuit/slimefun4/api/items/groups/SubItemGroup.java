@@ -15,9 +15,7 @@ import org.bukkit.inventory.ItemStack;
  * {@link NestedItemGroup}.
  *
  * @author TheBusyBiscuit
- *
  * @see NestedItemGroup
- *
  */
 public class SubItemGroup extends ItemGroup {
 
@@ -64,9 +62,7 @@ public class SubItemGroup extends ItemGroup {
      * is disabled. If an {@link ItemGroup} is not accessible by the {@link Player},
      * see {@link #isAccessible(Player)}, this method will also return false.
      *
-     * @param p
-     *            The {@link Player} to check for
-     *
+     * @param p The {@link Player} to check for
      * @return Whether this {@link SubItemGroup} is visible to the given {@link Player}
      * in the {@link NestedItemGroup}
      */

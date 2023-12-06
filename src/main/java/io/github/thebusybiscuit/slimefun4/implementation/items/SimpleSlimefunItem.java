@@ -14,18 +14,15 @@ import org.bukkit.inventory.ItemStack;
 /**
  * This is basically a quickstart class for your very first {@link SlimefunItem}.
  * This class easily allows you to add one {@link ItemHandler} to your {@link SlimefunItem}.
- *
+ * <p>
  * You could use an {@link ItemUseHandler} for example to give your {@link SlimefunItem}
  * very basic right-click functionalities.
  *
+ * @param <T> The Type of {@link ItemHandler} to add to this {@link SlimefunItem}
  * @author TheBusyBiscuit
- *
  * @see ItemHandler
  * @see ItemUseHandler
  * @see SlimefunItem
- *
- * @param <T>
- *            The Type of {@link ItemHandler} to add to this {@link SlimefunItem}
  */
 public abstract class SimpleSlimefunItem<T extends ItemHandler> extends SlimefunItem {
 

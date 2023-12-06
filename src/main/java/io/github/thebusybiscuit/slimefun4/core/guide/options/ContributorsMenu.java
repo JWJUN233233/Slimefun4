@@ -23,7 +23,6 @@ import org.bukkit.inventory.meta.SkullMeta;
  * This menu shows a list of every {@link Contributor} to this project.
  *
  * @author TheBusyBiscuit
- *
  */
 final class ContributorsMenu {
 

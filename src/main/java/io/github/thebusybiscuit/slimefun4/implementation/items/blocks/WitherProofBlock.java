@@ -16,9 +16,7 @@ import org.bukkit.inventory.ItemStack;
  * Items created with this class cannot be destroyed by a {@link Wither}.
  *
  * @author TheBusyBiscuit
- *
  * @see WitherProof
- *
  */
 public class WitherProofBlock extends SlimefunItem implements WitherProof {
 

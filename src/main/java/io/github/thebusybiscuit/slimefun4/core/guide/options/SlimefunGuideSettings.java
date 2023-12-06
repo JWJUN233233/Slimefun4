@@ -28,13 +28,11 @@ import org.bukkit.inventory.ItemStack;
 /**
  * This static utility class offers various methods that provide access to the
  * Settings menu of our {@link SlimefunGuide}.
- *
+ * <p>
  * This menu is used to allow a {@link Player} to change things such as the {@link Language}.
  *
  * @author TheBusyBiscuit
- *
  * @see SlimefunGuide
- *
  */
 public final class SlimefunGuideSettings {
 
@@ -264,9 +262,7 @@ public final class SlimefunGuideSettings {
      * in their {@link SlimefunGuide}.
      * If they enabled this setting, they will see fireworks when they unlock a {@link Research}.
      *
-     * @param p
-     *            The {@link Player}
-     *
+     * @param p The {@link Player}
      * @return Whether this {@link Player} wants to see fireworks when unlocking a {@link Research}
      */
     public static boolean hasFireworksEnabled(@Nonnull Player p) {
@@ -278,9 +274,7 @@ public final class SlimefunGuideSettings {
      * in their {@link SlimefunGuide}.
      * If they enabled this setting, they will see messages in chat about the progress of their {@link Research}.
      *
-     * @param p
-     *            The {@link Player}
-     *
+     * @param p The {@link Player}
      * @return Whether this {@link Player} wants to info messages in chat when unlocking a {@link Research}
      */
     public static boolean hasLearningAnimationEnabled(@Nonnull Player p) {
@@ -291,17 +285,11 @@ public final class SlimefunGuideSettings {
      * Helper method to get the value of a {@link SlimefunGuideOption} that the {@link Player}
      * has set in their {@link SlimefunGuide}
      *
-     * @param p
-     *            The {@link Player}
-     * @param optionsClass
-     *            Class of the {@link SlimefunGuideOption} to get the value of
-     * @param defaultValue
-     *            Default value to return in case the option is not found at all or has no value set
-     * @param <T>
-     *            Type of the {@link SlimefunGuideOption}
-     * @param <V>
-     *            Type of the {@link SlimefunGuideOption} value
-     *
+     * @param p            The {@link Player}
+     * @param optionsClass Class of the {@link SlimefunGuideOption} to get the value of
+     * @param defaultValue Default value to return in case the option is not found at all or has no value set
+     * @param <T>          Type of the {@link SlimefunGuideOption}
+     * @param <V>          Type of the {@link SlimefunGuideOption} value
      * @return The value of given {@link SlimefunGuideOption}
      */
     @Nonnull

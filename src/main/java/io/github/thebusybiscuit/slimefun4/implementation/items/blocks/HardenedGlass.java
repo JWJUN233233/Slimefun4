@@ -15,9 +15,7 @@ import org.bukkit.inventory.ItemStack;
  * a {@link WitherSkull}. However the {@link Wither} is still able to destroy it directly.
  *
  * @author TheBusyBiscuit
- *
  * @see WitherProofBlock
- *
  */
 public class HardenedGlass extends WitherProofBlock {
 

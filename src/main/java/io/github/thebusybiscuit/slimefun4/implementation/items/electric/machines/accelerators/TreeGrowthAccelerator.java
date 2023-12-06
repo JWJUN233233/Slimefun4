@@ -25,10 +25,8 @@ import org.bukkit.inventory.ItemStack;
  * the {@link CropGrowthAccelerator} but boosts the growth of nearby trees.
  *
  * @author TheBusyBiscuit
- *
  * @see CropGrowthAccelerator
  * @see AnimalGrowthAccelerator
- *
  */
 public class TreeGrowthAccelerator extends AbstractGrowthAccelerator {
 

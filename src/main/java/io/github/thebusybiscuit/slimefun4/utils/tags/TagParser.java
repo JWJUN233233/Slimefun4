@@ -33,9 +33,7 @@ import org.bukkit.Tag;
  * The {@link TagParser} is responsible for parsing a JSON input into a {@link SlimefunTag}.
  *
  * @author TheBusyBiscuit
- *
  * @see SlimefunTag
- *
  */
 public class TagParser implements Keyed {
 
@@ -48,8 +46,7 @@ public class TagParser implements Keyed {
     /**
      * This constructs a new {@link TagParser}.
      *
-     * @param key
-     *            The {@link NamespacedKey} of the resulting {@link SlimefunTag}
+     * @param key The {@link NamespacedKey} of the resulting {@link SlimefunTag}
      */
     public TagParser(@Nonnull NamespacedKey key) {
         this.key = key;
@@ -58,8 +55,7 @@ public class TagParser implements Keyed {
     /**
      * This constructs a new {@link TagParser} for the given {@link SlimefunTag}
      *
-     * @param tag
-     *            The {@link SlimefunTag} to parse inputs for
+     * @param tag The {@link SlimefunTag} to parse inputs for
      */
     TagParser(@Nonnull SlimefunTag tag) {
         this(tag.getKey());
@@ -81,14 +77,10 @@ public class TagParser implements Keyed {
      * This will parse the given JSON {@link String} and run the provided callback with {@link Set Sets} of
      * matched {@link Material Materials} and {@link Tag Tags}.
      *
-     * @param json
-     *            The JSON {@link String} to parse
-     * @param callback
-     *            A callback to run after successfully parsing the input
-     *
-     * @throws TagMisconfigurationException
-     *             This is thrown whenever the given input is malformed or no adequate
-     *             {@link Material} or {@link Tag} could be found
+     * @param json     The JSON {@link String} to parse
+     * @param callback A callback to run after successfully parsing the input
+     * @throws TagMisconfigurationException This is thrown whenever the given input is malformed or no adequate
+     *                                      {@link Material} or {@link Tag} could be found
      */
     public void parse(@Nonnull String json, @Nonnull BiConsumer<Set<Material>, Set<Tag<Material>>> callback)
             throws TagMisconfigurationException {
@@ -117,10 +109,7 @@ public class TagParser implements Keyed {
                     } else {
                         throw new TagMisconfigurationException(
                                 key,
-                                "Unexpected value format: "
-                                        + element.getClass().getSimpleName()
-                                        + " - "
-                                        + element.toString());
+                                "Unexpected value format: " + element.getClass().getSimpleName() + " - " + element);
                     }
                 }
 

@@ -13,7 +13,6 @@ import org.bukkit.inventory.ItemStack;
  * Credit for most of these goes to our main head designer "AquaLazuryt".
  *
  * @author TheBusyBiscuit
- *
  */
 public enum HeadTexture {
     PORTABLE_CRAFTER("72ec4a4bd8a58f8361f8a0303e2199d33d624ea5f92f7cb3414fee95e2d861"),

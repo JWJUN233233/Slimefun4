@@ -14,11 +14,9 @@ import org.bukkit.event.entity.EntityDeathEvent;
  * and used in conjunction with the {@link RecipeType#MOB_DROP}.
  *
  * @author dNiym
- *
  * @see BasicCircuitBoard
  * @see MobDropListener
  * @see PiglinBarterDrop
- *
  */
 public interface RandomMobDrop extends ItemAttribute {
 

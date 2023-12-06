@@ -293,8 +293,7 @@ public class Talisman extends SlimefunItem {
      * Dependent on the selected config setting, the message will be sent via the actionbar
      * or in the chat window.
      *
-     * @param p
-     *            The {@link Player} who shall receive the message
+     * @param p The {@link Player} who shall receive the message
      */
     public void sendMessage(@Nonnull Player p) {
         Validate.notNull(p, "The Player must not be null.");

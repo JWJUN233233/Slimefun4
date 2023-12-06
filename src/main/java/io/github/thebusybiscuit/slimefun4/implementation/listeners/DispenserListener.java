@@ -22,9 +22,7 @@ import org.bukkit.event.block.BlockDispenseEvent;
  *
  * @author TheBusyBiscuit
  * @author MisterErwin
- *
  * @see BlockDispenseHandler
- *
  */
 public class DispenserListener implements Listener {
 

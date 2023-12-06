@@ -15,9 +15,7 @@ import org.bukkit.potion.PotionEffectType;
  * {@link MonsterJerky} is basically just Rotten Flesh but without the Hunger Effect.
  *
  * @author TheBusyBiscuit
- *
  * @see MeatJerky
- *
  */
 public class MonsterJerky extends SimpleSlimefunItem<ItemConsumptionHandler> {
 

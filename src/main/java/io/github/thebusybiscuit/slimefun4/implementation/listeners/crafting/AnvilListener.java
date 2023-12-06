@@ -16,7 +16,6 @@ import org.bukkit.inventory.ItemStack;
  * anvil.
  *
  * @author TheBusyBiscuit
- *
  */
 public class AnvilListener implements SlimefunCraftingListener {
 

@@ -30,9 +30,7 @@ import org.bukkit.inventory.ItemStack;
  * their {@link Villager} variant. It is also one of the very few utilisations of {@link EntityInteractHandler}.
  *
  * @author Linox
- *
  * @see EntityInteractHandler
- *
  */
 public class MagicalZombiePills extends SimpleSlimefunItem<EntityInteractHandler> implements NotPlaceable {
 

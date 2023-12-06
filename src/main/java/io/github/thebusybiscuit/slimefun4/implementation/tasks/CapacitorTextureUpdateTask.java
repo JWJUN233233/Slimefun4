@@ -17,7 +17,6 @@ import org.bukkit.block.Block;
  * <strong>This must be executed on the main {@link Server} {@link Thread}!</strong>
  *
  * @author TheBusyBiscuit
- *
  */
 public class CapacitorTextureUpdateTask implements Runnable {
 
@@ -35,12 +34,9 @@ public class CapacitorTextureUpdateTask implements Runnable {
     /**
      * This creates a new {@link CapacitorTextureUpdateTask} with the given parameters.
      *
-     * @param l
-     *            The {@link Location} of the {@link Capacitor}
-     * @param charge
-     *            The amount of charge in this {@link Capacitor}
-     * @param capacity
-     *            The capacity of this {@link Capacitor}
+     * @param l        The {@link Location} of the {@link Capacitor}
+     * @param charge   The amount of charge in this {@link Capacitor}
+     * @param capacity The capacity of this {@link Capacitor}
      */
     public CapacitorTextureUpdateTask(@Nonnull Location l, double charge, double capacity) {
         Validate.notNull(l, "The Location cannot be null");

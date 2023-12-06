@@ -34,11 +34,9 @@ import org.bukkit.inventory.ItemStack;
  *
  * @author TheBusyBiscuit
  * @author Liruxo
- *
  * @see PlayerRightClickEvent
  * @see ItemUseHandler
  * @see BlockUseHandler
- *
  */
 public class SlimefunItemInteractListener implements Listener {
 

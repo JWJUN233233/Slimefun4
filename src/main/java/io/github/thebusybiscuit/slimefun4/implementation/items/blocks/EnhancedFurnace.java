@@ -23,11 +23,10 @@ import org.bukkit.inventory.ItemStack;
  * The {@link EnhancedFurnace} is an upgraded version of a {@link Furnace}.
  * It has a custom speed, efficiency and also a level of fortune.
  * All of these values are tweaked for every instance of this class.
- *
+ * <p>
  * It uses a {@link BlockTicker} to manipulate the {@link Furnace} into working faster.
  *
  * @author TheBusyBiscuit
- *
  */
 public class EnhancedFurnace extends SimpleSlimefunItem<BlockTicker> {
 

@@ -20,7 +20,6 @@ import org.bukkit.inventory.ItemStack;
  * Instead the {@link ItemStack} is saved and given back to the {@link Player} when they respawn.
  *
  * @author TheBusyBiscuit
- *
  */
 public class SoulboundListener implements Listener {
 

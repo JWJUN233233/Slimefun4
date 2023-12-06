@@ -17,9 +17,7 @@ import org.bukkit.inventory.ItemStack;
  * This {@link Event} is called when an {@link ExplosiveTool} is used to break blocks.
  *
  * @author GallowsDove
- *
  * @see ExplosiveTool
- *
  */
 public class ExplosiveToolBreakBlocksEvent extends PlayerEvent implements Cancellable {
 

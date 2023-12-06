@@ -28,7 +28,6 @@ import org.bukkit.inventory.ItemStack;
  *
  * @author TheBusyBiscuit
  * @author Linox
- *
  */
 public class PickaxeOfVeinMining extends SimpleSlimefunItem<ToolUseHandler> {
 

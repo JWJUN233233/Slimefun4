@@ -24,9 +24,7 @@ import org.bukkit.inventory.ItemStack;
  * The {@link OutputChest} can be used to capture the output items from a {@link MultiBlockMachine}.
  *
  * @author TheBusyBiscuit
- *
  * @see MultiBlockMachine
- *
  */
 public class OutputChest extends SlimefunItem {
 

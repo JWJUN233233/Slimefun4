@@ -17,7 +17,6 @@ import org.bukkit.inventory.ItemStack;
  * Right-Clicking will open the {@link Inventory} of the restored Backpack.
  *
  * @author Sfiguz7
- *
  * @see SlimefunBackpack
  * @see PlayerBackpack
  */
@@ -26,8 +25,7 @@ public class RestoredBackpack extends SlimefunBackpack {
     /**
      * This will create a new {@link SlimefunBackpack} with the given arguments.
      *
-     * @param itemGroup
-     *            the {@link ItemGroup} to bind this {@link SlimefunBackpack} to
+     * @param itemGroup the {@link ItemGroup} to bind this {@link SlimefunBackpack} to
      */
     @ParametersAreNonnullByDefault
     public RestoredBackpack(@Nonnull ItemGroup itemGroup) {

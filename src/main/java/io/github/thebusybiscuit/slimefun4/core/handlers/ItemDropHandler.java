@@ -12,7 +12,6 @@ import org.bukkit.event.player.PlayerDropItemEvent;
  *
  * @author Linox
  * @author TheBusyBiscuit
- *
  */
 @FunctionalInterface
 public interface ItemDropHandler extends GlobalItemHandler {

@@ -12,7 +12,6 @@ import org.bukkit.enchantments.Enchantment;
  * a level. It is only used by the {@link TalismanListener} to handle the {@link MagicianTalisman}.
  *
  * @author TheBusyBiscuit
- *
  * @see MagicianTalisman
  */
 public class TalismanEnchantment extends ItemSetting<Boolean> {

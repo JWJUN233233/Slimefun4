@@ -16,11 +16,9 @@ import org.bukkit.event.player.PlayerEvent;
  * Either manually or through dying with an emergency transmitter.
  *
  * @author TheBusyBiscuit
- *
  * @see GPSNetwork
  * @see TeleportationManager
  * @see Waypoint
- *
  */
 public class WaypointCreateEvent extends PlayerEvent implements Cancellable {
 
@@ -77,8 +75,7 @@ public class WaypointCreateEvent extends PlayerEvent implements Cancellable {
     /**
      * This sets the name of the waypoint to the given argument.
      *
-     * @param name
-     *            The name for this waypoint
+     * @param name The name for this waypoint
      */
     public void setName(@Nonnull String name) {
         Validate.notEmpty(name, "The name of a waypoint must not be empty!");

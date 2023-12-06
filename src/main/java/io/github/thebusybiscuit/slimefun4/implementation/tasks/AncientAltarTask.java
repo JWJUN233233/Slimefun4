@@ -33,10 +33,8 @@ import org.bukkit.inventory.ItemStack;
  * @author dniym
  * @author meiamsome
  * @author TheBusyBiscuit
- *
  * @see AncientAltar
  * @see AncientAltarListener
- *
  */
 public class AncientAltarTask implements Runnable {
 

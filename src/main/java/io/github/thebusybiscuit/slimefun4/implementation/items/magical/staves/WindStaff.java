@@ -22,7 +22,6 @@ import org.bukkit.inventory.ItemStack;
  * The {@link WindStaff} is a powerful staff which launches the {@link Player} forward when right clicked.
  *
  * @author TheBusyBiscuit
- *
  */
 public class WindStaff extends SimpleSlimefunItem<ItemUseHandler> {
 

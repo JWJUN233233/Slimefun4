@@ -35,9 +35,7 @@ import org.bukkit.inventory.meta.Repairable;
  * @author mrcoffee1026
  * @author VoidAngel
  * @author StarWishSama
- *
  * @see AutoEnchanter
- *
  */
 public class AutoDisenchanter extends AbstractEnchantmentMachine {
 

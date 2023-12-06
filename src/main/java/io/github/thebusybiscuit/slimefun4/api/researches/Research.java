@@ -48,22 +48,16 @@ public class Research implements Keyed {
 
     /**
      * The constructor for a {@link Research}.
-     *
+     * <p>
      * Create a new research, then bind this research to the Slimefun items you want by calling
      * {@link #addItems(SlimefunItem...)}. Once you're finished, call {@link #register()}
      * to register it.
      *
-     * @param key
-     *            A unique identifier for this {@link Research}
-     * @param id
-     *            old way of identifying researches
-     * @param defaultName
-     *            The displayed name of this {@link Research}
-     * @param levelCost
-     *            The Cost in XP levels to unlock this {@link Research}
-     * @param currencyCost
-     *            The Cost in economy to unlock this {@link Research}
-     *
+     * @param key          A unique identifier for this {@link Research}
+     * @param id           old way of identifying researches
+     * @param defaultName  The displayed name of this {@link Research}
+     * @param levelCost    The Cost in XP levels to unlock this {@link Research}
+     * @param currencyCost The Cost in economy to unlock this {@link Research}
      */
     public Research(
             @Nonnull NamespacedKey key, int id, @Nonnull String defaultName, int levelCost, double currencyCost) {
@@ -79,20 +73,15 @@ public class Research implements Keyed {
 
     /**
      * The constructor for a {@link Research}.
-     *
+     * <p>
      * Create a new research, then bind this research to the Slimefun items you want by calling
      * {@link #addItems(SlimefunItem...)}. Once you're finished, call {@link #register()}
      * to register it.
      *
-     * @param key
-     *            A unique identifier for this {@link Research}
-     * @param id
-     *            old way of identifying researches
-     * @param defaultName
-     *            The displayed name of this {@link Research}
-     * @param defaultCost
-     *            The Cost in XP levels to unlock this {@link Research}
-     *
+     * @param key         A unique identifier for this {@link Research}
+     * @param id          old way of identifying researches
+     * @param defaultName The displayed name of this {@link Research}
+     * @param defaultCost The Cost in XP levels to unlock this {@link Research}
      */
     public Research(@Nonnull NamespacedKey key, int id, @Nonnull String defaultName, int defaultCost) {
         Validate.notNull(key, "A NamespacedKey must be provided");
@@ -126,9 +115,8 @@ public class Research implements Keyed {
      * Gets the ID of this {@link Research}.
      * This is the old way of identifying Researches, use a {@link NamespacedKey} in the future.
      *
-     * @deprecated Numeric Ids for Researches are deprecated, use {@link #getKey()} for identification instead.
-     *
      * @return The ID of this {@link Research}
+     * @deprecated Numeric Ids for Researches are deprecated, use {@link #getKey()} for identification instead.
      */
     @Deprecated
     public int getID() {
@@ -140,9 +128,7 @@ public class Research implements Keyed {
      * The name is automatically taken from the currently selected {@link Language} of
      * the specified {@link Player}.
      *
-     * @param p
-     *            The {@link Player} to translate this name for.
-     *
+     * @param p The {@link Player} to translate this name for.
      * @return The localized Name of this {@link Research}.
      */
     public @Nonnull String getName(@Nonnull Player p) {
@@ -210,8 +196,7 @@ public class Research implements Keyed {
     /**
      * Bind the specified {@link SlimefunItem SlimefunItems} to this {@link Research}.
      *
-     * @param items
-     *            Instances of {@link SlimefunItem} to bind to this {@link Research}
+     * @param items Instances of {@link SlimefunItem} to bind to this {@link Research}
      */
     public void addItems(SlimefunItem... items) {
         for (SlimefunItem item : items) {
@@ -224,9 +209,7 @@ public class Research implements Keyed {
     /**
      * Bind the specified ItemStacks to this {@link Research}.
      *
-     * @param items
-     *            Instances of {@link ItemStack} to bind to this {@link Research}
-     *
+     * @param items Instances of {@link ItemStack} to bind to this {@link Research}
      * @return The current instance of {@link Research}
      */
     @Nonnull
@@ -256,19 +239,12 @@ public class Research implements Keyed {
      * Handle what to do when a {@link Player} clicks on an un-researched item in
      * a {@link SlimefunGuideImplementation}.
      *
-     * @param guide
-     *            The {@link SlimefunGuideImplementation} used.
-     * @param player
-     *            The {@link Player} who clicked on the item.
-     * @param profile
-     *            The {@link PlayerProfile} of that {@link Player}.
-     * @param sfItem
-     *            The {@link SlimefunItem} on which the {@link Player} clicked.
-     * @param itemGroup
-     *            The {@link ItemGroup} where the {@link Player} was.
-     * @param page
-     *            The page number of where the {@link Player} was in the {@link ItemGroup};
-     *
+     * @param guide     The {@link SlimefunGuideImplementation} used.
+     * @param player    The {@link Player} who clicked on the item.
+     * @param profile   The {@link PlayerProfile} of that {@link Player}.
+     * @param sfItem    The {@link SlimefunItem} on which the {@link Player} clicked.
+     * @param itemGroup The {@link ItemGroup} where the {@link Player} was.
+     * @param page      The page number of where the {@link Player} was in the {@link ItemGroup};
      */
     @ParametersAreNonnullByDefault
     public void unlockFromGuide(
@@ -326,10 +302,8 @@ public class Research implements Keyed {
     /**
      * This unlocks this {@link Research} for the given {@link Player} without any form of callback.
      *
-     * @param p
-     *            The {@link Player} who should unlock this {@link Research}
-     * @param instant
-     *            Whether to unlock it instantly
+     * @param p       The {@link Player} who should unlock this {@link Research}
+     * @param instant Whether to unlock it instantly
      */
     public void unlock(@Nonnull Player p, boolean instant) {
         unlock(p, instant, null);
@@ -338,12 +312,9 @@ public class Research implements Keyed {
     /**
      * Unlocks this {@link Research} for the specified {@link Player}.
      *
-     * @param p
-     *            The {@link Player} for which to unlock this {@link Research}
-     * @param isInstant
-     *            Whether to unlock this {@link Research} instantly
-     * @param callback
-     *            A callback which will be run when the {@link Research} animation completed
+     * @param p         The {@link Player} for which to unlock this {@link Research}
+     * @param isInstant Whether to unlock this {@link Research} instantly
+     * @param callback  A callback which will be run when the {@link Research} animation completed
      */
     public void unlock(@Nonnull Player p, boolean isInstant, @Nullable Consumer<Player> callback) {
         PlayerProfile.get(p, new PlayerResearchTask(this, isInstant, callback));

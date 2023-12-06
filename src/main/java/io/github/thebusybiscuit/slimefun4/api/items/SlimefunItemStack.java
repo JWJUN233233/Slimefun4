@@ -36,11 +36,10 @@ import org.bukkit.potion.PotionEffectType;
  *
  * @author TheBusyBiscuit
  * @author Walshy
- *
  */
 public class SlimefunItemStack extends ItemStack {
 
-    private String id;
+    private final String id;
     private ItemMetaSnapshot itemMetaSnapshot;
 
     private boolean locked = false;
@@ -225,15 +224,12 @@ public class SlimefunItemStack extends ItemStack {
     /**
      * This method returns the associated {@link SlimefunItem} and casts it to the provided
      * {@link Class}.
-     *
+     * <p>
      * If no item was found or the found {@link SlimefunItem} is not of the requested type,
      * the method will return null.
      *
-     * @param <T>
-     *            The type of {@link SlimefunItem} to cast this to
-     * @param type
-     *            The {@link Class} of the target {@link SlimefunItem}
-     *
+     * @param <T>  The type of {@link SlimefunItem} to cast this to
+     * @param type The {@link Class} of the target {@link SlimefunItem}
      * @return The {@link SlimefunItem} this {@link SlimefunItem} represents, casted to the given type
      */
     public @Nullable <T extends SlimefunItem> T getItem(@Nonnull Class<T> type) {

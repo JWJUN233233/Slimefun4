@@ -16,7 +16,6 @@ import org.bukkit.inventory.ItemStack;
  * cartography table.
  *
  * @author NathanAdhitya
- *
  */
 public class GrindstoneListener implements SlimefunCraftingListener {
 

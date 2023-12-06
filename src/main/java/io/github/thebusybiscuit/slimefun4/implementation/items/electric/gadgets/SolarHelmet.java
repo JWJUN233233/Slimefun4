@@ -22,10 +22,8 @@ import org.bukkit.inventory.PlayerInventory;
  * or holding.
  *
  * @author TheBusyBiscuit
- *
  * @see SolarHelmetTask
  * @see Rechargeable
- *
  */
 public class SolarHelmet extends SlimefunItem {
 
@@ -52,8 +50,7 @@ public class SolarHelmet extends SlimefunItem {
      * This method recharges the equipment of the given {@link Player} by the configured
      * factor of this {@link SolarHelmet}.
      *
-     * @param p
-     *            The {@link Player} wearing this {@link SolarHelmet}
+     * @param p The {@link Player} wearing this {@link SolarHelmet}
      */
     public void rechargeItems(@Nonnull Player p) {
         PlayerInventory inv = p.getInventory();

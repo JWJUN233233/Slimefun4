@@ -14,10 +14,8 @@ import org.bukkit.inventory.ItemStack;
  * You can find the actual behaviour in the {@link JetBootsTask} class.
  *
  * @author TheBusyBiscuit
- *
  * @see Jetpack
  * @see JetBootsTask
- *
  */
 public class JetBoots extends SlimefunItem implements Rechargeable {
 

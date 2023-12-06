@@ -15,9 +15,7 @@ import org.bukkit.inventory.ItemStack;
  * {@link MeatJerky} is available for all meat variants.
  *
  * @author TheBusyBiscuit
- *
  * @see MonsterJerky
- *
  */
 public class MeatJerky extends SimpleSlimefunItem<ItemConsumptionHandler> {
 

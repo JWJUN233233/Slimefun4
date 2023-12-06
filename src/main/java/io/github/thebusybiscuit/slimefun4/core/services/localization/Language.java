@@ -20,9 +20,7 @@ import org.bukkit.inventory.ItemStack;
  * This Class represents a {@link Language} that Slimefun can recognize and use.
  *
  * @author TheBusyBiscuit
- *
  * @see LocalizationService
- *
  */
 public final class Language {
 

@@ -12,7 +12,6 @@ import org.bukkit.block.Biome;
  * A {@link GEOResource} which consists of Salt.
  *
  * @author TheBusyBiscuit
- *
  */
 class SaltResource extends AbstractResource {
 

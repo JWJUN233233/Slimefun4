@@ -11,9 +11,7 @@ import org.bukkit.entity.Player;
  * The higher the level the more severe the effect of radiation will be.
  *
  * @author TheBusyBiscuit
- *
  * @see Radioactive
- *
  */
 public enum Radioactivity {
 
@@ -77,7 +75,7 @@ public enum Radioactivity {
     /**
      * This method returns the level for the radiation effect to use in conjunction
      * with this level of {@link Radioactive}.
-     *
+     * <p>
      * It is basically the index of this enum constant.
      *
      * @return The level of radiation associated with this constant.

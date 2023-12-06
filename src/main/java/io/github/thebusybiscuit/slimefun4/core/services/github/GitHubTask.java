@@ -22,10 +22,8 @@ import org.bukkit.Bukkit;
  * It retrieves every {@link Contributor} of this project from GitHub.
  *
  * @author TheBusyBiscuit
- *
  * @see GitHubService
  * @see Contributor
- *
  */
 class GitHubTask implements Runnable {
 

@@ -18,7 +18,6 @@ import org.bukkit.event.entity.PlayerDeathEvent;
  * create a waypoint for a {@link Player} who carries an Emergency Transmitter.
  *
  * @author TheBusyBiscuit
- *
  */
 public class DeathpointListener implements Listener {
 

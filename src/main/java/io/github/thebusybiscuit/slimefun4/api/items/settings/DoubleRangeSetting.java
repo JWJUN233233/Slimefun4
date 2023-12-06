@@ -11,10 +11,8 @@ import org.apache.commons.lang.Validate;
  * and enforces this range using the {@link #validateInput(Double)} method.
  *
  * @author TheBusyBiscuit
- *
  * @see ItemSetting
  * @see IntRangeSetting
- *
  */
 public class DoubleRangeSetting extends ItemSetting<Double> {
 

@@ -16,10 +16,8 @@ import org.bukkit.potion.PotionEffectType;
  *
  * @author beSnow
  * @author TheBusyBiscuit
- *
  * @see BeeWings
  * @see BeeWingsListener
- *
  */
 public class BeeWingsTask extends AbstractPlayerTask {
 
@@ -69,11 +67,8 @@ public class BeeWingsTask extends AbstractPlayerTask {
     /**
      * Calculates the distance of the given {@link Block} from the ground.
      *
-     * @param b
-     *            The {@link Block} to calculate from.
-     * @param limit
-     *            The limit of {@link Block blocks} to check under the given {@link Block b}.
-     *
+     * @param b     The {@link Block} to calculate from.
+     * @param limit The limit of {@link Block blocks} to check under the given {@link Block b}.
      */
     private int getDistanceToGround(@Nonnull Block b, int limit) {
         for (int i = 1; i <= limit; i++) {

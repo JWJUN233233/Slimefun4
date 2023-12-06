@@ -18,7 +18,6 @@ import org.bukkit.inventory.ItemStack;
  * This handles all integrations with {@link mcMMO}.
  *
  * @author TheBusyBiscuit
- *
  */
 class McMMOIntegration implements Listener {
 
@@ -65,9 +64,7 @@ class McMMOIntegration implements Listener {
      * We basically don't want players to salvage any {@link SlimefunItem} unless
      * it is a {@link VanillaItem}.
      *
-     * @param item
-     *            The {@link ItemStack} to check
-     *
+     * @param item The {@link ItemStack} to check
      * @return Whether this item can be safely salvaged
      */
     private boolean isSalvageable(@Nonnull ItemStack item) {

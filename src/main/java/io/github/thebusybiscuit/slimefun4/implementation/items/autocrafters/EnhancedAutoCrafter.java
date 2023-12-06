@@ -13,12 +13,10 @@ import org.bukkit.inventory.ItemStack;
  * It can craft items that are crafted using the {@link EnhancedCraftingTable}.
  *
  * @author TheBusyBiscuit
- *
  * @see AbstractAutoCrafter
  * @see VanillaAutoCrafter
  * @see SlimefunItemRecipe
  * @see AutoCrafterListener
- *
  */
 public class EnhancedAutoCrafter extends SlimefunAutoCrafter {
 

@@ -9,7 +9,6 @@ import org.bukkit.Server;
  * results send to them as a {@link PerformanceSummary}.
  *
  * @author TheBusyBiscuit
- *
  */
 public interface PerformanceInspector {
 
@@ -24,8 +23,7 @@ public interface PerformanceInspector {
     /**
      * This will send a text message to the {@link PerformanceInspector}.
      *
-     * @param msg
-     *            The message to send
+     * @param msg The message to send
      */
     void sendMessage(@Nonnull String msg);
 

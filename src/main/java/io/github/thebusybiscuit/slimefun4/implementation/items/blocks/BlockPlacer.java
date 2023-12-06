@@ -43,9 +43,7 @@ import org.bukkit.inventory.meta.ItemMeta;
  * shooting them.
  *
  * @author TheBusyBiscuit
- *
  * @see BlockPlacerPlaceEvent
- *
  */
 public class BlockPlacer extends SlimefunItem {
 
@@ -118,11 +116,8 @@ public class BlockPlacer extends SlimefunItem {
      * This checks whether the {@link Player} who placed down this {@link BlockPlacer} has
      * building permissions at that {@link Location}.
      *
-     * @param dispenser
-     *            The {@link Dispenser} who represents our {@link BlockPlacer}
-     * @param target
-     *            The {@link Block} where it should be placed
-     *
+     * @param dispenser The {@link Dispenser} who represents our {@link BlockPlacer}
+     * @param target    The {@link Block} where it should be placed
      * @return Whether this action is permitted or not
      */
     @ParametersAreNonnullByDefault
@@ -146,9 +141,7 @@ public class BlockPlacer extends SlimefunItem {
     /**
      * This checks if the given {@link Material} is allowed to be placed.
      *
-     * @param type
-     *            The {@link Material} to check
-     *
+     * @param type The {@link Material} to check
      * @return Whether placing this {@link Material} is allowed
      */
     private boolean isAllowed(@Nonnull Block facedBlock, @Nonnull Material type) {

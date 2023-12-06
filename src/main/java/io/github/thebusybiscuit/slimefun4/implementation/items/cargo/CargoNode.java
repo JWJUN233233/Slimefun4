@@ -10,16 +10,13 @@ import org.bukkit.block.Block;
  * Do not implement this interface yourself, it will not have any effect.
  *
  * @author TheBusyBiscuit
- *
  */
 public interface CargoNode {
 
     /**
      * This returns the selected channel for the given {@link Block}.
      *
-     * @param b
-     *            The {@link Block}
-     *
+     * @param b The {@link Block}
      * @return The channel which this {@link CargoNode} is currently on
      */
     int getSelectedChannel(@Nonnull Block b);

@@ -11,10 +11,8 @@ import org.bukkit.event.entity.EntityDropItemEvent;
  * a {@link SlimefunItem} to be dropped by a {@link Piglin} on {@link EntityDropItemEvent}.
  *
  * @author dNiym
- *
  * @see PiglinListener
  * @see RandomMobDrop
- *
  */
 public interface PiglinBarterDrop extends ItemAttribute {
 
@@ -22,7 +20,7 @@ public interface PiglinBarterDrop extends ItemAttribute {
      * Implement this method to make this {@link SlimefunItem} have a variable chance
      * of being dropped by a {@link Piglin} when bartering with them. This interface
      * should be used with the {@link RecipeType#BARTER_DROP}.
-     *
+     * <p>
      * It is recommended that this chance is kept reasonably low to feel like
      * a vanilla drop as a 100% chance will completely override all {@link Piglin}
      * barter drops. (NOTE: this feature only exists in 1.16+)

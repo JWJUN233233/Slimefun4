@@ -20,9 +20,7 @@ import org.bukkit.inventory.ItemStack;
  * being destroyed by an explosion.
  *
  * @author TheBusyBiscuit
- *
  * @see BlockPlaceHandler
- *
  */
 public abstract class BlockBreakHandler implements ItemHandler {
 
@@ -39,10 +37,8 @@ public abstract class BlockBreakHandler implements ItemHandler {
     /**
      * This constructs a new {@link BlockBreakHandler}.
      *
-     * @param allowAndroids
-     *            Whether a {@link MinerAndroid} is allowed to break blocks of this type
-     * @param allowExplosions
-     *            Whether blocks of this type are allowed to be broken by explosions
+     * @param allowAndroids   Whether a {@link MinerAndroid} is allowed to break blocks of this type
+     * @param allowExplosions Whether blocks of this type are allowed to be broken by explosions
      */
     protected BlockBreakHandler(boolean allowAndroids, boolean allowExplosions) {
         this.allowAndroids = allowAndroids;
@@ -65,8 +61,7 @@ public abstract class BlockBreakHandler implements ItemHandler {
     /**
      * This returns whether an explosion is able to break the given {@link Block}.
      *
-     * @param b
-     *            The {@link Block}
+     * @param b The {@link Block}
      * @return Whether explosions can destroy this {@link Block}
      */
     public boolean isExplosionAllowed(@Nonnull Block b) {
@@ -81,9 +76,7 @@ public abstract class BlockBreakHandler implements ItemHandler {
      * This returns whether a {@link MinerAndroid} is allowed to break
      * the given {@link Block}.
      *
-     * @param b
-     *            The {@link Block}
-     *
+     * @param b The {@link Block}
      * @return Whether androids can break the given {@link Block}
      */
     public boolean isAndroidAllowed(@Nonnull Block b) {

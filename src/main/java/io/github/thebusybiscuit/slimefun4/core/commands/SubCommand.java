@@ -15,9 +15,7 @@ import org.bukkit.entity.Player;
  * {@code /sf ...} and is followed by the name of this {@link SubCommand}.
  *
  * @author TheBusyBiscuit
- *
  * @see SlimefunCommand
- *
  */
 public abstract class SubCommand {
 
@@ -72,9 +70,7 @@ public abstract class SubCommand {
      * If the given {@link CommandSender} is a {@link Player}, the description
      * will be localized with the currently selected {@link Language} of that {@link Player}.
      *
-     * @param sender
-     *            The {@link CommandSender} who requested the description
-     *
+     * @param sender The {@link CommandSender} who requested the description
      * @return A possibly localized description of this {@link SubCommand}
      */
     public @Nonnull String getDescription(@Nonnull CommandSender sender) {

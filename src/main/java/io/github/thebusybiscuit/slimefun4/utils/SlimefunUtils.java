@@ -65,8 +65,7 @@ public final class SlimefunUtils {
      * This method quickly returns whether an {@link Item} was marked as "no_pickup" by
      * a Slimefun device.
      *
-     * @param item
-     *            The {@link Item} to query
+     * @param item The {@link Item} to query
      * @return Whether the {@link Item} is excluded from being picked up
      */
     public static boolean hasNoPickupFlag(@Nonnull Item item) {
@@ -77,10 +76,8 @@ public final class SlimefunUtils {
      * This will prevent the given {@link Item} from being picked up.
      * This is useful for display items which the {@link AncientPedestal} uses.
      *
-     * @param item
-     *            The {@link Item} to prevent from being picked up
-     * @param context
-     *            The context in which this {@link Item} was flagged
+     * @param item    The {@link Item} to prevent from being picked up
+     * @param context The context in which this {@link Item} was flagged
      */
     public static void markAsNoPickup(@Nonnull Item item, @Nonnull String context) {
         item.setMetadata(NO_PICKUP_METADATA, new FixedMetadataValue(Slimefun.instance(), context));
@@ -95,8 +92,7 @@ public final class SlimefunUtils {
     /**
      * This method checks whether the given {@link ItemStack} is considered {@link Soulbound}.
      *
-     * @param item
-     *            The {@link ItemStack} to check for
+     * @param item The {@link ItemStack} to check for
      * @return Whether the given item is soulbound
      */
     public static boolean isSoulbound(@Nullable ItemStack item) {
@@ -110,11 +106,9 @@ public final class SlimefunUtils {
      * If the provided item is {@link Soulbound} through the {@link SlimefunItems#SOULBOUND_RUNE}, then this
      * method will also check that the {@link SlimefunItems#SOULBOUND_RUNE} is enabled in the provided {@link World}
      *
-     * @param item
-     *            The {@link ItemStack} to check for
-     * @param world
-     *            The {@link World} to check if the {@link SlimefunItem} is enabled in if applicable.
-     *            If {@code null} then this will not do a world check.
+     * @param item  The {@link ItemStack} to check for
+     * @param world The {@link World} to check if the {@link SlimefunItem} is enabled in if applicable.
+     *              If {@code null} then this will not do a world check.
      * @return Whether the given item is soulbound
      */
     public static boolean isSoulbound(@Nullable ItemStack item, @Nullable World world) {
@@ -162,11 +156,8 @@ public final class SlimefunUtils {
      * by {@link #isSoulbound(ItemStack)}.<br>
      * If false is passed, this property will be removed.
      *
-     * @param item
-     *            The {@link ItemStack} you want to add/remove Soulbound from.
-     * @param makeSoulbound
-     *            If the item should be soulbound.
-     *
+     * @param item          The {@link ItemStack} you want to add/remove Soulbound from.
+     * @param makeSoulbound If the item should be soulbound.
      * @see #isSoulbound(ItemStack)
      */
     public static void setSoulbound(@Nullable ItemStack item, boolean makeSoulbound) {
@@ -205,9 +196,7 @@ public final class SlimefunUtils {
     /**
      * This method checks whether the given {@link ItemStack} is radioactive.
      *
-     * @param item
-     *            The {@link ItemStack} to check
-     *
+     * @param item The {@link ItemStack} to check
      * @return Whether this {@link ItemStack} is radioactive or not
      */
     public static boolean isRadioactive(@Nullable ItemStack item) {
@@ -218,9 +207,7 @@ public final class SlimefunUtils {
      * This method returns an {@link ItemStack} for the given texture.
      * The result will be a Player Head with this texture.
      *
-     * @param texture
-     *            The texture for this head (base64 or hash)
-     *
+     * @param texture The texture for this head (base64 or hash)
      * @return An {@link ItemStack} with this Head texture
      */
     public static @Nonnull ItemStack getCustomHead(@Nonnull String texture) {
@@ -504,11 +491,8 @@ public final class SlimefunUtils {
      * This checks if the two provided lores are equal.
      * This method will ignore any lines such as the soulbound one.
      *
-     * @param lore1
-     *            The first lore
-     * @param lore2
-     *            The second lore
-     *
+     * @param lore1 The first lore
+     * @param lore2 The second lore
      * @return Whether the two lores are equal
      */
     public static boolean equalsLore(@Nonnull List<String> lore1, @Nonnull List<String> lore2) {
@@ -563,13 +547,9 @@ public final class SlimefunUtils {
      * <p>
      * If you already have an instance of {@link SlimefunItem}, please use {@link SlimefunItem#canUse(Player, boolean)}.
      *
-     * @param p
-     *            The {@link Player}
-     * @param item
-     *            The {@link ItemStack} to check
-     * @param sendMessage
-     *            Whether to send a message response to the {@link Player}
-     *
+     * @param p           The {@link Player}
+     * @param item        The {@link ItemStack} to check
+     * @param sendMessage Whether to send a message response to the {@link Player}
      * @return Whether the {@link Player} is able to use that item.
      */
     public static boolean canPlayerUseItem(@Nonnull Player p, @Nullable ItemStack item, boolean sendMessage) {
@@ -589,15 +569,10 @@ public final class SlimefunUtils {
      * This method automatically calls a {@link SlimefunItemSpawnEvent} to allow
      * other plugins to catch the item being dropped.
      *
-     * @param loc
-     *            The {@link Location} where to drop the item
-     * @param item
-     *            The {@link ItemStack} to drop
-     * @param reason
-     *            The {@link ItemSpawnReason} why the item is being dropped
-     * @param addRandomOffset
-     *            Whether a random offset should be added (see {@link World#dropItemNaturally(Location, ItemStack)})
-     *
+     * @param loc             The {@link Location} where to drop the item
+     * @param item            The {@link ItemStack} to drop
+     * @param reason          The {@link ItemSpawnReason} why the item is being dropped
+     * @param addRandomOffset Whether a random offset should be added (see {@link World#dropItemNaturally(Location, ItemStack)})
      * @return The dropped {@link Item} (or null if the {@link SlimefunItemSpawnEvent} was cancelled)
      */
     @ParametersAreNonnullByDefault
@@ -624,13 +599,9 @@ public final class SlimefunUtils {
      * This method automatically calls a {@link SlimefunItemSpawnEvent} to allow
      * other plugins to catch the item being dropped.
      *
-     * @param loc
-     *            The {@link Location} where to drop the item
-     * @param item
-     *            The {@link ItemStack} to drop
-     * @param reason
-     *            The {@link ItemSpawnReason} why the item is being dropped
-     *
+     * @param loc    The {@link Location} where to drop the item
+     * @param item   The {@link ItemStack} to drop
+     * @param reason The {@link ItemSpawnReason} why the item is being dropped
      * @return The dropped {@link Item} (or null if the {@link SlimefunItemSpawnEvent} was cancelled)
      */
     @ParametersAreNonnullByDefault
@@ -643,9 +614,7 @@ public final class SlimefunUtils {
      * If the MC version is 1.16 or above
      * this will call {@link Inventory#isEmpty()} (Which calls MC code resulting in a faster method).
      *
-     * @param inventory
-     *            The {@link Inventory} to check.
-     *
+     * @param inventory The {@link Inventory} to check.
      * @return True if the inventory is empty and false otherwise
      */
     public static boolean isInventoryEmpty(@Nonnull Inventory inventory) {

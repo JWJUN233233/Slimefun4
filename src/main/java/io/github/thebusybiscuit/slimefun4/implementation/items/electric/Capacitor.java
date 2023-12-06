@@ -14,14 +14,12 @@ import org.bukkit.inventory.ItemStack;
 /**
  * A {@link Capacitor} is an {@link EnergyNetComponent} that serves as the energy
  * storage of an {@link EnergyNet}.
- *
+ * <p>
  * It is represented by {@code EnergyNetComponentType.CAPACITOR}.
  *
  * @author TheBusyBiscuit
- *
  * @see EnergyNet
  * @see EnergyNetComponent
- *
  */
 public class Capacitor extends SlimefunItem implements EnergyNetComponent {
 

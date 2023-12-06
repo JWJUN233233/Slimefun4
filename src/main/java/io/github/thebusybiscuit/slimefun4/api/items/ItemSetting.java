@@ -12,10 +12,8 @@ import org.apache.commons.lang.Validate;
  * This class represents a Setting for a {@link SlimefunItem} that can be modified via
  * the {@code Items.yml} {@link Config} file.
  *
+ * @param <T> The type of data stored under this {@link ItemSetting}
  * @author TheBusyBiscuit
- *
- * @param <T>
- *            The type of data stored under this {@link ItemSetting}
  */
 public class ItemSetting<T> {
 
@@ -231,8 +229,7 @@ public class ItemSetting<T> {
 
     @Override
     public final boolean equals(Object obj) {
-        if (obj instanceof ItemSetting) {
-            ItemSetting<?> setting = (ItemSetting<?>) obj;
+        if (obj instanceof ItemSetting<?> setting) {
             return Objects.equals(getKey(), setting.getKey()) && Objects.equals(getItem(), setting.getItem());
         } else {
             return false;

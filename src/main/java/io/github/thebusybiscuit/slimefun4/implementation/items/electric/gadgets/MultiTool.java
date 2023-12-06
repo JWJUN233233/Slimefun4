@@ -24,7 +24,6 @@ import org.bukkit.persistence.PersistentDataType;
  * the behaviour of any other {@link SlimefunItem}.
  *
  * @author TheBusyBiscuit
- *
  */
 public class MultiTool extends SlimefunItem implements Rechargeable {
 

@@ -55,11 +55,8 @@ public abstract class BlockMenuPreset extends ChestMenu {
      * {@link BlockMenu} of that {@link Block}.
      * Override this as necessary.
      *
-     * @param b
-     *            The {@link Block} trying to be opened
-     * @param p
-     *            The {@link Player} who wants to open the {@link BlockMenu}
-     *
+     * @param b The {@link Block} trying to be opened
+     * @param p The {@link Player} who wants to open the {@link BlockMenu}
      * @return Whether that {@link Player} is allowed
      */
     public abstract boolean canOpen(@Nonnull Block b, @Nonnull Player p);
@@ -70,15 +67,10 @@ public abstract class BlockMenuPreset extends ChestMenu {
      * This method is called whenever an {@link ItemStack} changes.
      * You can override this as necessary if you need to listen to these events
      *
-     * @param menu
-     *            The {@link Inventory} affected by this
-     * @param slot
-     *            The affected slot
-     * @param previous
-     *            The {@link ItemStack} in that slot before the operation
-     * @param next
-     *            The {@link ItemStack} that it changes to
-     *
+     * @param menu     The {@link Inventory} affected by this
+     * @param slot     The affected slot
+     * @param previous The {@link ItemStack} in that slot before the operation
+     * @param next     The {@link ItemStack} that it changes to
      * @return The new outcome of this operation
      */
     @Nullable protected ItemStack onItemStackChange(
@@ -104,10 +96,8 @@ public abstract class BlockMenuPreset extends ChestMenu {
     /**
      * This method will draw unclickable background items into this {@link BlockMenuPreset}.
      *
-     * @param item
-     *            The {@link ItemStack} that should be used as background
-     * @param slots
-     *            The slots which should be treated as background
+     * @param item  The {@link ItemStack} that should be used as background
+     * @param slots The slots which should be treated as background
      */
     public void drawBackground(@Nonnull ItemStack item, @Nonnull int[] slots) {
         Validate.notNull(item, "The background item cannot be null!");
@@ -121,8 +111,7 @@ public abstract class BlockMenuPreset extends ChestMenu {
     /**
      * This method will draw unclickable background items into this {@link BlockMenuPreset}.
      *
-     * @param slots
-     *            The slots which should be treated as background
+     * @param slots The slots which should be treated as background
      */
     public void drawBackground(@Nonnull int[] slots) {
         drawBackground(ChestMenuUtils.getBackground(), slots);

@@ -17,9 +17,7 @@ import org.bukkit.inventory.ItemStack;
  * to which only the {@link Player} who placed it down has access.
  *
  * @author TheBusyBiscuit
- *
  * @see SharedActivationPlate
- *
  */
 public class PersonalActivationPlate extends AbstractTeleporterPlate {
 

@@ -21,9 +21,7 @@ import org.bukkit.ChatColor;
  *
  * @author TheBusyBiscuit
  * @author Walshy
- *
  * @see GitHubService
- *
  */
 public class Contributor {
 
@@ -39,10 +37,8 @@ public class Contributor {
     /**
      * This creates a new {@link Contributor} with the given ingame name and GitHub profile.
      *
-     * @param minecraftName
-     *            The ingame name in Minecraft for this {@link Contributor}
-     * @param profile
-     *            A link to their GitHub profile
+     * @param minecraftName The ingame name in Minecraft for this {@link Contributor}
+     * @param profile       A link to their GitHub profile
      */
     public Contributor(@Nonnull String minecraftName, @Nonnull String profile) {
         Validate.notNull(minecraftName, "Username must never be null!");
@@ -56,8 +52,7 @@ public class Contributor {
     /**
      * This creates a new {@link Contributor} with the given username.
      *
-     * @param username
-     *            The username of this {@link Contributor}
+     * @param username The username of this {@link Contributor}
      */
     public Contributor(@Nonnull String username) {
         Validate.notNull(username, "Username must never be null!");
@@ -71,10 +66,8 @@ public class Contributor {
      * This sets the amount of contributions of this {@link Contributor} for the
      * specified role.
      *
-     * @param role
-     *            The role of this {@link Contributor}
-     * @param commits
-     *            The amount of contributions made as that role
+     * @param role    The role of this {@link Contributor}
+     * @param commits The amount of contributions made as that role
      */
     public void setContributions(@Nonnull String role, int commits) {
         Validate.notNull(role, "The role cannot be null!");
@@ -131,9 +124,7 @@ public class Contributor {
      * This method gives you the amount of contributions this {@link Contributor}
      * has submmited in the name of the given role.
      *
-     * @param role
-     *            The role for which to count the contributions.
-     *
+     * @param role The role for which to count the contributions.
      * @return The amount of contributions this {@link Contributor} submitted as the given role
      */
     public int getContributions(@Nonnull String role) {
@@ -145,8 +136,7 @@ public class Contributor {
     /**
      * This method sets the {@link UUID} for this {@link Contributor}.
      *
-     * @param uuid
-     *            The {@link UUID} for this {@link Contributor}
+     * @param uuid The {@link UUID} for this {@link Contributor}
      */
     public void setUniqueId(@Nullable UUID uuid) {
         this.uuid = uuid == null ? Optional.empty() : Optional.of(uuid);
@@ -180,9 +170,7 @@ public class Contributor {
      * If no texture could be found, or it hasn't been pulled yet,
      * then it will return a placeholder texture.
      *
-     * @param github
-     *            Our {@link GitHubService} instance
-     *
+     * @param github Our {@link GitHubService} instance
      * @return A Base64-Head Texture
      */
     @Nonnull
@@ -213,8 +201,7 @@ public class Contributor {
     /**
      * This sets the skin texture of this {@link Contributor} or clears it.
      *
-     * @param skin
-     *            The base64 skin texture or null
+     * @param skin The base64 skin texture or null
      */
     public void setTexture(@Nullable String skin) {
         headTexture.compute(skin);

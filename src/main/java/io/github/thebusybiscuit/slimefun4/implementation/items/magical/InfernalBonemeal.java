@@ -21,7 +21,6 @@ import org.bukkit.inventory.ItemStack;
  * Nether Warts.
  *
  * @author TheBusyBiscuit
- *
  */
 public class InfernalBonemeal extends SimpleSlimefunItem<ItemUseHandler> {
 

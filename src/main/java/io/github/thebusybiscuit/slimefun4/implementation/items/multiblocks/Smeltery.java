@@ -35,11 +35,9 @@ import org.bukkit.inventory.ItemStack;
  * @author emanueljg
  * @author SoSeDiK
  * @author Redemption198
- *
  * @see AbstractSmeltery
  * @see MakeshiftSmeltery
  * @see IgnitionChamber
- *
  */
 public class Smeltery extends AbstractSmeltery {
 

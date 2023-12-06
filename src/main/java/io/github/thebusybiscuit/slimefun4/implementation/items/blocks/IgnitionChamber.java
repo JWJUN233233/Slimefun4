@@ -31,9 +31,7 @@ import org.bukkit.inventory.meta.ItemMeta;
  *
  * @author AtomicScience
  * @author TheBusyBiscuit
- *
  * @see Smeltery
- *
  */
 public class IgnitionChamber extends SlimefunItem {
 
@@ -54,14 +52,11 @@ public class IgnitionChamber extends SlimefunItem {
      * This triggers an {@link IgnitionChamber} to be used from the given {@link Smeltery}
      * block and {@link Player}.
      *
-     * @param p
-     *            The {@link Player} who triggered this action
-     * @param smelteryBlock
-     *            The {@link Dispenser} block of our {@link Smeltery}
-     *
+     * @param p             The {@link Player} who triggered this action
+     * @param smelteryBlock The {@link Dispenser} block of our {@link Smeltery}
      * @return Whether the operation completed successfully.
-     *         This will return <code>false</code> when there is no
-     *         chamber or no flint and steel present
+     * This will return <code>false</code> when there is no
+     * chamber or no flint and steel present
      */
     @ParametersAreNonnullByDefault
     public static boolean useFlintAndSteel(Player p, Block smelteryBlock) {

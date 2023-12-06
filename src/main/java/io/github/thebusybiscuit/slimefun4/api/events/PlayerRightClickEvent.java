@@ -26,7 +26,6 @@ import org.bukkit.inventory.ItemStack;
  * to do a heavy lookup or item comparison.
  *
  * @author TheBusyBiscuit
- *
  */
 public class PlayerRightClickEvent extends PlayerEvent {
 
@@ -53,8 +52,7 @@ public class PlayerRightClickEvent extends PlayerEvent {
      * This constructs a new {@link PlayerRightClickEvent} based on the original {@link PlayerInteractEvent}.
      * The {@link Result} of the original {@link PlayerInteractEvent} will be copied.
      *
-     * @param originalEvent
-     *            The original {@link PlayerInteractEvent}
+     * @param originalEvent The original {@link PlayerInteractEvent}
      */
     public PlayerRightClickEvent(@Nonnull PlayerInteractEvent originalEvent) {
         super(originalEvent.getPlayer());

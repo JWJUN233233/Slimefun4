@@ -21,7 +21,6 @@ import org.bukkit.inventory.ItemStack;
  * in our {@link GEOResource} implementations.
  *
  * @author TheBusyBiscuit
- *
  */
 abstract class AbstractResource implements GEOResource {
 
@@ -76,11 +75,8 @@ abstract class AbstractResource implements GEOResource {
      * Internal helper method for reading a {@link BiomeMap} of {@link Integer} type values from
      * a resource file.
      *
-     * @param resource
-     *            The {@link AbstractResource} instance
-     * @param path
-     *            The path to our biome map file
-     *
+     * @param resource The {@link AbstractResource} instance
+     * @param path     The path to our biome map file
      * @return A {@link BiomeMap} for this resource
      */
     @ParametersAreNonnullByDefault

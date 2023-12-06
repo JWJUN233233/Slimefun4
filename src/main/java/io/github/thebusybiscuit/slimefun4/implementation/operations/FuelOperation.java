@@ -11,7 +11,6 @@ import org.bukkit.inventory.ItemStack;
  * This {@link MachineOperation} represents the process of burning fuel.
  *
  * @author TheBusyBiscuit
- *
  */
 public class FuelOperation implements MachineOperation {
 

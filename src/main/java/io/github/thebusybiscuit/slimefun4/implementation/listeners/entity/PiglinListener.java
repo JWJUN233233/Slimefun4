@@ -26,7 +26,6 @@ import org.bukkit.inventory.ItemStack;
  *
  * @author poma123
  * @author dNiym
- *
  */
 public class PiglinListener implements Listener {
 

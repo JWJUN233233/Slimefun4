@@ -28,7 +28,6 @@ import org.bukkit.util.Vector;
  * takes fall damage.
  *
  * @author TheBusyBiscuit
- *
  */
 public class StomperBoots extends SlimefunItem {
 
@@ -40,8 +39,7 @@ public class StomperBoots extends SlimefunItem {
     /**
      * This will apply the "stomp" effect to the given {@link EntityDamageEvent}.
      *
-     * @param fallDamageEvent
-     *            The {@link EntityDamageEvent} in which the {@link Player} has taken fall damage
+     * @param fallDamageEvent The {@link EntityDamageEvent} in which the {@link Player} has taken fall damage
      */
     public void stomp(@Nonnull EntityDamageEvent fallDamageEvent) {
         Player player = (Player) fallDamageEvent.getEntity();
@@ -79,11 +77,8 @@ public class StomperBoots extends SlimefunItem {
     /**
      * This gives us the "shockwave" {@link Vector} for a given target.
      *
-     * @param origin
-     *            The {@link Location} of our {@link Player}
-     * @param target
-     *            The {@link Location} of the {@link Entity} we are pushing away
-     *
+     * @param origin The {@link Location} of our {@link Player}
+     * @param target The {@link Location} of the {@link Entity} we are pushing away
      * @return A {@link Vector} to determine the velocity for our {@link Entity}
      */
     @Nonnull
@@ -104,10 +99,8 @@ public class StomperBoots extends SlimefunItem {
      * collision with {@link LivingEntity#setCollidable(boolean)} or
      * gravity with {@link LivingEntity#setGravity(boolean)}.
      *
-     * @param entity
-     *            The {@link LivingEntity} to check.
-     * @param player
-     *            The {@link Player} using the {@link StomperBoots}.
+     * @param entity The {@link LivingEntity} to check.
+     * @param player The {@link Player} using the {@link StomperBoots}.
      * @return If the entity can move.
      */
     protected boolean canPush(@Nonnull Player player, @Nonnull LivingEntity entity) {

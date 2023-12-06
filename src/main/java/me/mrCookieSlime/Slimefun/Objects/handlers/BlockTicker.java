@@ -47,12 +47,9 @@ public abstract class BlockTicker implements ItemHandler {
     /**
      * This method is called every tick for every block
      *
-     * @param b
-     *            The {@link Block} that was ticked
-     * @param item
-     *            The corresponding {@link SlimefunItem}
-     * @param data
-     *            The data stored in this {@link Block}
+     * @param b    The {@link Block} that was ticked
+     * @param item The corresponding {@link SlimefunItem}
+     * @param data The data stored in this {@link Block}
      */
     public void tick(Block b, SlimefunItem item, SlimefunBlockData data) {
         tick(b, item, new BlockDataConfigWrapper(data));

@@ -23,7 +23,6 @@ import org.bukkit.inventory.ItemStack;
  * The {@link PickaxeOfTheSeeker} will make you face the nearest ore upon right clicking.
  *
  * @author TheBusyBiscuit
- *
  */
 public class PickaxeOfTheSeeker extends SimpleSlimefunItem<ItemUseHandler> implements DamageableItem {
 

@@ -9,7 +9,6 @@ import org.bukkit.inventory.ItemStack;
  * This enum covers all different fuel sources a {@link ProgrammableAndroid} can have.
  *
  * @author TheBusyBiscuit
- *
  */
 public enum AndroidFuelSource {
 

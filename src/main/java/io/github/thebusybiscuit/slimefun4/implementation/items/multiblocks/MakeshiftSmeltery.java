@@ -19,9 +19,7 @@ import org.bukkit.inventory.ItemStack;
  * Its functionality is very limited and it cannot be used to smelt alloys.
  *
  * @author TheBusyBiscuit
- *
  * @see Smeltery
- *
  */
 public class MakeshiftSmeltery extends AbstractSmeltery {
 

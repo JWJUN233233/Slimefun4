@@ -38,7 +38,7 @@ public final class WikiUtils {
      * 读取附属的 wiki.json 并设置物品的 Wiki 按钮
      * 可对页面地址进行更改
      *
-     * @param plugin 附属 {@link SlimefunAddon} 实例
+     * @param plugin    附属 {@link SlimefunAddon} 实例
      * @param formatter 对页面地址进行更改
      */
     public static void setupJson(Plugin plugin, Function<String, String> formatter) {
