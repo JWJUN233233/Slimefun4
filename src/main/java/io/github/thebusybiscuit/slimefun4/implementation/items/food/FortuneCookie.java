@@ -21,6 +21,7 @@ import org.bukkit.inventory.ItemStack;
  * The messages can be defined in the {@link LocalizationService}.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class FortuneCookie extends SimpleSlimefunItem<ItemConsumptionHandler> {
 

@@ -15,6 +15,7 @@ import org.bukkit.event.block.BlockPlaceEvent;
  * to.
  *
  * @author TheBusyBiscuit
+ *
  */
 public abstract class BlockPlaceHandler implements ItemHandler {
 
@@ -27,7 +28,8 @@ public abstract class BlockPlaceHandler implements ItemHandler {
     /**
      * This method is called whenever a {@link Player} placed this {@link Block}.
      *
-     * @param e The corresponding {@link BlockPlaceEvent}
+     * @param e
+     *            The corresponding {@link BlockPlaceEvent}
      */
     public abstract void onPlayerPlace(@Nonnull BlockPlaceEvent e);
 
@@ -37,7 +39,8 @@ public abstract class BlockPlaceHandler implements ItemHandler {
      * Override the method {@link #isBlockPlacerAllowed()} instead if you want to disallow the
      * {@link BlockPlacer} from placing this {@link Block}.
      *
-     * @param e The corresponding {@link BlockPlacerPlaceEvent}
+     * @param e
+     *            The corresponding {@link BlockPlacerPlaceEvent}
      */
     public void onBlockPlacerPlace(@Nonnull BlockPlacerPlaceEvent e) {
         // This can be overridden, if necessary

@@ -11,6 +11,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
  * any of these messages.
  *
  * @author TheBusyBiscuit
+ *
  */
 final class StartupWarnings {
 

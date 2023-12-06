@@ -26,8 +26,10 @@ import org.bukkit.potion.PotionEffectType;
  * of a {@link Cooler}.
  *
  * @author TheBusyBiscuit
+ *
  * @see Cooler
  * @see CoolerListener
+ *
  */
 public class Juice extends SimpleSlimefunItem<ItemConsumptionHandler> {
 
@@ -78,8 +80,10 @@ public class Juice extends SimpleSlimefunItem<ItemConsumptionHandler> {
     /**
      * Determines from which hand the juice is being drunk, and its amount
      *
-     * @param p    The {@link Player} that triggered this
-     * @param item The {@link ItemStack} in question
+     * @param p
+     *            The {@link Player} that triggered this
+     * @param item
+     *            The {@link ItemStack} in question
      */
     @ParametersAreNonnullByDefault
     private void removeGlassBottle(Player p, ItemStack item) {

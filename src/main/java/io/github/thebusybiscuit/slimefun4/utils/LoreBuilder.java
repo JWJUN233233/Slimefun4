@@ -15,7 +15,9 @@ import javax.annotation.Nonnull;
  * {@link SlimefunItemStack}. It is mostly used directly inside the class {@link SlimefunItems}.
  *
  * @author TheBusyBiscuit
+ *
  * @see SlimefunItems
+ *
  */
 public final class LoreBuilder {
 

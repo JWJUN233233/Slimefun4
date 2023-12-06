@@ -27,7 +27,9 @@ import org.bukkit.util.Vector;
  *
  * @author TheBusyBiscuit
  * @author Linox
+ *
  * @see SlimefunBow
+ *
  */
 public class ExplosiveBow extends SlimefunBow {
 

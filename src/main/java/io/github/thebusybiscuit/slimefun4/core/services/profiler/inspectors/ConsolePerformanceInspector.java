@@ -14,6 +14,7 @@ import org.bukkit.command.ConsoleCommandSender;
  * But it can theoretically be used for any type of {@link CommandSender} as it uses uncolored texts.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class ConsolePerformanceInspector implements PerformanceInspector {
 
@@ -35,9 +36,12 @@ public class ConsolePerformanceInspector implements PerformanceInspector {
     /**
      * This creates a new {@link ConsolePerformanceInspector} for the given {@link CommandSender}.
      *
-     * @param console   The {@link CommandSender}, preferably a {@link ConsoleCommandSender}
-     * @param verbose   Whether the summary will be verbose or not
-     * @param orderType The {@link SummaryOrderType} of the timings
+     * @param console
+     *            The {@link CommandSender}, preferably a {@link ConsoleCommandSender}
+     * @param verbose
+     *            Whether the summary will be verbose or not
+     * @param orderType
+     *            The {@link SummaryOrderType} of the timings
      */
     @ParametersAreNonnullByDefault
     public ConsolePerformanceInspector(CommandSender console, boolean verbose, SummaryOrderType orderType) {

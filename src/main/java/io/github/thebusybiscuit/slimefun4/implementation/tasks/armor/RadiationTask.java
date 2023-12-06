@@ -96,10 +96,12 @@ public class RadiationTask extends AbstractArmorTask {
      * Checks if the {@link Player} is within their grace period. A grace period is granted after death
      * to give enough time to remove the radioactive items before being killed once more, which
      * with KeepInventory on would result in a very hard-to-escape loop.
-     *
-     * @param player The {@link Player} to check against.
-     * @return Returns true if the {@link Player} is within their grace period.
      * @see RadioactivityListener
+     *
+     * @param player
+     *              The {@link Player} to check against.
+     *
+     * @return Returns true if the {@link Player} is within their grace period.
      */
     private boolean withinGracePeriod(@Nonnull Player player) {
         Long gracePeriodEnd = ACTIVE_GRACE_PERIODS.get(player.getUniqueId());

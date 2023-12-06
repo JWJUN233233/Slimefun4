@@ -20,8 +20,10 @@ import org.bukkit.inventory.ItemStack;
  * They work similar to {@link Capacitor capacitors}.
  *
  * @author Linox
+ *
  * @see EnergyNet
  * @see EnergyNetComponent
+ *
  */
 public class EnergyConnector extends SimpleSlimefunItem<BlockUseHandler> implements EnergyNetComponent {
 

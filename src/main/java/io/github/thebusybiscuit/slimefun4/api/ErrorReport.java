@@ -31,8 +31,11 @@ import org.bukkit.plugin.Plugin;
  * an {@link ErrorReport} instead.
  * Error reports get saved in the plugin folder.
  *
- * @param <T> The type of {@link Throwable} which has spawned this {@link ErrorReport}
+ * @param <T>
+ *            The type of {@link Throwable} which has spawned this {@link ErrorReport}
+ *
  * @author TheBusyBiscuit
+ *
  */
 public class ErrorReport<T extends Throwable> {
 
@@ -49,9 +52,12 @@ public class ErrorReport<T extends Throwable> {
      * print the necessary info and provides a {@link Consumer} for any more detailed
      * needs.
      *
-     * @param throwable The {@link Throwable} which caused this {@link ErrorReport}.
-     * @param addon     The {@link SlimefunAddon} responsible.
-     * @param printer   A custom {@link Consumer} to add more details.
+     * @param throwable
+     *            The {@link Throwable} which caused this {@link ErrorReport}.
+     * @param addon
+     *            The {@link SlimefunAddon} responsible.
+     * @param printer
+     *            A custom {@link Consumer} to add more details.
      */
     @ParametersAreNonnullByDefault
     public ErrorReport(T throwable, SlimefunAddon addon, Consumer<PrintStream> printer) {
@@ -65,9 +71,12 @@ public class ErrorReport<T extends Throwable> {
      * This constructs a new {@link ErrorReport} for the given {@link Location} and
      * {@link SlimefunItem}.
      *
-     * @param throwable The {@link Throwable} which caused this {@link ErrorReport}.
-     * @param l         The {@link Location} at which the error was thrown.
-     * @param item      The {@link SlimefunItem} responsible.
+     * @param throwable
+     *            The {@link Throwable} which caused this {@link ErrorReport}.
+     * @param l
+     *            The {@link Location} at which the error was thrown.
+     * @param item
+     *            The {@link SlimefunItem} responsible.
      */
     @ParametersAreNonnullByDefault
     public ErrorReport(T throwable, Location l, SlimefunItem item) {
@@ -114,8 +123,10 @@ public class ErrorReport<T extends Throwable> {
     /**
      * This constructs a new {@link ErrorReport} for the given {@link SlimefunItem}.
      *
-     * @param throwable The {@link Throwable} which caused this {@link ErrorReport}.
-     * @param item      The {@link SlimefunItem} responsible.
+     * @param throwable
+     *            The {@link Throwable} which caused this {@link ErrorReport}.
+     * @param item
+     *            The {@link SlimefunItem} responsible.
      */
     @ParametersAreNonnullByDefault
     public ErrorReport(T throwable, SlimefunItem item) {
@@ -159,7 +170,7 @@ public class ErrorReport<T extends Throwable> {
         this.file = getNewFile();
         count.incrementAndGet();
 
-        try (PrintStream stream = new PrintStream(file, StandardCharsets.UTF_8)) {
+        try (PrintStream stream = new PrintStream(file, StandardCharsets.UTF_8.name())) {
             stream.println();
 
             stream.println("Error Generated: " + dateFormat.format(LocalDateTime.now()));
@@ -271,8 +282,10 @@ public class ErrorReport<T extends Throwable> {
      * When an {@link Exception} occurs, a new {@link ErrorReport} will be generated using
      * the provided {@link Function}.
      *
-     * @param function The {@link Function} to generate a new {@link ErrorReport}
-     * @param runnable The code to execute
+     * @param function
+     *            The {@link Function} to generate a new {@link ErrorReport}
+     * @param runnable
+     *            The code to execute
      */
     public static void tryCatch(
             @Nonnull Function<Exception, ErrorReport<Exception>> function, @Nonnull Runnable runnable) {

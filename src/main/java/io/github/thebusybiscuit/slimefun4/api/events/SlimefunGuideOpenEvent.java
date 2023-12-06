@@ -13,6 +13,7 @@ import org.bukkit.inventory.ItemStack;
  * This {@link Event} is called whenever a {@link Player} tries to open the Slimefun Guide book.
  *
  * @author Linox
+ *
  * @see SlimefunGuideMode
  */
 public class SlimefunGuideOpenEvent extends Event implements Cancellable {
@@ -69,7 +70,8 @@ public class SlimefunGuideOpenEvent extends Event implements Cancellable {
     /**
      * Changes the {@link SlimefunGuideMode} that was tried to be opened with.
      *
-     * @param layout The new {@link SlimefunGuideMode}
+     * @param layout
+     *            The new {@link SlimefunGuideMode}
      */
     public void setGuideLayout(@Nonnull SlimefunGuideMode layout) {
         Validate.notNull(layout, "You must specify a layout that is not-null!");

@@ -32,10 +32,12 @@ import org.bukkit.block.Block;
  *
  * @author meiamsome
  * @author TheBusyBiscuit
+ *
  * @see Network
  * @see EnergyNetComponent
  * @see EnergyNetProvider
  * @see EnergyNetComponentType
+ *
  */
 public class EnergyNet extends Network implements HologramOwner {
 
@@ -336,7 +338,9 @@ public class EnergyNet extends Network implements HologramOwner {
      * This attempts to get an {@link EnergyNet} from a given {@link Location}.
      * If no suitable {@link EnergyNet} could be found, {@code null} will be returned.
      *
-     * @param l The target {@link Location}
+     * @param l
+     *            The target {@link Location}
+     *
      * @return The {@link EnergyNet} at that {@link Location}, or {@code null}
      */
     @Nullable public static EnergyNet getNetworkFromLocation(@Nonnull Location l) {
@@ -349,7 +353,9 @@ public class EnergyNet extends Network implements HologramOwner {
      * This attempts to get an {@link EnergyNet} from a given {@link Location}.
      * If no suitable {@link EnergyNet} could be found, a new one will be created.
      *
-     * @param l The target {@link Location}
+     * @param l
+     *            The target {@link Location}
+     *
      * @return The {@link EnergyNet} at that {@link Location}, or a new one
      */
     @Nonnull

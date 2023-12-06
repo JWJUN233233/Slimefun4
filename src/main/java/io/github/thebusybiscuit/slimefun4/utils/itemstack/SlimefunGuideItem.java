@@ -17,8 +17,10 @@ import org.bukkit.inventory.meta.ItemMeta;
  * This is just a helper {@link ItemStack} class for the {@link SlimefunGuide} {@link ItemStack}.
  *
  * @author TheBusyBiscuit
+ *
  * @see SlimefunGuide
  * @see SlimefunGuideImplementation
+ *
  */
 public class SlimefunGuideItem extends ItemStack {
 

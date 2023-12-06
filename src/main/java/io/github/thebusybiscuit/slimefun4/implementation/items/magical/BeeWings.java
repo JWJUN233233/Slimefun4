@@ -15,8 +15,10 @@ import org.bukkit.inventory.ItemStack;
  *
  * @author beSnow
  * @author TheBusyBiscuit
+ *
  * @see BeeWingsListener
  * @see BeeWingsTask
+ *
  */
 public class BeeWings extends SlimefunItem {
 

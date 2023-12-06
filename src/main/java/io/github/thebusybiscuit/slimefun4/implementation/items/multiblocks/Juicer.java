@@ -32,7 +32,9 @@ import org.bukkit.inventory.ItemStack;
  *
  * @author TheBusyBiscuit
  * @author Liruxo
+ *
  * @see Juice
+ *
  */
 public class Juicer extends MultiBlockMachine {
 

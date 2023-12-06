@@ -15,11 +15,12 @@ import org.bukkit.inventory.meta.ItemMeta;
  * This class serves as a way of checking whether a {@link Player} has changed their armor
  * between ticks. We do that by storing the hash of their armor and a reference to the
  * corresponding {@link SlimefunArmorPiece} if such a correlation exists.
- * <p>
+ *
  * This gives us a significant performance improvement as we only need to check for a
  * {@link SlimefunArmorPiece} if the item diverged in the first place.
  *
  * @author TheBusyBiscuit
+ *
  * @see SlimefunArmorPiece
  * @see SlimefunArmorTask
  */
@@ -41,8 +42,10 @@ public final class HashedArmorpiece {
      * This will update this {@link HashedArmorpiece} with the given {@link ItemStack}
      * and the corresponding {@link SlimefunItem}
      *
-     * @param stack The new armorpiece to be stored in this {@link HashedArmorpiece}
-     * @param item  The {@link SlimefunItem} corresponding to the provided {@link ItemStack}, may be null
+     * @param stack
+     *            The new armorpiece to be stored in this {@link HashedArmorpiece}
+     * @param item
+     *            The {@link SlimefunItem} corresponding to the provided {@link ItemStack}, may be null
      */
     public void update(@Nullable ItemStack stack, @Nullable SlimefunItem item) {
         if (stack == null || stack.getType() == Material.AIR) {
@@ -66,7 +69,8 @@ public final class HashedArmorpiece {
      * This method checks whether the given {@link ItemStack} is no longer similar to the
      * one represented by this {@link HashedArmorpiece}.
      *
-     * @param stack The {@link ItemStack} to compare
+     * @param stack
+     *            The {@link ItemStack} to compare
      * @return Whether the {@link HashedArmorpiece} and the given {@link ItemStack} mismatch
      */
     public boolean hasDiverged(@Nullable ItemStack stack) {

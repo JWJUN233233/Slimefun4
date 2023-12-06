@@ -30,10 +30,10 @@ public class MultiBlockCraftEvent extends PlayerEvent implements Cancellable {
     /**
      * Creates a new {@link MultiBlockCraftEvent}.
      *
-     * @param p       The player that crafts using a multiblock
+     * @param p The player that crafts using a multiblock
      * @param machine The multiblock machine used to craft
-     * @param input   The input items of the craft
-     * @param output  The resulting item of the craft
+     * @param input The input items of the craft
+     * @param output The resulting item of the craft
      */
     @ParametersAreNonnullByDefault
     public MultiBlockCraftEvent(Player p, MultiBlockMachine machine, ItemStack[] input, ItemStack output) {
@@ -46,10 +46,10 @@ public class MultiBlockCraftEvent extends PlayerEvent implements Cancellable {
     /**
      * Creates a new {@link MultiBlockCraftEvent}.
      *
-     * @param p       The player that crafts using a multiblock
+     * @param p The player that crafts using a multiblock
      * @param machine The multiblock machine used to craft
-     * @param input   The input item of the craft
-     * @param output  The resulting item of the craft
+     * @param input The input item of the craft
+     * @param output The resulting item of the craft
      */
     @ParametersAreNonnullByDefault
     public MultiBlockCraftEvent(Player p, MultiBlockMachine machine, ItemStack input, ItemStack output) {
@@ -86,7 +86,9 @@ public class MultiBlockCraftEvent extends PlayerEvent implements Cancellable {
     /**
      * Sets the output of the craft. Keep in mind that this overwrites any existing output.
      *
-     * @param output The new item for the event to produce.
+     * @param output
+     *            The new item for the event to produce.
+     *
      * @return The previous {@link ItemStack} output that was replaced.
      */
     public @Nullable ItemStack setOutput(@Nullable ItemStack output) {

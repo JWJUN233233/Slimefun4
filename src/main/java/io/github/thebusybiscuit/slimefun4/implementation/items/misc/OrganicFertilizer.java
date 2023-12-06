@@ -15,8 +15,10 @@ import org.bukkit.inventory.ItemStack;
  * or {@link TreeGrowthAccelerator}. And can be crafted using a {@link FoodComposter}.
  *
  * @author TheBusyBiscuit
+ *
  * @see CropGrowthAccelerator
  * @see TreeGrowthAccelerator
+ *
  */
 public class OrganicFertilizer extends SlimefunItem {
 

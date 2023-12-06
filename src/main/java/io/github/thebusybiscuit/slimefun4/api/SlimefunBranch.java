@@ -9,6 +9,7 @@ import org.apache.commons.lang.Validate;
  * development or stable, unofficial or even unknown.
  *
  * @author TheBusyBiscuit
+ *
  */
 public enum SlimefunBranch {
 

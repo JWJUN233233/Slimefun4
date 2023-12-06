@@ -23,6 +23,7 @@ import org.apache.commons.lang.Validate;
  * as open issues or pending pull requests.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class GitHubService {
 
@@ -45,7 +46,8 @@ public class GitHubService {
     /**
      * This creates a new {@link GitHubService} for the given repository.
      *
-     * @param repository The repository to create this {@link GitHubService} for
+     * @param repository
+     *            The repository to create this {@link GitHubService} for
      */
     public GitHubService(@Nonnull String repository) {
         this.repository = repository;
@@ -58,7 +60,8 @@ public class GitHubService {
      * This will start the {@link GitHubService} and run the asynchronous {@link GitHubTask}
      * every so often to update its data.
      *
-     * @param plugin Our instance of {@link Slimefun}
+     * @param plugin
+     *            Our instance of {@link Slimefun}
      */
     public void start(@Nonnull Slimefun plugin) {
         loadConnectors(false);
@@ -250,7 +253,9 @@ public class GitHubService {
     /**
      * This returns the cached skin texture for a given username.
      *
-     * @param username The minecraft username
+     * @param username
+     *            The minecraft username
+     *
      * @return The cached skin texture for that user (or null)
      */
     protected @Nullable String getCachedTexture(@Nonnull String username) {

@@ -10,8 +10,10 @@ import javax.annotation.Nonnull;
  * A {@link MachineProcessHolder} can hold a {@link MachineProcessor} which is responsible for
  * handling any {@link MachineOperation}.
  *
- * @param <T> The type of {@link MachineOperation} the {@link MachineProcessor} should hold.
  * @author TheBusyBiscuit
+ *
+ * @param <T>
+ *            The type of {@link MachineOperation} the {@link MachineProcessor} should hold.
  */
 public interface MachineProcessHolder<T extends MachineOperation> extends ItemAttribute {
 

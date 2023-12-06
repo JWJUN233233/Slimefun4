@@ -19,6 +19,7 @@ import org.bukkit.inventory.ItemStack;
  * Cancelling this event will make the {@link AncientAltar} drop no item after the recipe is finished.
  *
  * @author Tweep
+ *
  * @see AncientAltar
  * @see AncientAltarTask
  * @see AncientAltarListener
@@ -66,7 +67,8 @@ public class AncientAltarCraftEvent extends PlayerEvent implements Cancellable {
     /**
      * This method will change the item that would be dropped by the {@link AncientAltar}
      *
-     * @param output being the {@link ItemStack} you want to change the item to.
+     * @param output
+     *            being the {@link ItemStack} you want to change the item to.
      */
     public void setItem(ItemStack output) {
         if (output == null || output.getType() == Material.AIR) {

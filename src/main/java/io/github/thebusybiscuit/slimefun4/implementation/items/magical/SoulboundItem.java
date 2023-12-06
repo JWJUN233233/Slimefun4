@@ -15,9 +15,11 @@ import org.bukkit.inventory.ItemStack;
  * Represents an Item that will not drop upon death.
  *
  * @author TheBusyBiscuit
+ *
  * @see Soulbound
  * @see SoulboundRune
  * @see SoulboundListener
+ *
  */
 public class SoulboundItem extends SlimefunItem implements Soulbound, NotPlaceable {
 

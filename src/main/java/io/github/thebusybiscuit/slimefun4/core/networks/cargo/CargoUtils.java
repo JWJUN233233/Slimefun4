@@ -37,6 +37,7 @@ import org.bukkit.inventory.ItemStack;
  * @author TheBusyBiscuit
  * @author Walshy
  * @author DNx5
+ *
  */
 final class CargoUtils {
 
@@ -55,7 +56,9 @@ final class CargoUtils {
      * This is a performance-saving shortcut to quickly test whether a given
      * {@link Block} might be an {@link InventoryHolder} or not.
      *
-     * @param block The {@link Block} to check
+     * @param block
+     *            The {@link Block} to check
+     *
      * @return Whether this {@link Block} represents a {@link BlockState} that is an {@link InventoryHolder}
      */
     static boolean hasInventory(@Nullable Block block) {
@@ -412,8 +415,11 @@ final class CargoUtils {
      * For the current applicational purposes a quick check for any wooden logs is sufficient.
      * Otherwise the "lazyness" can be turned off in the future.
      *
-     * @param stack The {@link ItemStack} to test
-     * @param lazy  Whether or not to perform a "lazy" but performance-saving check
+     * @param stack
+     *            The {@link ItemStack} to test
+     * @param lazy
+     *            Whether or not to perform a "lazy" but performance-saving check
+     *
      * @return Whether the given {@link ItemStack} can be smelted or not
      */
     private static boolean isSmeltable(@Nullable ItemStack stack, boolean lazy) {

@@ -34,6 +34,7 @@ import org.bukkit.inventory.ItemStack;
  * and produces a {@link KnowledgeFlask}.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class ExpCollector extends SlimefunItem implements InventoryBlock, EnergyNetComponent {
 
@@ -149,8 +150,10 @@ public class ExpCollector extends SlimefunItem implements InventoryBlock, Energy
      * Produces Flasks of Knowledge for the given block until it either uses all stored
      * experience or runs out of room.
      *
-     * @param location         The {@link Location} of the {@link ExpCollector} to produce flasks in.
-     * @param experiencePoints The number of experience points to use during production.
+     * @param location
+     *                  The {@link Location} of the {@link ExpCollector} to produce flasks in.
+     * @param experiencePoints
+     *                  The number of experience points to use during production.
      */
     private void produceFlasks(@Nonnull Location location, int experiencePoints) {
         int withdrawn = 0;

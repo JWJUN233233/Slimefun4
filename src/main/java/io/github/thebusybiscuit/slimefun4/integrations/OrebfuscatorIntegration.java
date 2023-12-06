@@ -19,9 +19,11 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 
 /**
+ *
  * This handles block breaks with orebfuscator
  *
  * @author NgLoader
+ *
  */
 class OrebfuscatorIntegration implements Listener {
 

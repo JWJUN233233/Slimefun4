@@ -13,13 +13,14 @@ import org.bukkit.entity.Player;
 /**
  * A very simple API that is meant for adding/getting/clearing custom status effects
  * to/from players.
- * <p>
+ *
  * The effects are stored via {@link PersistentDataAPI} and use NBT data that is
  * saved across server restarts.
- * <p>
+ *
  * You can specify a level for your status effect too.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class StatusEffect implements Keyed {
 
@@ -39,9 +40,12 @@ public class StatusEffect implements Keyed {
      * You can specify a duration, this will reference
      * {@link StatusEffect#add(Player, int, int, TimeUnit)} with a level of 1.
      *
-     * @param p        The {@link Player} whom to apply the effect to
-     * @param duration The duration of how long that status effect shall last
-     * @param unit     The {@link TimeUnit} for the given duration
+     * @param p
+     *            The {@link Player} whom to apply the effect to
+     * @param duration
+     *            The duration of how long that status effect shall last
+     * @param unit
+     *            The {@link TimeUnit} for the given duration
      */
     public void add(@Nonnull Player p, int duration, @Nonnull TimeUnit unit) {
         add(p, 1, duration, unit);
@@ -50,10 +54,14 @@ public class StatusEffect implements Keyed {
     /**
      * This applies this {@link StatusEffect} to the given {@link Player}.
      *
-     * @param p        The {@link Player} whom to apply the effect to
-     * @param level    The level of this effect
-     * @param duration The duration of how long that status effect shall last
-     * @param unit     The {@link TimeUnit} for the given duration
+     * @param p
+     *            The {@link Player} whom to apply the effect to
+     * @param level
+     *            The level of this effect
+     * @param duration
+     *            The duration of how long that status effect shall last
+     * @param unit
+     *            The {@link TimeUnit} for the given duration
      */
     public void add(@Nonnull Player p, int level, int duration, @Nonnull TimeUnit unit) {
         PersistentDataAPI.setString(p, getKey(), level + ";" + System.currentTimeMillis() + unit.toMillis(duration));
@@ -63,8 +71,10 @@ public class StatusEffect implements Keyed {
      * This applies this {@link StatusEffect} to the given {@link Player}.
      * This will apply it permanently, there is no duration.
      *
-     * @param p     The {@link Player} whom to apply the effect to
-     * @param level The level of this effect
+     * @param p
+     *            The {@link Player} whom to apply the effect to
+     * @param level
+     *            The level of this effect
      */
     public void addPermanent(@Nonnull Player p, int level) {
         PersistentDataAPI.setString(p, getKey(), level + ";0");
@@ -76,7 +86,8 @@ public class StatusEffect implements Keyed {
      * If the effect has expired, it will automatically remove all associated
      * NBT data of this effect.
      *
-     * @param p The {@link Player} to check for
+     * @param p
+     *            The {@link Player} to check for
      * @return Whether this {@link StatusEffect} is currently applied
      */
     public boolean isPresent(@Nonnull Player p) {
@@ -101,7 +112,8 @@ public class StatusEffect implements Keyed {
      * This method returns an {@link OptionalInt} describing the level of this status
      * effect on that player.
      *
-     * @param p The {@link Player} to check for
+     * @param p
+     *            The {@link Player} to check for
      * @return An {@link OptionalInt} that describes the result
      */
     public @Nonnull OptionalInt getLevel(@Nonnull Player p) {
@@ -118,7 +130,8 @@ public class StatusEffect implements Keyed {
     /**
      * This will remove this {@link StatusEffect} from the given {@link Player}.
      *
-     * @param p The {@link Player} to clear it from
+     * @param p
+     *            The {@link Player} to clear it from
      */
     public void clear(@Nonnull Player p) {
         PersistentDataAPI.remove(p, getKey());

@@ -28,8 +28,10 @@ import org.bukkit.potion.PotionEffect;
  *
  * @author TheBusyBiscuit
  * @author Linox
+ *
  * @see Cooler
  * @see Juice
+ *
  */
 public class CoolerListener implements Listener {
 
@@ -79,8 +81,10 @@ public class CoolerListener implements Listener {
      * This takes a {@link Juice} from the given {@link Cooler} and consumes it in order
      * to restore hunger for the given {@link Player}.
      *
-     * @param p      The {@link Player}
-     * @param cooler The {@link Cooler} {@link ItemStack} to take the {@link Juice} from
+     * @param p
+     *            The {@link Player}
+     * @param cooler
+     *            The {@link Cooler} {@link ItemStack} to take the {@link Juice} from
      */
     private void takeJuiceFromCooler(@Nonnull Player p, @Nonnull ItemStack cooler) {
         if (PlayerBackpack.isOwnerOnline(cooler.getItemMeta())) {

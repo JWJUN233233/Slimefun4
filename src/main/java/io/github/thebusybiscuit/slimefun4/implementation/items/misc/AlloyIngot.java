@@ -13,7 +13,9 @@ import org.bukkit.inventory.ItemStack;
  * These ingots can be crafted using a {@link Smeltery}.
  *
  * @author TheBusyBiscuit
+ *
  * @see Smeltery
+ *
  */
 public class AlloyIngot extends SlimefunItem {
 

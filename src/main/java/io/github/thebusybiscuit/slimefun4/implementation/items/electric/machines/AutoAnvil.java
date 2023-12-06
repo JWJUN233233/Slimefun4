@@ -18,6 +18,7 @@ import org.bukkit.inventory.meta.ItemMeta;
  * Duct tape.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class AutoAnvil extends AContainer {
 

@@ -16,6 +16,7 @@ import org.bukkit.entity.Player;
  * or sending a {@link String} to a {@link Player}.
  *
  * @author TheBusyBiscuit
+ *
  */
 public final class ChatUtils {
 
@@ -54,11 +55,13 @@ public final class ChatUtils {
      * This converts a given {@link String} to a human-friendly version.
      * This can be used to convert enum constants to easier to read words with
      * spaces and upper case word starts.
-     * <p>
+     *
      * For example:
      * {@code ENUM_CONSTANT: Enum Constant}
      *
-     * @param string The {@link String} to convert
+     * @param string
+     *            The {@link String} to convert
+     *
      * @return A human-friendly version of the given {@link String}
      */
     public static @Nonnull String humanize(@Nonnull String string) {
@@ -78,10 +81,14 @@ public final class ChatUtils {
     /**
      * This method adds an s to a string if the supplied integer is not 1.
      *
-     * @param string The string to potentially pluralize
-     * @param count  The amount of things
-     * @return {@code string} if {@code count} is 1 else {@code string + "s"}
-     * @throws IllegalArgumentException if count is less than 0
+     * @param string
+     *      The string to potentially pluralize
+     * @param count
+     *      The amount of things
+     * @return
+     *      {@code string} if {@code count} is 1 else {@code string + "s"}
+     * @throws IllegalArgumentException
+     *      if count is less than 0
      */
     public static @Nonnull String checkPlurality(@Nonnull String string, int count) {
         if (count < 0) {

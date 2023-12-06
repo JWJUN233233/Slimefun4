@@ -16,6 +16,7 @@ import org.bukkit.Bukkit;
  * they say "SlimefunStartupTask" instead of "Slimefun:lambda:123456789".
  *
  * @author TheBusyBiscuit
+ *
  */
 public class SlimefunStartupTask implements Runnable {
 
@@ -25,8 +26,10 @@ public class SlimefunStartupTask implements Runnable {
     /**
      * This initializes our {@link SlimefunStartupTask} for the given {@link Slimefun}.
      *
-     * @param plugin   The main instance of our {@link Slimefun}
-     * @param runnable A {@link Runnable} containing additional operations that need to be run
+     * @param plugin
+     *            The main instance of our {@link Slimefun}
+     * @param runnable
+     *            A {@link Runnable} containing additional operations that need to be run
      */
     public SlimefunStartupTask(@Nonnull Slimefun plugin, @Nonnull Runnable runnable) {
         this.plugin = plugin;

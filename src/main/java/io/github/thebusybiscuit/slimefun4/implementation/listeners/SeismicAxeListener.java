@@ -14,7 +14,9 @@ import org.bukkit.event.entity.EntityChangeBlockEvent;
  * created using a {@link SeismicAxe}.
  *
  * @author TheBusyBiscuit
+ *
  * @see SeismicAxe
+ *
  */
 public class SeismicAxeListener implements Listener {
 

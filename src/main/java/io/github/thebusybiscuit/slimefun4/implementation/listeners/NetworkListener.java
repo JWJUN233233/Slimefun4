@@ -17,8 +17,10 @@ import org.bukkit.event.block.BlockPlaceEvent;
  *
  * @author meiamsome
  * @author TheBusyBiscuit
+ *
  * @see Network
  * @see NetworkManager
+ *
  */
 public class NetworkListener implements Listener {
 

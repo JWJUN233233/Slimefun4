@@ -29,7 +29,9 @@ import org.bukkit.util.Vector;
  * It also has a cool visual effect where it shows a leash following a fired {@link Arrow}.
  *
  * @author TheBusyBiscuit
+ *
  * @see GrapplingHookListener
+ *
  */
 public class GrapplingHook extends SimpleSlimefunItem<ItemUseHandler> {
 

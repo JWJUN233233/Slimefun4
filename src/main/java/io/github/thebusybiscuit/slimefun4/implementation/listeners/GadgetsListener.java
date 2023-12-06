@@ -25,10 +25,12 @@ import org.bukkit.event.player.PlayerToggleSneakEvent;
  * like the {@link Jetpack} or {@link JetBoots}
  *
  * @author TheBusyBiscuit
+ *
  * @see JetpackTask
  * @see JetBootsTask
  * @see ParachuteTask
  * @see InfusedMagnetTask
+ *
  */
 public class GadgetsListener implements Listener {
 

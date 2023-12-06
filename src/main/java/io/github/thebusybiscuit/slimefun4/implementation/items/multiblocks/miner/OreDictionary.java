@@ -11,6 +11,7 @@ import org.bukkit.inventory.ItemStack;
  * Simple interface to map ore blocks to their respective item(s).
  *
  * @author TheBusyBiscuit
+ *
  */
 interface OreDictionary {
 

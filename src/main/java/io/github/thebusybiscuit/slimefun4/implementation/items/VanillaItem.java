@@ -14,22 +14,29 @@ import org.bukkit.inventory.ItemStack;
  * When a {@link VanillaItem} gets disabled, its {@link ItemState} goes on {@code State.VANILLA} which
  * automatically
  * replace it in the recipes by its vanilla equivalent.
- * <p>
+ *
  * A {@link VanillaItem} is also automatically useable in workbenches.
  *
  * @author TheBusyBiscuit
+ *
  * @see SlimefunItem
+ *
  */
 public class VanillaItem extends SlimefunItem {
 
     /**
      * Instantiates a new {@link VanillaItem} with the given arguments.
      *
-     * @param itemGroup  the {@link ItemGroup} to bind this {@link VanillaItem} to
-     * @param item       the item corresponding to this {@link VanillaItem}
-     * @param id         the id of this {@link VanillaItem}
-     * @param recipeType the type of the recipe to obtain this {@link VanillaItem}
-     * @param recipe     the recipe to obtain this {@link VanillaItem}
+     * @param itemGroup
+     *            the {@link ItemGroup} to bind this {@link VanillaItem} to
+     * @param item
+     *            the item corresponding to this {@link VanillaItem}
+     * @param id
+     *            the id of this {@link VanillaItem}
+     * @param recipeType
+     *            the type of the recipe to obtain this {@link VanillaItem}
+     * @param recipe
+     *            the recipe to obtain this {@link VanillaItem}
      */
     @ParametersAreNonnullByDefault
     public VanillaItem(ItemGroup itemGroup, ItemStack item, String id, RecipeType recipeType, ItemStack[] recipe) {

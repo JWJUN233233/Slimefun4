@@ -15,6 +15,7 @@ import javax.annotation.Nonnull;
  * can perform.
  *
  * @author TheBusyBiscuit
+ *
  * @see ItemUseHandler
  * @see ItemConsumptionHandler
  * @see BlockUseHandler
@@ -30,9 +31,11 @@ public interface ItemHandler {
      * with this {@link ItemHandler}, it will return an {@link IncompatibleItemHandlerException}
      * if the items are not compatible.
      *
-     * @param item The {@link SlimefunItem} to validate
+     * @param item
+     *            The {@link SlimefunItem} to validate
+     *
      * @return An {@link Optional} describing the result, it will contain an {@link IncompatibleItemHandlerException}
-     * should there be an issue
+     *         should there be an issue
      */
     @Nonnull
     default Optional<IncompatibleItemHandlerException> validate(@Nonnull SlimefunItem item) {

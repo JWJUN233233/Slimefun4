@@ -12,6 +12,7 @@ import org.bukkit.inventory.ItemStack;
  * an {@link ItemStack}.
  *
  * @author WalshyDev
+ *
  * @see AutoDisenchantEvent
  */
 public class AutoEnchantEvent extends Event implements Cancellable {

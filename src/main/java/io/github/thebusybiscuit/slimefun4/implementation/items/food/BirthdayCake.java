@@ -13,6 +13,7 @@ import org.bukkit.inventory.ItemStack;
  * This is just a nod to me, TheBusyBiscuit, being born on October 26th.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class BirthdayCake extends SlimefunItem implements NotPlaceable {
 

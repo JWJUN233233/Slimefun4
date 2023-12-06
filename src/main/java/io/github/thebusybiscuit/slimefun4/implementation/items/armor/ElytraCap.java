@@ -21,6 +21,7 @@ import org.bukkit.inventory.ItemStack;
  * The {@link ElytraCap} negates damage taken when crashing into a wall using an elytra.
  *
  * @author Seggan
+ *
  * @see ElytraImpactListener
  */
 public class ElytraCap extends SlimefunArmorPiece implements DamageableItem, ProtectiveArmor {

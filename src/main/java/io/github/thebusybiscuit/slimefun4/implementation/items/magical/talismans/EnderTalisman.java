@@ -15,6 +15,7 @@ import org.bukkit.inventory.ItemStack;
  * that works while it is in your {@link EnderChest}.
  *
  * @author TheBusyBiscuit
+ *
  */
 class EnderTalisman extends Talisman {
 

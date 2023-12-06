@@ -16,11 +16,13 @@ import org.bukkit.inventory.ItemStack;
  * for our teleporter activation plates.
  *
  * @author TheBusyBiscuit
+ *
  * @see Teleporter
  * @see TeleporterPylon
  * @see TeleporterListener
  * @see PersonalActivationPlate
  * @see SharedActivationPlate
+ *
  */
 public abstract class AbstractTeleporterPlate extends SlimefunItem {
 
@@ -34,8 +36,11 @@ public abstract class AbstractTeleporterPlate extends SlimefunItem {
      * This method checks whether the given {@link Player} is allowed to activate
      * the {@link Teleporter}.
      *
-     * @param p     The {@link Player} who stepped onto this plate
-     * @param block The actual {@link Block} of this activation plate
+     * @param p
+     *            The {@link Player} who stepped onto this plate
+     * @param block
+     *            The actual {@link Block} of this activation plate
+     *
      * @return Whether the {@link Player} can access the {@link Teleporter}
      */
     public abstract boolean hasAccess(@Nonnull Player p, @Nonnull Block block);

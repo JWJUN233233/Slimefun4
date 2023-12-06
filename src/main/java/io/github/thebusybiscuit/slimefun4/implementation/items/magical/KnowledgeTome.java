@@ -27,6 +27,7 @@ import org.bukkit.inventory.meta.ItemMeta;
  * from one {@link Player} to another.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class KnowledgeTome extends SimpleSlimefunItem<ItemUseHandler> {
 

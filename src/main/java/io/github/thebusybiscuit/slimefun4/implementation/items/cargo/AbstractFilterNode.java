@@ -24,8 +24,10 @@ import org.bukkit.inventory.ItemStack;
  * This abstract super class represents all filtered Cargo nodes.
  *
  * @author TheBusyBiscuit
+ *
  * @see CargoInputNode
  * @see AdvancedCargoOutputNode
+ *
  */
 abstract class AbstractFilterNode extends AbstractCargoNode {
 

@@ -16,8 +16,10 @@ import org.bukkit.potion.PotionEffect;
  * One of the very few utilisations of {@link ProtectiveArmor}.
  *
  * @author Linox
+ *
  * @see SlimefunArmorPiece
  * @see ProtectiveArmor
+ *
  */
 public class HazmatArmorPiece extends SlimefunArmorPiece implements ProtectiveArmor {
 

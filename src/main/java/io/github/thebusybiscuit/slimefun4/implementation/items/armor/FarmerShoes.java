@@ -14,6 +14,7 @@ import org.bukkit.inventory.ItemStack;
  * on {@link Farmland} without breaking it.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class FarmerShoes extends SlimefunItem {
 

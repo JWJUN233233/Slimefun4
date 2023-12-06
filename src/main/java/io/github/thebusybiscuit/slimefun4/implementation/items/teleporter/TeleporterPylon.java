@@ -14,6 +14,7 @@ import org.bukkit.inventory.ItemStack;
  * for the {@link Teleporter}.
  *
  * @author TheBusyBiscuit
+ *
  * @see Teleporter
  * @see RainbowBlock
  * @see RainbowTickHandler

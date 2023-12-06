@@ -20,8 +20,10 @@ import org.bukkit.inventory.ItemStack;
  * to the {@link SlimefunGuide}.
  *
  * @author TheBusyBiscuit
+ *
  * @see SlimefunGuideMode
  * @see SurvivalSlimefunGuide
+ *
  */
 public interface SlimefunGuideImplementation {
 

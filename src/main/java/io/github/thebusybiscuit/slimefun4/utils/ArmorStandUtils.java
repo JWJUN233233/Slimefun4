@@ -11,9 +11,10 @@ import org.bukkit.entity.ArmorStand;
  * This class holds utilities for {@link ArmorStand}, useful for classes
  * dealing with {@link ArmorStand}s that are not from {@link HologramsService}
  *
- * @author JustAHuman
  * @see HologramProjector
  * @see AncientPedestal
+ *
+ * @author JustAHuman
  */
 public class ArmorStandUtils {
 
@@ -22,8 +23,9 @@ public class ArmorStandUtils {
      * <br>
      * Set Properties: Invisible, Silent, Marker, No-Gravity, No Base Plate, Don't Remove When Far Away
      *
-     * @param location   The {@link Location} to spawn the {@link ArmorStand}
+     * @param location The {@link Location} to spawn the {@link ArmorStand}
      * @param customName The {@link String} custom name the {@link ArmorStand} should display
+     *
      * @return The spawned {@link ArmorStand}
      */
     public static @Nonnull ArmorStand spawnArmorStand(@Nonnull Location location, @Nonnull String customName) {
@@ -39,6 +41,7 @@ public class ArmorStandUtils {
      * Set Properties: Invisible, Silent, Marker, No-Gravity, No Base Plate, Don't Remove When Far Away
      *
      * @param location The {@link Location} to spawn the {@link ArmorStand}
+     *
      * @return The spawned {@link ArmorStand}
      */
     public static @Nonnull ArmorStand spawnArmorStand(@Nonnull Location location) {

@@ -15,6 +15,7 @@ import org.bukkit.entity.Player;
  *
  * @author TheBusyBiscuit
  * @author martinbrom
+ *
  * @see SlimefunArmorTask
  * @see RainbowArmorTask
  */
@@ -36,8 +37,10 @@ public abstract class AbstractArmorTask implements Runnable {
     /**
      * Schedules this {@link AbstractArmorTask} to run every {@code tickInterval} ticks
      *
-     * @param plugin       The {@link Slimefun}
-     * @param tickInterval Delay between two "runs" of this task in ticks
+     * @param plugin
+     *            The {@link Slimefun}
+     * @param tickInterval
+     *            Delay between two "runs" of this task in ticks
      */
     public final void schedule(@Nonnull Slimefun plugin, long tickInterval) {
         Preconditions.checkNotNull(plugin, "The plugin instance cannot be null!");
@@ -66,8 +69,10 @@ public abstract class AbstractArmorTask implements Runnable {
      * Method to handle behavior for player's armor as a whole.
      * It is called once per player.
      *
-     * @param p       The {@link Player} wearing the armor
-     * @param profile The {@link Player}'s {@link PlayerProfile}
+     * @param p
+     *            The {@link Player} wearing the armor
+     * @param profile
+     *            The {@link Player}'s {@link PlayerProfile}
      */
     @ParametersAreNonnullByDefault
     protected abstract void onPlayerTick(Player p, PlayerProfile profile);

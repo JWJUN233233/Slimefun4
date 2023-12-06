@@ -19,6 +19,7 @@ import org.bukkit.inventory.RecipeChoice.MaterialChoice;
  * As the name would probably suggest.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class ElectricFurnace extends AContainer implements NotHopperable {
 

@@ -11,7 +11,9 @@ import org.bukkit.Server;
  *
  * @author TheBusyBiscuit
  * @author Walshy
+ *
  * @see Slimefun
+ *
  */
 public enum MinecraftVersion {
 
@@ -66,8 +68,10 @@ public enum MinecraftVersion {
      * This constructor forces the {@link MinecraftVersion} to be real.
      * It must be a real version of Minecraft.
      *
-     * @param majorVersion The major version of minecraft as an {@link Integer}
-     * @param name         The display name of this {@link MinecraftVersion}
+     * @param majorVersion
+     *            The major version of minecraft as an {@link Integer}
+     * @param name
+     *            The display name of this {@link MinecraftVersion}
      */
     MinecraftVersion(int majorVersion, @Nonnull String name) {
         this.name = name;
@@ -80,8 +84,10 @@ public enum MinecraftVersion {
      * A virtual {@link MinecraftVersion} (unknown or unit test) is not an actual
      * version of Minecraft but rather a state of the {@link Server} software.
      *
-     * @param name    The display name of this {@link MinecraftVersion}
-     * @param virtual Whether this {@link MinecraftVersion} is virtual
+     * @param name
+     *            The display name of this {@link MinecraftVersion}
+     * @param virtual
+     *            Whether this {@link MinecraftVersion} is virtual
      */
     MinecraftVersion(@Nonnull String name, boolean virtual) {
         this.name = name;
@@ -120,7 +126,9 @@ public enum MinecraftVersion {
      * <p>
      * Example: {@literal "1.13"} returns {@literal 13}
      *
-     * @param minecraftVersion The {@link Integer} version to match
+     * @param minecraftVersion
+     *            The {@link Integer} version to match
+     *
      * @return Whether this {@link MinecraftVersion} matches the specified version id
      */
     public boolean isMinecraftVersion(int minecraftVersion) {
@@ -130,10 +138,12 @@ public enum MinecraftVersion {
     /**
      * This method checks whether this {@link MinecraftVersion} is newer or equal to
      * the given {@link MinecraftVersion},
-     * <p>
+     *
      * An unknown version will default to {@literal false}.
      *
-     * @param version The {@link MinecraftVersion} to compare
+     * @param version
+     *            The {@link MinecraftVersion} to compare
+     *
      * @return Whether this {@link MinecraftVersion} is newer or equal to the given {@link MinecraftVersion}
      */
     public boolean isAtLeast(@Nonnull MinecraftVersion version) {
@@ -163,10 +173,12 @@ public enum MinecraftVersion {
 
     /**
      * This checks whether this {@link MinecraftVersion} is older than the specified {@link MinecraftVersion}.
-     * <p>
+     *
      * An unknown version will default to {@literal true}.
      *
-     * @param version The {@link MinecraftVersion} to compare
+     * @param version
+     *            The {@link MinecraftVersion} to compare
+     *
      * @return Whether this {@link MinecraftVersion} is older than the given one
      */
     public boolean isBefore(@Nonnull MinecraftVersion version) {

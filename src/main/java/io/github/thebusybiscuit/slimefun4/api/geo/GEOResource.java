@@ -17,25 +17,30 @@ import org.bukkit.inventory.ItemStack;
 /**
  * A {@link GEOResource} is a virtual resource that can be thought of as world-gen.
  * However it cannot be found in a {@link World}.
- * <p>
+ *
  * This resource only exists in memory and can be retrieved through a {@link GEOMiner}
  * or similar devices.
- * <p>
+ *
  * A {@link GEOResource} can be detected via the {@link GEOScanner}.
  *
  * @author TheBusyBiscuit
+ *
  * @see ResourceManager
  * @see GEOMiner
  * @see GEOScanner
  * @see GEOResourceGenerationEvent
+ *
  */
 public interface GEOResource extends Keyed {
 
     /**
      * Returns the default supply of this resource in that biome
      *
-     * @param environment The {@link Environment} this area is currently in (NORMAL / NETHER / THE_END)
-     * @param biome       The {@link Biome} this area is currently in.
+     * @param environment
+     *            The {@link Environment} this area is currently in (NORMAL / NETHER / THE_END)
+     * @param biome
+     *            The {@link Biome} this area is currently in.
+     *
      * @return The default supply found in a {@link Chunk} with the given {@link Biome}
      */
     int getDefaultSupply(@Nonnull Environment environment, @Nonnull Biome biome);
@@ -83,7 +88,8 @@ public interface GEOResource extends Keyed {
      * This method returns a localized name for this {@link GEOResource} in the
      * {@link Language} the given {@link Player} selected.
      *
-     * @param p The {@link Player} to localize the name for.
+     * @param p
+     *            The {@link Player} to localize the name for.
      * @return The localized name for this {@link GEOResource}
      */
     @Nonnull

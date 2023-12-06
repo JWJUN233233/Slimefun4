@@ -22,6 +22,7 @@ import org.bukkit.inventory.ItemStack;
  *
  * @author TheBusyBiscuit
  * @author martinbrom
+ *
  * @see AncientAltarListener
  * @see AncientAltarTask
  * @see AncientAltarCraftEvent

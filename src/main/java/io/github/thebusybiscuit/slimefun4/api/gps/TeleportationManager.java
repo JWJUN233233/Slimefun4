@@ -32,8 +32,10 @@ import org.bukkit.potion.PotionEffectType;
  * who is using a {@link Teleporter}.
  *
  * @author TheBusyBiscuit
+ *
  * @see GPSNetwork
  * @see Teleporter
+ *
  */
 public final class TeleportationManager {
 
@@ -158,9 +160,13 @@ public final class TeleportationManager {
      * <li>and so on...</li>
      * </ul>
      *
-     * @param complexity  The complexity of the {@link GPSNetwork}
-     * @param source      The source {@link Location}
-     * @param destination The destination {@link Location}
+     * @param complexity
+     *            The complexity of the {@link GPSNetwork}
+     * @param source
+     *            The source {@link Location}
+     * @param destination
+     *            The destination {@link Location}
+     *
      * @return The amount of time the teleportation will take
      */
     public int getTeleportationTime(int complexity, @Nonnull Location source, @Nonnull Location destination) {

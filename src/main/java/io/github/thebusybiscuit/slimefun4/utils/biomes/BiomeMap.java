@@ -31,8 +31,10 @@ import org.bukkit.plugin.java.JavaPlugin;
  * your {@link BiomeMap} from a {@link JsonElement}, make sure to provide an adequate
  * {@link BiomeDataConverter} to convert the raw json data.
  *
- * @param <T> The stored data type
  * @author TheBusyBiscuit
+ *
+ * @param <T>
+ *            The stored data type
  */
 public class BiomeMap<T> implements Keyed {
 
@@ -49,7 +51,8 @@ public class BiomeMap<T> implements Keyed {
     /**
      * This constructs a new {@link BiomeMap} with the given {@link NamespacedKey}.
      *
-     * @param namespacedKey The {@link NamespacedKey} for this {@link BiomeMap}
+     * @param namespacedKey
+     *            The {@link NamespacedKey} for this {@link BiomeMap}
      */
     @ParametersAreNonnullByDefault
     public BiomeMap(NamespacedKey namespacedKey) {
@@ -130,7 +133,7 @@ public class BiomeMap<T> implements Keyed {
      */
     @Override
     public String toString() {
-        return "BiomeMap " + dataMap;
+        return "BiomeMap " + dataMap.toString();
     }
 
     @ParametersAreNonnullByDefault

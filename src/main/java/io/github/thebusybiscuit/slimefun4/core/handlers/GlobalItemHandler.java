@@ -11,6 +11,8 @@ import org.bukkit.event.Listener;
  * exists seperate from them, similar to an {@link Event} {@link Listener}.
  *
  * @author TheBusyBiscuit
+ *
  * @see ItemDropHandler
+ *
  */
 public interface GlobalItemHandler extends ItemHandler {}

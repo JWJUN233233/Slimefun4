@@ -16,6 +16,7 @@ import org.bukkit.entity.Player;
  * A super ordinary class.
  *
  * @author TheBusyBiscuit
+ *
  */
 class RickFlexGroup extends FlexItemGroup {
 

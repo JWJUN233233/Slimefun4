@@ -17,7 +17,9 @@ import org.bukkit.event.entity.EntityChangeBlockEvent;
  * were marked as {@link WitherProof} to not be destroyed by a {@link Wither}.
  *
  * @author TheBusyBiscuit
+ *
  * @see WitherProof
+ *
  */
 public class WitherListener implements Listener {
 

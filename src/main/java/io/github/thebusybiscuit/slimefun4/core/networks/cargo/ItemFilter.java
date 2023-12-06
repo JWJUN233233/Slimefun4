@@ -25,8 +25,10 @@ import org.bukkit.inventory.ItemStack;
  * It is a snapshot of a cargo node's configuration.
  *
  * @author TheBusyBiscuit
+ *
  * @see CargoNet
  * @see CargoNetworkTask
+ *
  */
 class ItemFilter implements Predicate<ItemStack> {
 
@@ -62,7 +64,8 @@ class ItemFilter implements Predicate<ItemStack> {
      * This creates a new {@link ItemFilter} for the given {@link Block}.
      * This will copy all settings from that {@link Block} to this filter.
      *
-     * @param b The {@link Block}
+     * @param b
+     *            The {@link Block}
      */
     public ItemFilter(@Nonnull Block b) {
         update(b);
@@ -72,7 +75,8 @@ class ItemFilter implements Predicate<ItemStack> {
      * This updates or refreshes the {@link ItemFilter} to copy the settings
      * from the given {@link Block}. It takes a new snapshot.
      *
-     * @param b The {@link Block}
+     * @param b
+     *            The {@link Block}
      */
     public void update(@Nonnull Block b) {
         if (!isDirty() || isLoading) {
@@ -156,7 +160,8 @@ class ItemFilter implements Predicate<ItemStack> {
      * This will clear the {@link ItemFilter} and reject <strong>any</strong>
      * {@link ItemStack}.
      *
-     * @param rejectOnMatch Whether the item should be rejected on matches
+     * @param rejectOnMatch
+     *            Whether the item should be rejected on matches
      */
     private void clear(boolean rejectOnMatch) {
         this.items.clear();

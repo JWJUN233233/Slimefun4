@@ -18,7 +18,9 @@ public interface ExternallyInteractable {
      * This method should be used by the implementing class to fulfill the actions needed
      * when being interacted with returning the result of the interaction.
      *
-     * @param location The {@link Location} of the Block being targeted for the interaction.
+     * @param location
+     *                 The {@link Location} of the Block being targeted for the interaction.
+     *
      * @return The {@link InteractionResult} denoting the result of the interaction.
      */
     @Nonnull

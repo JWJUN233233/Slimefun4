@@ -17,7 +17,9 @@ import org.bukkit.inventory.ItemStack;
  * It needs water coolant as well as a steady supply of Reactor Coolant Cells
  *
  * @author TheBusyBiscuit
+ *
  * @see NetherStarReactor
+ *
  */
 public abstract class NuclearReactor extends Reactor {
 

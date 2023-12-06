@@ -19,6 +19,7 @@ import org.bukkit.event.player.PlayerQuitEvent;
  *
  * @author TheBusyBiscuit
  * @author SoSeDiK
+ *
  */
 public class PlayerProfileListener implements Listener {
 

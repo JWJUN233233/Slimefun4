@@ -21,6 +21,7 @@ import org.bukkit.event.player.PlayerCommandPreprocessEvent;
  * This {@link CommandExecutor} holds the functionality of our {@code /slimefun} command.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class SlimefunCommand implements CommandExecutor, Listener {
 

@@ -13,8 +13,10 @@ import org.bukkit.inventory.ItemStack;
  * It uses Silk Touch and has a bigger range.
  *
  * @author TheBusyBiscuit
+ *
  * @see IndustrialMiner
  * @see MiningTask
+ *
  */
 public class AdvancedIndustrialMiner extends IndustrialMiner {
 

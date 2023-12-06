@@ -14,7 +14,9 @@ import org.bukkit.entity.Player;
  * It manages the automatic pickup of nearby items.
  *
  * @author TheBusyBiscuit
+ *
  * @see InfusedMagnet
+ *
  */
 public class InfusedMagnetTask extends AbstractPlayerTask {
 
@@ -27,8 +29,10 @@ public class InfusedMagnetTask extends AbstractPlayerTask {
      * This creates a new {@link InfusedMagnetTask} for the given {@link Player} with the given
      * pickup radius.
      *
-     * @param p      The {@link Player} who items should be teleported to
-     * @param radius The radius in which items should be picked up
+     * @param p
+     *            The {@link Player} who items should be teleported to
+     * @param radius
+     *            The radius in which items should be picked up
      */
     public InfusedMagnetTask(@Nonnull Player p, double radius) {
         super(p);

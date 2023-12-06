@@ -8,8 +8,10 @@ import javax.annotation.Nonnull;
  * Each constant corresponds to a {@link SlimefunGuideImplementation}.
  *
  * @author TheBusyBiscuit
+ *
  * @see SlimefunGuide
  * @see SlimefunGuideImplementation
+ *
  */
 public enum SlimefunGuideMode {
 

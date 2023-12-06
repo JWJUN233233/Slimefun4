@@ -35,6 +35,7 @@ import org.bukkit.inventory.ItemStack;
  * @author TheBusyBiscuit
  * @author Walshy
  * @author DNx5
+ *
  */
 public class CargoNet extends AbstractItemNetwork implements HologramOwner {
 
@@ -67,7 +68,8 @@ public class CargoNet extends AbstractItemNetwork implements HologramOwner {
     /**
      * This constructs a new {@link CargoNet} at the given {@link Location}.
      *
-     * @param l The {@link Location} marking the manager of this {@link Network}.
+     * @param l
+     *            The {@link Location} marking the manager of this {@link Network}.
      */
     protected CargoNet(@Nonnull Location l) {
         super(l);
@@ -213,7 +215,9 @@ public class CargoNet extends AbstractItemNetwork implements HologramOwner {
      * Should there be invalid data this method it will fall back to zero in
      * order to preserve the integrity of the {@link CargoNet}.
      *
-     * @param node The {@link Location} of our cargo node
+     * @param node
+     *            The {@link Location} of our cargo node
+     *
      * @return The frequency of the given node
      */
     private static int getFrequency(@Nonnull Location node) {

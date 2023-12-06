@@ -16,9 +16,11 @@ import org.bukkit.entity.Player;
  * a class that inherits from {@link MultiBlockMachine}.
  *
  * @author TheBusyBiscuit
+ *
  * @see ItemHandler
  * @see MultiBlock
  * @see MultiBlockMachine
+ *
  */
 @FunctionalInterface
 public interface MultiBlockInteractionHandler extends ItemHandler {

@@ -16,8 +16,10 @@ import org.bukkit.entity.Player;
  *
  * @author TheBusyBiscuit
  * @author J3fftw1
+ *
  * @see SoundService
  * @see SoundConfiguration
+ *
  */
 public enum SoundEffect {
     ANCIENT_ALTAR_ITEM_CHECK_SOUND(Sound.ENTITY_ENDERMAN_TELEPORT, 1F, 2F),

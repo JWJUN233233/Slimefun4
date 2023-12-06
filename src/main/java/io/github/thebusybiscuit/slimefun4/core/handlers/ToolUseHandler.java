@@ -13,7 +13,9 @@ import org.bukkit.inventory.ItemStack;
  * as its tool.
  *
  * @author TheBusyBiscuit
+ *
  * @see BlockBreakHandler
+ *
  */
 @FunctionalInterface
 public interface ToolUseHandler extends ItemHandler {
@@ -22,10 +24,15 @@ public interface ToolUseHandler extends ItemHandler {
      * This method is called whenever a {@link BlockBreakEvent} was fired when using this
      * {@link SlimefunItem} to break a {@link Block}.
      *
-     * @param e       The {@link BlockBreakEvent}
-     * @param tool    The tool that was used
-     * @param fortune The amount of bonus drops to be expected from the fortune {@link Enchantment}.
-     * @param drops   The dropped items
+     * @param e
+     *            The {@link BlockBreakEvent}
+     * @param tool
+     *            The tool that was used
+     * @param fortune
+     *            The amount of bonus drops to be expected from the fortune {@link Enchantment}.
+     * @param drops
+     *            The dropped items
+     *
      */
     void onToolUse(BlockBreakEvent e, ItemStack tool, int fortune, List<ItemStack> drops);
 

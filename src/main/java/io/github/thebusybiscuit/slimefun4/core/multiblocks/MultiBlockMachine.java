@@ -38,7 +38,9 @@ import org.bukkit.inventory.ItemStack;
  * It holds recipes and a {@link MultiBlock} object which represents its structure.
  *
  * @author TheBusyBiscuit
+ *
  * @see MultiBlock
+ *
  */
 public abstract class MultiBlockMachine extends SlimefunItem implements NotPlaceable, RecipeDisplayItem {
 
@@ -154,9 +156,13 @@ public abstract class MultiBlockMachine extends SlimefunItem implements NotPlace
      * Optional last argument Inventory placeCheckerInv is for a {@link MultiBlockMachine} that create
      * a dummy inventory to check if there's a space for the adding, i.e. Enhanced crafting table
      *
-     * @param adding    The {@link ItemStack} that should be added
-     * @param dispBlock The {@link Block} of our {@link Dispenser}
-     * @param dispInv   The {@link Inventory} of our {@link Dispenser}
+     * @param adding
+     *            The {@link ItemStack} that should be added
+     * @param dispBlock
+     *            The {@link Block} of our {@link Dispenser}
+     * @param dispInv
+     *            The {@link Inventory} of our {@link Dispenser}
+     *
      * @return The target {@link Inventory}
      */
     @ParametersAreNonnullByDefault
@@ -184,9 +190,13 @@ public abstract class MultiBlockMachine extends SlimefunItem implements NotPlace
     /**
      * This method handles an output {@link ItemStack} from the {@link MultiBlockMachine} which has a crafting delay
      *
-     * @param outputItem A crafted {@link ItemStack} from {@link MultiBlockMachine}
-     * @param block      Main {@link Block} of our {@link Container} from {@link MultiBlockMachine}
-     * @param blockInv   The {@link Inventory} of our {@link Container}
+     * @param outputItem
+     *            A crafted {@link ItemStack} from {@link MultiBlockMachine}
+     * @param block
+     *            Main {@link Block} of our {@link Container} from {@link MultiBlockMachine}
+     * @param blockInv
+     *            The {@link Inventory} of our {@link Container}
+     *
      */
     @ParametersAreNonnullByDefault
     protected void handleCraftedItem(ItemStack outputItem, Block block, Inventory blockInv) {

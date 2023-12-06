@@ -11,6 +11,7 @@ import org.bukkit.inventory.ItemStack;
  * This implementation of {@link SlimefunBackpack} is also {@link Soulbound}.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class SoulboundBackpack extends SlimefunBackpack implements Soulbound {
 

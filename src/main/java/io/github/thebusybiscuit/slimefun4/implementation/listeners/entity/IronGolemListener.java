@@ -19,6 +19,7 @@ import org.bukkit.inventory.PlayerInventory;
  * a {@link SlimefunItem}.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class IronGolemListener implements Listener {
 

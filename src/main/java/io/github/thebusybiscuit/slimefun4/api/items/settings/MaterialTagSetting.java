@@ -13,11 +13,13 @@ import org.bukkit.Tag;
  * This variation of {@link ItemSetting} allows you to define a default {@link Tag}.
  * The {@link Tag} will be translated into a {@link String} {@link List} which the user
  * can then configure as they wish.
- * <p>
+ *
  * It also validates all inputs to be a valid {@link Material}.
  *
  * @author TheBusyBiscuit
+ *
  * @see ItemSetting
+ *
  */
 public class MaterialTagSetting extends ItemSetting<List<String>> {
 
@@ -65,7 +67,9 @@ public class MaterialTagSetting extends ItemSetting<List<String>> {
     /**
      * Internal method to turn a {@link Tag} into a {@link List} of {@link String Strings}.
      *
-     * @param tag Our {@link Tag}
+     * @param tag
+     *            Our {@link Tag}
+     *
      * @return The {@link String} {@link List}
      */
     private static @Nonnull List<String> getAsStringList(@Nonnull Tag<Material> tag) {

@@ -15,7 +15,9 @@ import org.bukkit.inventory.ItemStack;
  * This {@link Listener} is responsible for calling the {@link WeaponUseHandler}.
  *
  * @author Mooy1
+ *
  * @see WeaponUseHandler
+ *
  */
 public class SlimefunItemHitListener implements Listener {
 
@@ -25,10 +27,11 @@ public class SlimefunItemHitListener implements Listener {
 
     @EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
     public void onDamage(EntityDamageByEntityEvent e) {
-        if (!(e.getDamager() instanceof Player p)) {
+        if (!(e.getDamager() instanceof Player)) {
             return;
         }
 
+        Player p = (Player) e.getDamager();
         ItemStack item = p.getInventory().getItemInMainHand();
 
         if (!item.getType().isAir()) {

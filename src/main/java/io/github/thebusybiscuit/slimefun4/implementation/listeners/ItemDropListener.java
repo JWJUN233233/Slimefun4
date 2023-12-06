@@ -13,6 +13,7 @@ import org.bukkit.event.player.PlayerDropItemEvent;
  * Listens to the {@link PlayerDropItemEvent} to call any {@link ItemDropHandler}.
  *
  * @author TheBusyBiscuit
+ *
  * @see ItemDropHandler
  */
 public class ItemDropListener implements Listener {

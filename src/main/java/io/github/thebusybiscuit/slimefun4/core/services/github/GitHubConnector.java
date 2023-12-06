@@ -39,8 +39,10 @@ abstract class GitHubConnector {
     /**
      * This creates a new {@link GitHubConnector} for the given repository.
      *
-     * @param github     Our instance of {@link GitHubService}
-     * @param repository The repository we want to connect to
+     * @param github
+     *            Our instance of {@link GitHubService}
+     * @param repository
+     *            The repository we want to connect to
      */
     GitHubConnector(@Nonnull GitHubService github, @Nonnull String repository) {
         this.github = github;
@@ -75,7 +77,8 @@ abstract class GitHubConnector {
     /**
      * This method is called when the connection finished successfully.
      *
-     * @param response The response
+     * @param response
+     *            The response
      */
     public abstract void onSuccess(@Nonnull JsonNode response);
 

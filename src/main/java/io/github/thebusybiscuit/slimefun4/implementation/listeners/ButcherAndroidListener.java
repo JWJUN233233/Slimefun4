@@ -26,6 +26,7 @@ import org.bukkit.inventory.ItemStack;
  * killed by a {@link ButcherAndroid}.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class ButcherAndroidListener implements Listener {
 
@@ -73,8 +74,10 @@ public class ButcherAndroidListener implements Listener {
      * Wither Skeleton Skulls but for some weird reason
      * even Blaze rods...
      *
-     * @param drops      The {@link List} of item drops
-     * @param entityType The {@link EntityType} of the killed entity
+     * @param drops
+     *            The {@link List} of item drops
+     * @param entityType
+     *            The {@link EntityType} of the killed entity
      */
     @ParametersAreNonnullByDefault
     private void addExtraDrops(List<ItemStack> drops, EntityType entityType) {

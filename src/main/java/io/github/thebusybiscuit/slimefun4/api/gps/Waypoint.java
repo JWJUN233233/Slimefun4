@@ -18,10 +18,12 @@ import org.bukkit.inventory.ItemStack;
  * It can be used via a {@link Teleporter}.
  *
  * @author TheBusyBiscuit
+ *
  * @see WaypointCreateEvent
  * @see GPSNetwork
  * @see TeleportationManager
  * @see Teleporter
+ *
  */
 public class Waypoint {
 
@@ -33,10 +35,14 @@ public class Waypoint {
     /**
      * This constructs a new {@link Waypoint} object.
      *
-     * @param profile The owning {@link PlayerProfile}
-     * @param id      The unique id for this {@link Waypoint}
-     * @param loc     The {@link Location} of the {@link Waypoint}
-     * @param name    The name of this {@link Waypoint}
+     * @param profile
+     *            The owning {@link PlayerProfile}
+     * @param id
+     *            The unique id for this {@link Waypoint}
+     * @param loc
+     *            The {@link Location} of the {@link Waypoint}
+     * @param name
+     *            The name of this {@link Waypoint}
      */
     @ParametersAreNonnullByDefault
     public Waypoint(PlayerProfile profile, String id, Location loc, String name) {
@@ -125,10 +131,11 @@ public class Waypoint {
      */
     @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof Waypoint waypoint)) {
+        if (!(obj instanceof Waypoint)) {
             return false;
         }
 
+        Waypoint waypoint = (Waypoint) obj;
         return profile.getUUID().equals(waypoint.getOwner().getUUID())
                 && id.equals(waypoint.getId())
                 && location.equals(waypoint.getLocation())

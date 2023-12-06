@@ -28,8 +28,10 @@ import org.bukkit.inventory.meta.ItemMeta;
  * multiple {@link SlimefunItem} in the {@link SlimefunGuide}.
  *
  * @author TheBusyBiscuit
+ *
  * @see LockedItemGroup
  * @see SeasonalItemGroup
+ *
  */
 public class ItemGroup implements Keyed {
 
@@ -46,8 +48,10 @@ public class ItemGroup implements Keyed {
      * and the given {@link ItemStack} as its display item.
      * The tier is set to a default value of {@code 3}.
      *
-     * @param key  The {@link NamespacedKey} that is used to identify this {@link ItemGroup}
-     * @param item The {@link ItemStack} that is used to display this {@link ItemGroup}
+     * @param key
+     *            The {@link NamespacedKey} that is used to identify this {@link ItemGroup}
+     * @param item
+     *            The {@link ItemStack} that is used to display this {@link ItemGroup}
      */
     @ParametersAreNonnullByDefault
     public ItemGroup(NamespacedKey key, ItemStack item) {
@@ -58,11 +62,14 @@ public class ItemGroup implements Keyed {
      * Constructs a new {@link ItemGroup} with the given {@link NamespacedKey} as an identifier
      * and the given {@link ItemStack} as its display item.
      *
-     * @param key  The {@link NamespacedKey} that is used to identify this {@link ItemGroup}
-     * @param item The {@link ItemStack} that is used to display this {@link ItemGroup}
-     * @param tier The tier of this {@link ItemGroup}, higher tiers will make this {@link ItemGroup} appear further down
-     *             in
-     *             the {@link SlimefunGuide}
+     * @param key
+     *            The {@link NamespacedKey} that is used to identify this {@link ItemGroup}
+     * @param item
+     *            The {@link ItemStack} that is used to display this {@link ItemGroup}
+     * @param tier
+     *            The tier of this {@link ItemGroup}, higher tiers will make this {@link ItemGroup} appear further down
+     *            in
+     *            the {@link SlimefunGuide}
      */
     @ParametersAreNonnullByDefault
     public ItemGroup(NamespacedKey key, ItemStack item, int tier) {
@@ -91,7 +98,8 @@ public class ItemGroup implements Keyed {
      * By default, an {@link ItemGroup} is automatically registered when
      * a {@link SlimefunItem} was added to it.
      *
-     * @param addon The {@link SlimefunAddon} that wants to register this {@link ItemGroup}
+     * @param addon
+     *            The {@link SlimefunAddon} that wants to register this {@link ItemGroup}
      */
     public void register(@Nonnull SlimefunAddon addon) {
         Validate.notNull(addon, "The Addon cannot be null");
@@ -130,7 +138,8 @@ public class ItemGroup implements Keyed {
      * This sets the tier of this {@link ItemGroup}.
      * The tier determines the position of this {@link ItemGroup} in the {@link SlimefunGuide}.
      *
-     * @param tier The tier for this {@link ItemGroup}
+     * @param tier
+     *            The tier for this {@link ItemGroup}
      */
     public void setTier(int tier) {
         this.tier = tier;
@@ -162,7 +171,8 @@ public class ItemGroup implements Keyed {
     /**
      * Adds the given {@link SlimefunItem} to this {@link ItemGroup}.
      *
-     * @param item the {@link SlimefunItem} that should be added to this {@link ItemGroup}
+     * @param item
+     *            the {@link SlimefunItem} that should be added to this {@link ItemGroup}
      */
     public void add(@Nonnull SlimefunItem item) {
         Validate.notNull(item, "Cannot add null Items to an ItemGroup!");
@@ -187,7 +197,8 @@ public class ItemGroup implements Keyed {
     /**
      * Removes the given {@link SlimefunItem} from this {@link ItemGroup}.
      *
-     * @param item the {@link SlimefunItem} that should be removed from this {@link ItemGroup}
+     * @param item
+     *            the {@link SlimefunItem} that should be removed from this {@link ItemGroup}
      */
     public void remove(@Nonnull SlimefunItem item) {
         Validate.notNull(item, "Cannot remove null from an ItemGroup!");
@@ -198,7 +209,9 @@ public class ItemGroup implements Keyed {
      * This method returns a localized display item of this {@link ItemGroup}
      * for the specified {@link Player}.
      *
-     * @param p The Player to create this {@link ItemStack} for
+     * @param p
+     *            The Player to create this {@link ItemStack} for
+     *
      * @return A localized display item for this {@link ItemGroup}
      */
     public @Nonnull ItemStack getItem(@Nonnull Player p) {
@@ -238,7 +251,9 @@ public class ItemGroup implements Keyed {
      * This returns the localized display name of this {@link ItemGroup} for the given {@link Player}.
      * The method will fall back to {@link #getUnlocalizedName()} if no translation was found.
      *
-     * @param p The {@link Player} who to translate the name for
+     * @param p
+     *            The {@link Player} who to translate the name for
+     *
      * @return The localized name of this {@link ItemGroup}
      */
     public @Nonnull String getDisplayName(@Nonnull Player p) {
@@ -263,7 +278,9 @@ public class ItemGroup implements Keyed {
     /**
      * This method returns whether a given {@link SlimefunItem} exists in this {@link ItemGroup}.
      *
-     * @param item The {@link SlimefunItem} to find
+     * @param item
+     *            The {@link SlimefunItem} to find
+     *
      * @return Whether the given {@link SlimefunItem} was found in this {@link ItemGroup}
      */
     public boolean contains(@Nullable SlimefunItem item) {
@@ -276,7 +293,9 @@ public class ItemGroup implements Keyed {
      * it will not show up in the {@link SlimefunGuide} nor will items from this
      * {@link ItemGroup} show up in the guide search.
      *
-     * @param p The {@link Player} to check for
+     * @param p
+     *            The {@link Player} to check for
+     *
      * @return Whether this {@link ItemGroup} is accessible by the given {@link Player}
      */
     public boolean isAccessible(@Nonnull Player p) {
@@ -290,7 +309,9 @@ public class ItemGroup implements Keyed {
      * is disabled. If an {@link ItemGroup} is not accessible by the {@link Player},
      * see {@link #isAccessible(Player)}, this method will also return false.
      *
-     * @param p The {@link Player} to check for
+     * @param p
+     *            The {@link Player} to check for
+     *
      * @return Whether this {@link ItemGroup} is visible to the given {@link Player}
      */
     public boolean isVisible(@Nonnull Player p) {
@@ -328,7 +349,8 @@ public class ItemGroup implements Keyed {
      * be added, without a warning, into the group. False by default.
      * If set to true, Slimefun will not warn about items being added.
      *
-     * @param crossAddonItemGroup Whether items from another addon are allowable
+     * @param crossAddonItemGroup
+     *                          Whether items from another addon are allowable
      */
     public void setCrossAddonItemGroup(boolean crossAddonItemGroup) {
         this.crossAddonItemGroup = crossAddonItemGroup;
@@ -356,10 +378,12 @@ public class ItemGroup implements Keyed {
     /**
      * This method checks whether this {@link ItemGroup} will be hidden for the specified
      * {@link Player}.
-     * <p>
+     *
      * Categories are hidden if all of their items have been disabled.
      *
-     * @param p The {@link Player} to check for
+     * @param p
+     *            The {@link Player} to check for
+     *
      * @return Whether this {@link ItemGroup} will be hidden to the given {@link Player}
      */
     @Deprecated

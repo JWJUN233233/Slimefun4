@@ -18,6 +18,7 @@ import org.bukkit.inventory.ItemStack;
  * {@link InfusedMagnet} in their {@link Inventory}.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class InfusedMagnet extends UnplaceableBlock {
 

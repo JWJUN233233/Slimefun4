@@ -16,6 +16,7 @@ import org.bukkit.inventory.ItemStack;
  * When you right click it, any fire on your {@link Player} will be extinguished.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class WaterStaff extends SimpleSlimefunItem<ItemUseHandler> {
 

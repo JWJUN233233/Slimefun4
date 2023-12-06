@@ -11,7 +11,9 @@ import org.bukkit.ChatColor;
  * "grade" to each timings report and also use this for metrics collection.
  *
  * @author TheBusyBiscuit
+ *
  * @see SlimefunProfiler
+ *
  */
 public enum PerformanceRating implements Predicate<Float> {
 

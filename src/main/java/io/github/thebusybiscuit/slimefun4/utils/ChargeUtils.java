@@ -22,7 +22,9 @@ import org.bukkit.persistence.PersistentDataType;
  *
  * @author TheBusyBiscuit
  * @author WalshyDev
+ *
  * @see Rechargeable
+ *
  */
 public final class ChargeUtils {
 

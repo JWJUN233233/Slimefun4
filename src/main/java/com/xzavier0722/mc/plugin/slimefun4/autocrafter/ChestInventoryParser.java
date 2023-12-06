@@ -10,9 +10,11 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 /**
+ *
  * This is the implementation of {@link CrafterInteractable} with vanilla inventory.
  *
  * @author Xzavier0722
+ *
  */
 public class ChestInventoryParser implements CrafterInteractable {
     private final Inventory inv;

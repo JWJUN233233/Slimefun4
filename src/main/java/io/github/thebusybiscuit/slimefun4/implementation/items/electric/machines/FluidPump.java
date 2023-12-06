@@ -45,6 +45,7 @@ import org.bukkit.potion.PotionType;
  *
  * @author TheBusyBiscuit
  * @author Linox
+ *
  */
 public class FluidPump extends SimpleSlimefunItem<BlockTicker> implements InventoryBlock, EnergyNetComponent {
 
@@ -234,7 +235,9 @@ public class FluidPump extends SimpleSlimefunItem<BlockTicker> implements Invent
     /**
      * This method checks if the given {@link Block} is a liquid source {@link Block}.
      *
-     * @param block The {@link Block} in question
+     * @param block
+     *            The {@link Block} in question
+     *
      * @return Whether that {@link Block} is a liquid and a source {@link Block}.
      */
     private boolean isSource(@Nonnull Block block) {

@@ -24,7 +24,9 @@ import org.bukkit.block.data.type.GlassPane;
  * and sets itself to that.
  *
  * @author TheBusyBiscuit
+ *
  * @see RainbowBlock
+ *
  */
 public class RainbowTickHandler extends BlockTicker {
 
@@ -58,7 +60,9 @@ public class RainbowTickHandler extends BlockTicker {
      * This is done to save performance, so we don't have to validate {@link BlockData} at
      * runtime.
      *
-     * @param materials The {@link Material} Array to check
+     * @param materials
+     *            The {@link Material} Array to check
+     *
      * @return Whether the array contained any {@link GlassPane} materials
      */
     private boolean containsGlassPanes(@Nonnull List<Material> materials) {

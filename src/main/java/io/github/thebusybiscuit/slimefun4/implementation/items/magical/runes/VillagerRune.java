@@ -25,6 +25,7 @@ import org.bukkit.inventory.ItemStack;
  * Useful to reset a villager who does not have desirable trades.
  *
  * @author dNiym
+ *
  */
 public class VillagerRune extends SimpleSlimefunItem<EntityInteractHandler> {
 

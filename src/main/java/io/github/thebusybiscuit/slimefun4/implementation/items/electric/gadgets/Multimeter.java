@@ -20,8 +20,10 @@ import org.bukkit.inventory.ItemStack;
  * The {@link Multimeter} is used to measure charge and capacity of any {@link EnergyNetComponent}.
  *
  * @author TheBusyBiscuit
+ *
  * @see EnergyNet
  * @see EnergyNetComponent
+ *
  */
 public class Multimeter extends SimpleSlimefunItem<ItemUseHandler> {
 

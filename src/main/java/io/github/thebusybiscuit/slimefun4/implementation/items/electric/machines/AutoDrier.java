@@ -22,6 +22,7 @@ import org.bukkit.inventory.ItemStack;
  * It also allows you to convert Rotten Flesh into Leather.
  *
  * @author Linox
+ *
  */
 public class AutoDrier extends AContainer implements RecipeDisplayItem, NotHopperable {
 

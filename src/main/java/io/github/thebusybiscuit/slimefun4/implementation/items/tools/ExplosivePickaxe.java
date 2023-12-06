@@ -12,8 +12,10 @@ import org.bukkit.inventory.ItemStack;
  * in a size of 3 by 3. It also creates a explosion animation.
  *
  * @author TheBusyBiscuit
+ *
  * @see ExplosiveShovel
  * @see ExplosiveTool
+ *
  */
 public class ExplosivePickaxe extends ExplosiveTool {
 

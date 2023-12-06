@@ -18,8 +18,10 @@ import org.bukkit.inventory.ItemStack;
  * It has no further functionality.
  *
  * @author TheBusyBiscuit
+ *
  * @see CargoNode
  * @see CargoNet
+ *
  */
 public class CargoConnectorNode extends SimpleSlimefunItem<BlockUseHandler> {
 

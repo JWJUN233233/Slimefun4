@@ -37,6 +37,7 @@ import org.bukkit.util.Vector;
  * It is quite similar to a shockwave.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class SeismicAxe extends SimpleSlimefunItem<ItemUseHandler> implements NotPlaceable, DamageableItem {
 

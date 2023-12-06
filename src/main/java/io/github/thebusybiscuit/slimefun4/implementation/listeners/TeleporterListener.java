@@ -28,6 +28,7 @@ import org.bukkit.event.player.PlayerInteractEvent;
  * @author Walshy
  * @author Sfiguz7
  * @author SoSeDiK
+ *
  */
 public class TeleporterListener implements Listener {
 
@@ -102,7 +103,9 @@ public class TeleporterListener implements Listener {
      * This methoc checks if the given teleporter {@link Block} is surrounded
      * by all the necessary {@link TeleporterPylon}s.
      *
-     * @param teleporter The teleporter {@link Block}
+     * @param teleporter
+     *            The teleporter {@link Block}
+     *
      * @return Whether the teleporter is surrounded by pylons.
      */
     private boolean checkForPylons(@Nonnull Block teleporter) {

@@ -25,6 +25,7 @@ import org.bukkit.inventory.ItemStack;
  * interactions with ChestTerminal.
  *
  * @author TheBusyBiscuit
+ *
  */
 abstract class AbstractItemNetwork extends Network {
 
@@ -74,7 +75,8 @@ abstract class AbstractItemNetwork extends Network {
      * This will mark the {@link ItemFilter} of the given node dirty.
      * It will also invalidate the cached rotation.
      *
-     * @param node The {@link Location} of the cargo node
+     * @param node
+     *            The {@link Location} of the cargo node
      */
     public void markCargoNodeConfigurationDirty(@Nonnull Location node) {
         ItemFilter filter = filterCache.get(node);

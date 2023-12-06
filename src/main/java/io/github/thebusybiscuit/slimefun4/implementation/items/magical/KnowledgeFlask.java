@@ -19,6 +19,7 @@ import org.bukkit.inventory.ItemStack;
  * experience levels in a bottle when you right click.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class KnowledgeFlask extends SimpleSlimefunItem<ItemUseHandler> {
 

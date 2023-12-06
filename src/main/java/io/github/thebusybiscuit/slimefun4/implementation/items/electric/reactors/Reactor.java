@@ -50,9 +50,11 @@ import org.bukkit.inventory.ItemStack;
  * @author John000708
  * @author AlexLander123
  * @author TheBusyBiscuit
+ *
  * @see AGenerator
  * @see NuclearReactor
  * @see NetherStarReactor
+ *
  */
 public abstract class Reactor extends AbstractEnergyProvider
         implements HologramOwner, MachineProcessHolder<FuelOperation> {
@@ -469,10 +471,15 @@ public abstract class Reactor extends AbstractEnergyProvider
     /**
      * This method cools the given {@link Reactor}.
      *
-     * @param reactor    The {@link Location} of this {@link Reactor}
-     * @param menu       The {@link Inventory} of this {@link Reactor}
-     * @param accessPort The {@link ReactorAccessPort}, if available
-     * @param operation  The {@link FuelOperation} of this {@link Reactor}
+     * @param reactor
+     *            The {@link Location} of this {@link Reactor}
+     * @param menu
+     *            The {@link Inventory} of this {@link Reactor}
+     * @param accessPort
+     *            The {@link ReactorAccessPort}, if available
+     * @param operation
+     *            The {@link FuelOperation} of this {@link Reactor}
+     *
      * @return Whether the {@link Reactor} was successfully cooled, if not it should explode
      */
     private boolean hasEnoughCoolant(

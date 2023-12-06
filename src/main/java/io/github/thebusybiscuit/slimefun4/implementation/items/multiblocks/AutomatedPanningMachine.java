@@ -35,6 +35,7 @@ import org.bukkit.inventory.ItemStack;
  * @author Liruxo
  * @author svr333
  * @author JustAHuman
+ *
  * @see GoldPan
  */
 public class AutomatedPanningMachine extends MultiBlockMachine {

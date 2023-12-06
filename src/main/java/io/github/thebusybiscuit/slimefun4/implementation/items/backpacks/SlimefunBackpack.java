@@ -24,8 +24,10 @@ import org.bukkit.inventory.meta.ItemMeta;
  * Right-Clicking will open the {@link Inventory} of the currently held Backpack.
  *
  * @author TheBusyBiscuit
+ *
  * @see BackpackListener
  * @see PlayerBackpack
+ *
  */
 public class SlimefunBackpack extends SimpleSlimefunItem<ItemUseHandler> implements DistinctiveItem {
     private final int size;
@@ -51,8 +53,12 @@ public class SlimefunBackpack extends SimpleSlimefunItem<ItemUseHandler> impleme
      * This method returns whether a given {@link ItemStack} is allowed to be stored
      * in this {@link SlimefunBackpack}.
      *
-     * @param item               The {@link ItemStack} to check for
-     * @param itemAsSlimefunItem The same {@link ItemStack} as a {@link SlimefunItem}, might be null
+     * @param item
+     *            The {@link ItemStack} to check for
+     *
+     * @param itemAsSlimefunItem
+     *            The same {@link ItemStack} as a {@link SlimefunItem}, might be null
+     *
      * @return Whether the given {@link ItemStack} is allowed to be put into this {@link SlimefunBackpack}
      */
     public boolean isItemAllowed(@Nonnull ItemStack item, @Nullable SlimefunItem itemAsSlimefunItem) {

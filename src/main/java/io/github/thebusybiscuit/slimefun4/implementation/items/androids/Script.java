@@ -26,6 +26,7 @@ import org.bukkit.inventory.ItemStack;
  * A {@link Script} represents runnable code for a {@link ProgrammableAndroid}.
  *
  * @author TheBusyBiscuit
+ *
  */
 public final class Script {
 
@@ -37,7 +38,8 @@ public final class Script {
     /**
      * This constructs a new {@link Script} from the given {@link Config}.
      *
-     * @param config The {@link Config}
+     * @param config
+     *            The {@link Config}
      */
     private Script(@Nonnull Config config) {
         Validate.notNull(config);
@@ -94,7 +96,9 @@ public final class Script {
      * This method determines whether the given {@link OfflinePlayer} is the author of
      * this {@link Script}.
      *
-     * @param p The {@link OfflinePlayer} to check for
+     * @param p
+     *            The {@link OfflinePlayer} to check for
+     *
      * @return Whether the given {@link OfflinePlayer} is the author of this {@link Script}.
      */
     public boolean isAuthor(@Nonnull OfflinePlayer p) {
@@ -105,7 +109,9 @@ public final class Script {
      * This method checks whether a given {@link Player} is able to leave a rating for this {@link Script}.
      * A {@link Player} is unable to rate his own {@link Script} or a {@link Script} he already rated before.
      *
-     * @param p The {@link Player} to check for
+     * @param p
+     *            The {@link Player} to check for
+     *
      * @return Whether the given {@link Player} is able to rate this {@link Script}
      */
     public boolean canRate(@Nonnull Player p) {

@@ -28,9 +28,11 @@ import org.bukkit.inventory.ItemStack;
  * are capable of upgrading backpacks.
  *
  * @author TheBusyBiscuit
+ *
  * @see EnhancedCraftingTable
  * @see MagicWorkbench
  * @see ArmorForge
+ *
  */
 abstract class AbstractCraftingTable extends MultiBlockMachine {
 

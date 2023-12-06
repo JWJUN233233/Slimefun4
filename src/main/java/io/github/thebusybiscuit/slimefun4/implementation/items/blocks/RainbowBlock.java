@@ -13,6 +13,7 @@ import org.bukkit.inventory.ItemStack;
  * A {@link RainbowBlock} cycles through different colored {@link Material Materials}.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class RainbowBlock extends SimpleSlimefunItem<RainbowTickHandler> {
 

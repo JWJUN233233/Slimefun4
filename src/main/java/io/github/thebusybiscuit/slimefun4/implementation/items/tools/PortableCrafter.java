@@ -19,6 +19,7 @@ import org.bukkit.inventory.ItemStack;
  * It allows a {@link Player} to open up the {@link CraftingInventory} via right click.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class PortableCrafter extends SimpleSlimefunItem<ItemUseHandler> implements NotPlaceable {
 

@@ -29,6 +29,7 @@ import org.bukkit.util.Vector;
  * This service is responsible for handling holograms.
  *
  * @author TheBusyBiscuit
+ *
  * @see HologramOwner
  */
 public class HologramsService {
@@ -67,7 +68,8 @@ public class HologramsService {
     /**
      * This constructs a new {@link HologramsService}.
      *
-     * @param plugin Our {@link Plugin} instance
+     * @param plugin
+     *            Our {@link Plugin} instance
      */
     public HologramsService(@Nonnull Plugin plugin) {
         this.plugin = plugin;
@@ -114,8 +116,11 @@ public class HologramsService {
      * If createIfNoneExists is set to true a new {@link ArmorStand} will be spawned
      * if no existing one could be found.
      *
-     * @param loc                The {@link Location}
-     * @param createIfNoneExists Whether to create a new {@link ArmorStand} if none was found
+     * @param loc
+     *            The {@link Location}
+     * @param createIfNoneExists
+     *            Whether to create a new {@link ArmorStand} if none was found
+     *
      * @return The existing (or newly created) hologram
      */
     @Nullable private Hologram getHologram(@Nonnull Location loc, boolean createIfNoneExists) {
@@ -176,7 +181,9 @@ public class HologramsService {
      * This checks if a given {@link Entity} is an {@link ArmorStand}
      * and whether it has the correct attributes to be considered a {@link Hologram}.
      *
-     * @param n The {@link Entity} to check
+     * @param n
+     *            The {@link Entity} to check
+     *
      * @return Whether this could be a hologram
      */
     private boolean isHologram(@Nonnull Entity n) {
@@ -192,9 +199,13 @@ public class HologramsService {
      * This will cast the {@link Entity} to an {@link ArmorStand} and it will apply
      * all necessary attributes to the {@link ArmorStand}, then return a {@link Hologram}.
      *
-     * @param position  The {@link BlockPosition} of this hologram
-     * @param entity    The {@link Entity}
-     * @param container The {@link PersistentDataContainer} of the given {@link Entity}
+     * @param position
+     *            The {@link BlockPosition} of this hologram
+     * @param entity
+     *            The {@link Entity}
+     * @param container
+     *            The {@link PersistentDataContainer} of the given {@link Entity}
+     *
      * @return The {@link Hologram}
      */
     @Nullable private Hologram getAsHologram(
@@ -228,8 +239,10 @@ public class HologramsService {
      * <p>
      * <strong>This method must be executed on the main {@link Server} {@link Thread}.</strong>
      *
-     * @param loc      The {@link Location}
-     * @param consumer The callback to run
+     * @param loc
+     *            The {@link Location}
+     * @param consumer
+     *            The callback to run
      */
     private void updateHologram(@Nonnull Location loc, @Nonnull Consumer<Hologram> consumer) {
         Validate.notNull(loc, "Location must not be null");
@@ -260,9 +273,11 @@ public class HologramsService {
      * <p>
      * <strong>This method must be executed on the main {@link Server} {@link Thread}.</strong>
      *
-     * @param loc The {@link Location}
+     * @param loc
+     *            The {@link Location}
+     *
      * @return Whether the {@link Hologram} could be removed, false if the {@link Hologram} does not
-     * exist or was already removed
+     *         exist or was already removed
      */
     public boolean removeHologram(@Nonnull Location loc) {
         Validate.notNull(loc, "Location cannot be null");
@@ -291,8 +306,10 @@ public class HologramsService {
     /**
      * This will update the label of the {@link Hologram}.
      *
-     * @param loc   The {@link Location} of this {@link Hologram}
-     * @param label The label to set, can be null
+     * @param loc
+     *            The {@link Location} of this {@link Hologram}
+     * @param label
+     *            The label to set, can be null
      */
     public void setHologramLabel(@Nonnull Location loc, @Nullable String label) {
         Validate.notNull(loc, "Location must not be null");

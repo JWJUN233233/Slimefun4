@@ -32,6 +32,7 @@ import org.bukkit.inventory.ItemStack;
  * The {@link ElectricSmeltery} is an electric version of the standard {@link Smeltery}.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class ElectricSmeltery extends AContainer implements NotHopperable {
 

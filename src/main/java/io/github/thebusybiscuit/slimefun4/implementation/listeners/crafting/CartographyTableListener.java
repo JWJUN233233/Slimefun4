@@ -16,6 +16,7 @@ import org.bukkit.inventory.ItemStack;
  * cartography table.
  *
  * @author poma123
+ *
  */
 public class CartographyTableListener implements SlimefunCraftingListener {
 

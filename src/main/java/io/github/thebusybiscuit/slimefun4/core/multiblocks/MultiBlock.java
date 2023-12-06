@@ -22,9 +22,11 @@ import org.bukkit.block.BlockFace;
  *
  * @author TheBusyBiscuit
  * @author Liruxo
+ *
  * @see MultiBlockMachine
  * @see MultiBlockInteractionHandler
  * @see MultiBlockInteractEvent
+ *
  */
 public class MultiBlock {
 
@@ -87,9 +89,11 @@ public class MultiBlock {
 
     @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof MultiBlock mb)) {
+        if (!(obj instanceof MultiBlock)) {
             return false;
         }
+
+        MultiBlock mb = (MultiBlock) obj;
 
         if (trigger == mb.getTriggerBlock() && isSymmetric == mb.isSymmetric) {
             for (int i = 0; i < mb.getStructure().length; i++) {
@@ -125,7 +129,9 @@ public class MultiBlock {
                 return a == Material.MOVING_PISTON;
             }
 
-            return b == a;
+            if (b != a) {
+                return false;
+            }
         }
 
         return true;

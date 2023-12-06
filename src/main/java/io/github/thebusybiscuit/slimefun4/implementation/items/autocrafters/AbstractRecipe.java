@@ -23,9 +23,11 @@ import org.bukkit.inventory.ShapelessRecipe;
  * recipes made using the {@link EnhancedCraftingTable}.
  *
  * @author TheBusyBiscuit
+ *
  * @see AbstractAutoCrafter
  * @see VanillaRecipe
  * @see SlimefunItemRecipe
+ *
  */
 public abstract class AbstractRecipe {
 
@@ -47,8 +49,10 @@ public abstract class AbstractRecipe {
     /**
      * Protected constructor. For implementation classes only.
      *
-     * @param ingredients The ingredients for this recipe as predicates
-     * @param result      The resulting {@link ItemStack}
+     * @param ingredients
+     *            The ingredients for this recipe as predicates
+     * @param result
+     *            The resulting {@link ItemStack}
      */
     @ParametersAreNonnullByDefault
     protected AbstractRecipe(Collection<Predicate<ItemStack>> ingredients, ItemStack result) {
@@ -95,7 +99,8 @@ public abstract class AbstractRecipe {
      * This method enables or disables this recipe.
      * A disabled recipe will not be crafted.
      *
-     * @param enabled Whether this recipe is enabled
+     * @param enabled
+     *            Whether this recipe is enabled
      */
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
@@ -105,8 +110,10 @@ public abstract class AbstractRecipe {
      * This will visually represent this {@link AbstractRecipe} in the given {@link ChestMenu}.
      * Any {@link MaterialChoice} will be cycled through using the {@link AsyncRecipeChoiceTask}.
      *
-     * @param menu The {@link ChestMenu} to display the recipe in
-     * @param task The {@link AsyncRecipeChoiceTask} instance
+     * @param menu
+     *            The {@link ChestMenu} to display the recipe in
+     * @param task
+     *            The {@link AsyncRecipeChoiceTask} instance
      */
     public abstract void show(@Nonnull ChestMenu menu, @Nonnull AsyncRecipeChoiceTask task);
 
@@ -118,7 +125,9 @@ public abstract class AbstractRecipe {
      * Currently supported recipe types are {@link ShapedRecipe} and {@link ShapelessRecipe}.
      * If the {@link Recipe} is null or none of the aforementioned types, null will be returned.
      *
-     * @param recipe The {@link Recipe} to wrap
+     * @param recipe
+     *            The {@link Recipe} to wrap
+     *
      * @return The wrapped {@link AbstractRecipe} or null
      */
     @Nullable public static AbstractRecipe of(@Nullable Recipe recipe) {
@@ -136,8 +145,11 @@ public abstract class AbstractRecipe {
      * Note that the {@link SlimefunItem} must be crafted using the specified {@link RecipeType},
      * otherwise null will be returned.
      *
-     * @param item       The {@link SlimefunItem} the recipe belongs to
-     * @param recipeType The {@link RecipeType}
+     * @param item
+     *            The {@link SlimefunItem} the recipe belongs to
+     * @param recipeType
+     *            The {@link RecipeType}
+     *
      * @return The wrapped {@link AbstractRecipe} or null
      */
     @Nullable public static AbstractRecipe of(@Nullable SlimefunItem item, @Nonnull RecipeType recipeType) {

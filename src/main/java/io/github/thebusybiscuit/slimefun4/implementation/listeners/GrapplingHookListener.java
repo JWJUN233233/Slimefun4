@@ -35,7 +35,9 @@ import org.bukkit.util.Vector;
  * @author TheBusyBiscuit
  * @author Linox
  * @author BlackBeltPanda
+ *
  * @see GrapplingHook
+ *
  */
 public class GrapplingHookListener implements Listener {
 

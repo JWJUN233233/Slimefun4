@@ -18,6 +18,7 @@ import org.bukkit.inventory.ItemStack;
  * Only applied if the whole set is worn.
  *
  * @author Linox
+ *
  */
 public class BeeListener implements Listener {
 
@@ -27,7 +28,8 @@ public class BeeListener implements Listener {
 
     @EventHandler
     public void onDamage(EntityDamageByEntityEvent e) {
-        if (e.getDamager() instanceof Bee && e.getEntity() instanceof Player p) {
+        if (e.getDamager() instanceof Bee && e.getEntity() instanceof Player) {
+            Player p = (Player) e.getEntity();
             Optional<PlayerProfile> optional = PlayerProfile.find(p);
 
             if (!optional.isPresent()) {

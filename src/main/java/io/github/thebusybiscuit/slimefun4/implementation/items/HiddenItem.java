@@ -13,6 +13,7 @@ import org.bukkit.inventory.ItemStack;
  * that is hidden from the Slimefun guide.
  *
  * @author char321
+ *
  */
 public class HiddenItem extends SlimefunItem implements NotConfigurable {
 

@@ -47,11 +47,12 @@ import org.bukkit.inventory.ItemStack;
  *
  * @author Redemption198
  * @author TheBusyBiscuit
+ *
  */
 public class AncientAltarListener implements Listener {
 
-    private final AncientAltar altarItem;
-    private final AncientPedestal pedestalItem;
+    private AncientAltar altarItem;
+    private AncientPedestal pedestalItem;
 
     private final Set<Location> altarsInUse = new HashSet<>();
 

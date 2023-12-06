@@ -26,10 +26,11 @@ import org.bukkit.inventory.meta.SkullMeta;
  * {@link Zombie}, {@link Skeleton} and {@link Creeper} skulls when killing the respective {@link Monster}.
  * Additionally, you can also obtain the head of a {@link Player} by killing them too.
  * This sword also allows you to have a higher chance of getting the skull of a {@link WitherSkeleton} too.
- * <p>
+ *
  * All chances are managed by an {@link ItemSetting} and can be configured.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class SwordOfBeheading extends SimpleSlimefunItem<EntityKillHandler> {
 

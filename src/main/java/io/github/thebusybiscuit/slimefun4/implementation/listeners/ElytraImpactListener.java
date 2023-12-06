@@ -26,6 +26,7 @@ import org.bukkit.event.entity.EntityToggleGlideEvent;
  *
  * @author Seggan
  * @author J3fftw1
+ *
  * @see ElytraCap
  */
 public class ElytraImpactListener implements Listener {

@@ -18,7 +18,9 @@ import org.bukkit.inventory.ItemStack;
  *
  * @author Linox
  * @author TheBusyBiscuit
+ *
  * @see EntityInteractHandler
+ *
  */
 public class EntityInteractionListener implements Listener {
 

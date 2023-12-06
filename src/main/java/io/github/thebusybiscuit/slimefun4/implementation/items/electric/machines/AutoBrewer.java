@@ -20,9 +20,11 @@ import org.bukkit.potion.PotionData;
 import org.bukkit.potion.PotionType;
 
 /**
+ *
  * The {@link AutoBrewer} machine with most if not all potion recipes.
  *
  * @author Linox
+ *
  */
 public class AutoBrewer extends AContainer implements NotHopperable {
 
@@ -143,7 +145,9 @@ public class AutoBrewer extends AContainer implements NotHopperable {
     /**
      * Checks whether a given {@link Material} is a valid Potion material.
      *
-     * @param mat The {@link Material} to check
+     * @param mat
+     *            The {@link Material} to check
+     *
      * @return Whether this {@link Material} is a valid potion
      */
     private boolean isPotion(@Nonnull Material mat) {

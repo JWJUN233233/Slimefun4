@@ -37,7 +37,9 @@ import org.bukkit.block.data.Waterlogged;
  * and follow Minecraft's tags.json format.
  *
  * @author TheBusyBiscuit
+ *
  * @see TagParser
+ *
  */
 public enum SlimefunTag implements Tag<Material> {
 
@@ -308,7 +310,8 @@ public enum SlimefunTag implements Tag<Material> {
     /**
      * This method reloads this {@link SlimefunTag} from our resources directory.
      *
-     * @throws TagMisconfigurationException This is thrown whenever a {@link SlimefunTag} could not be parsed properly
+     * @throws TagMisconfigurationException
+     *             This is thrown whenever a {@link SlimefunTag} could not be parsed properly
      */
     public void reload() throws TagMisconfigurationException {
         new TagParser(this).parse(this, (materials, tags) -> {
@@ -323,12 +326,13 @@ public enum SlimefunTag implements Tag<Material> {
     /**
      * This method reloads every single {@link SlimefunTag} from the resources directory.
      * It is equivalent to running {@link #reload()} on every single {@link SlimefunTag} manually.
-     * <p>
+     *
      * Do keep in mind though that any misconfigured {@link SlimefunTag} will abort the entire
      * method and throw a {@link TagMisconfigurationException}. So one faulty {@link SlimefunTag}
      * will stop the reloading process.
      *
-     * @throws TagMisconfigurationException This is thrown if one of the {@link SlimefunTag SlimefunTags} could not be parsed correctly
+     * @throws TagMisconfigurationException
+     *             This is thrown if one of the {@link SlimefunTag SlimefunTags} could not be parsed correctly
      */
     public static void reloadAll() throws TagMisconfigurationException {
         for (SlimefunTag tag : valuesCache) {
@@ -422,7 +426,9 @@ public enum SlimefunTag implements Tag<Material> {
      * your Java version. It also means that you can avoid an IllegalArgumentException which let's
      * face it is always good.
      *
-     * @param value The value which you would like to look up.
+     * @param value
+     *            The value which you would like to look up.
+     *
      * @return The {@link SlimefunTag} or null if it does not exist.
      */
     public static @Nullable SlimefunTag getTag(@Nonnull String value) {

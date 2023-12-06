@@ -32,6 +32,7 @@ import org.bukkit.persistence.PersistentDataType;
  * @author Walshy
  * @author TheBusyBiscuit
  * @author martinbrom
+ *
  * @see StormStaff
  */
 public abstract class LimitedUseItem extends SimpleSlimefunItem<ItemUseHandler> {
@@ -60,7 +61,9 @@ public abstract class LimitedUseItem extends SimpleSlimefunItem<ItemUseHandler> 
      * Sets the maximum number of times this item can be used.
      * The number must be greater than zero.
      *
-     * @param count The maximum number of times this item can be used.
+     * @param count
+     *            The maximum number of times this item can be used.
+     *
      * @return The {@link LimitedUseItem} for chaining of setters
      */
     public final @Nonnull LimitedUseItem setMaxUseCount(int count) {

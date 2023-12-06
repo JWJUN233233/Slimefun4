@@ -17,8 +17,10 @@ import org.bukkit.inventory.ItemStack;
  * However it can only break blocks that a shovel can break.
  *
  * @author Linox
+ *
  * @see ExplosivePickaxe
  * @see ExplosiveTool
+ *
  */
 public class ExplosiveShovel extends ExplosiveTool {
 

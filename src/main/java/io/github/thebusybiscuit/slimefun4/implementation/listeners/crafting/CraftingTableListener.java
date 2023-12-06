@@ -3,6 +3,7 @@ package io.github.thebusybiscuit.slimefun4.implementation.listeners.crafting;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import javax.annotation.Nonnull;
+import org.bukkit.entity.Player;
 import org.bukkit.event.Event.Result;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -15,6 +16,7 @@ import org.bukkit.inventory.ItemStack;
  * crafting table.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class CraftingTableListener implements SlimefunCraftingListener {
 
@@ -29,7 +31,7 @@ public class CraftingTableListener implements SlimefunCraftingListener {
 
             if (sfItem != null && !sfItem.isUseableInWorkbench()) {
                 e.setResult(Result.DENY);
-                Slimefun.getLocalization().sendMessage(e.getWhoClicked(), "workbench.not-enhanced", true);
+                Slimefun.getLocalization().sendMessage((Player) e.getWhoClicked(), "workbench.not-enhanced", true);
                 break;
             }
         }

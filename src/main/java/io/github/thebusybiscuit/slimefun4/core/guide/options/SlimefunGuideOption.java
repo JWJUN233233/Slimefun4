@@ -11,8 +11,10 @@ import org.bukkit.inventory.ItemStack;
 /**
  * This interface represents an option in the {@link SlimefunGuide}.
  *
- * @param <T> The type of value for this option
  * @author TheBusyBiscuit
+ *
+ * @param <T>
+ *            The type of value for this option
  */
 public interface SlimefunGuideOption<T> extends Keyed {
 

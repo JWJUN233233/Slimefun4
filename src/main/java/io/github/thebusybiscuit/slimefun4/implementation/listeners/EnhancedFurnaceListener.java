@@ -24,7 +24,9 @@ import org.bukkit.inventory.ItemStack;
  * of an {@link EnhancedFurnace}.
  *
  * @author TheBusyBiscuit
+ *
  * @see EnhancedFurnace
+ *
  */
 public class EnhancedFurnaceListener implements Listener {
 

@@ -24,8 +24,10 @@ public class AndroidMineEvent extends Event implements Cancellable {
     private boolean cancelled;
 
     /**
-     * @param block   The mined {@link Block}
-     * @param android The {@link AndroidInstance} that triggered this {@link Event}
+     * @param block
+     *            The mined {@link Block}
+     * @param android
+     *            The {@link AndroidInstance} that triggered this {@link Event}
      */
     @ParametersAreNonnullByDefault
     public AndroidMineEvent(Block block, AndroidInstance android) {

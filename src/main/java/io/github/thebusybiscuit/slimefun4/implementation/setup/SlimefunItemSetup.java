@@ -219,6 +219,7 @@ import org.bukkit.potion.PotionType;
 /**
  * This class holds the recipes of all items.
  * This is the place where all items from Slimefun are registered.
+ *
  */
 public final class SlimefunItemSetup {
 

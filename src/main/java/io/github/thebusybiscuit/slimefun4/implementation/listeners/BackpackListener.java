@@ -38,8 +38,10 @@ import org.bukkit.inventory.ItemStack;
  * @author AtomicScience
  * @author VoidAngel
  * @author John000708
+ *
  * @see SlimefunBackpack
  * @see PlayerBackpack
+ *
  */
 public class BackpackListener implements Listener {
 

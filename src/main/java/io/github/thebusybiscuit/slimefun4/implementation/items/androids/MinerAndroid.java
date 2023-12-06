@@ -42,7 +42,9 @@ import org.bukkit.inventory.ItemStack;
  * @author CyberPatriot
  * @author Redemption198
  * @author Poslovitch
+ *
  * @see AndroidMineEvent
+ *
  */
 public class MinerAndroid extends ProgrammableAndroid {
 

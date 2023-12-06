@@ -19,6 +19,7 @@ import org.bukkit.inventory.ItemStack;
  * {@link EnderChest} upon right clicking.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class EnderBackpack extends SimpleSlimefunItem<ItemUseHandler> implements NotPlaceable {
 

@@ -41,6 +41,7 @@ import org.bukkit.inventory.ItemStack;
  * various mappings and collections related to {@link SlimefunItem}.
  *
  * @author TheBusyBiscuit
+ *
  */
 public final class SlimefunRegistry {
 
@@ -144,7 +145,7 @@ public final class SlimefunRegistry {
      * {@link Player} who is currently unlocking a {@link Research}.
      *
      * @return A {@link Set} holding the {@link UUID} from every {@link Player}
-     * who is currently unlocking a {@link Research}
+     *         who is currently unlocking a {@link Research}
      */
     @Nonnull
     public Set<UUID> getCurrentlyResearchingPlayers() {
@@ -174,7 +175,9 @@ public final class SlimefunRegistry {
      * using the {@link SlimefunGuide}, then please use the static methods provided in the
      * {@link SlimefunGuide} class.
      *
-     * @param mode The {@link SlimefunGuideMode}
+     * @param mode
+     *            The {@link SlimefunGuideMode}
+     *
      * @return The corresponding {@link SlimefunGuideImplementation}
      */
     @Nonnull

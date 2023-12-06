@@ -34,8 +34,10 @@ import org.bukkit.inventory.ItemStack;
  * This {@link SlimefunItem} is a super class for items like the {@link ExplosivePickaxe} or {@link ExplosiveShovel}.
  *
  * @author TheBusyBiscuit
+ *
  * @see ExplosivePickaxe
  * @see ExplosiveShovel
+ *
  */
 public class ExplosiveTool extends SimpleSlimefunItem<ToolUseHandler> implements NotPlaceable, DamageableItem {
 

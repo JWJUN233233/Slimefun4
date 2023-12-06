@@ -20,13 +20,15 @@ import org.bukkit.Location;
  * This Interface, when attached to a class that inherits from {@link SlimefunItem}, marks
  * the Item as an electric Block.
  * This will make this Block interact with an {@link EnergyNet}.
- * <p>
+ *
  * You can specify the Type of Block via {@link EnergyNetComponent#getEnergyComponentType()}.
  * You can also specify a capacity for this Block via {@link EnergyNetComponent#getCapacity()}.
  *
  * @author TheBusyBiscuit
+ *
  * @see EnergyNetComponentType
  * @see EnergyNet
+ *
  */
 public interface EnergyNetComponent extends ItemAttribute {
 
@@ -60,7 +62,9 @@ public interface EnergyNetComponent extends ItemAttribute {
     /**
      * This returns the currently stored charge at a given {@link Location}.
      *
-     * @param l The target {@link Location}
+     * @param l
+     *            The target {@link Location}
+     *
      * @return The charge stored at that {@link Location}
      */
     default int getCharge(@Nonnull Location l) {
@@ -110,8 +114,11 @@ public interface EnergyNetComponent extends ItemAttribute {
      * This returns the currently stored charge at a given {@link Location}.
      * object for this {@link Location}.
      *
-     * @param l    The target {@link Location}
-     * @param data The data at this {@link Location}
+     * @param l
+     *            The target {@link Location}
+     * @param data
+     *            The data at this {@link Location}
+     *
      * @return The charge stored at that {@link Location}
      */
     default int getCharge(@Nonnull Location l, @Nonnull SlimefunBlockData data) {
@@ -137,8 +144,10 @@ public interface EnergyNetComponent extends ItemAttribute {
      * If this {@link EnergyNetComponent} is of type {@code EnergyNetComponentType.CAPACITOR}, then
      * this method will automatically update the texture of this {@link Capacitor} as well.
      *
-     * @param l      The target {@link Location}
-     * @param charge The new charge
+     * @param l
+     *            The target {@link Location}
+     * @param charge
+     *            The new charge
      */
     default void setCharge(@Nonnull Location l, int charge) {
         Validate.notNull(l, "Location was null!");

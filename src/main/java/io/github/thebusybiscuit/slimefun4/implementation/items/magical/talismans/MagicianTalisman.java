@@ -24,6 +24,7 @@ import org.bukkit.inventory.ItemStack;
  * with an extra {@link Enchantment} when they enchant their {@link ItemStack}.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class MagicianTalisman extends Talisman {
 
@@ -63,7 +64,8 @@ public class MagicianTalisman extends Talisman {
                     .log(
                             Level.SEVERE,
                             x,
-                            () -> "The following Exception was thrown when initializing the settings for " + this);
+                            () -> "The following Exception was thrown when initializing the settings for "
+                                    + toString());
         }
     }
 

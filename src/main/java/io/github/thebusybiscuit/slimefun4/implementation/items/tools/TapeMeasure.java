@@ -28,6 +28,7 @@ import org.bukkit.persistence.PersistentDataType;
  * The {@link TapeMeasure} is used to measure the distance between two {@link Block Blocks}.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class TapeMeasure extends SimpleSlimefunItem<ItemUseHandler> implements NotPlaceable {
 

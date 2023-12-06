@@ -26,9 +26,9 @@ public class ChestMenu extends SlimefunInventoryHolder {
 
     private boolean clickable;
     private boolean emptyClickable;
-    private final String title;
-    private final List<ItemStack> items;
-    private final Map<Integer, MenuClickHandler> handlers;
+    private String title;
+    private List<ItemStack> items;
+    private Map<Integer, MenuClickHandler> handlers;
     private MenuOpeningHandler open;
     private MenuCloseHandler close;
     private MenuClickHandler playerclick;
@@ -318,23 +318,23 @@ public class ChestMenu extends SlimefunInventoryHolder {
     @FunctionalInterface
     public interface MenuClickHandler {
 
-        boolean onClick(Player p, int slot, ItemStack item, ClickAction action);
+        public boolean onClick(Player p, int slot, ItemStack item, ClickAction action);
     }
 
     public interface AdvancedMenuClickHandler extends MenuClickHandler {
 
-        boolean onClick(InventoryClickEvent e, Player p, int slot, ItemStack cursor, ClickAction action);
+        public boolean onClick(InventoryClickEvent e, Player p, int slot, ItemStack cursor, ClickAction action);
     }
 
     @FunctionalInterface
     public interface MenuOpeningHandler {
 
-        void onOpen(Player p);
+        public void onOpen(Player p);
     }
 
     @FunctionalInterface
     public interface MenuCloseHandler {
 
-        void onClose(Player p);
+        public void onClose(Player p);
     }
 }

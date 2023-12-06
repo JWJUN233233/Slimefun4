@@ -37,6 +37,7 @@ import org.bukkit.inventory.EquipmentSlot;
  * This is where the functionality of this item is implemented.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class DebugFishListener implements Listener {
 
@@ -164,9 +165,11 @@ public class DebugFishListener implements Listener {
 
             // Check if the skull is a wall skull, and if so use Directional instead of Rotatable.
             if (b.getType() == Material.PLAYER_WALL_HEAD) {
-                p.sendMessage(ChatColors.color("  &dFacing: &e" + ((Directional) b.getBlockData()).getFacing()));
+                p.sendMessage(ChatColors.color("  &dFacing: &e"
+                        + ((Directional) b.getBlockData()).getFacing().toString()));
             } else {
-                p.sendMessage(ChatColors.color("  &dRotation: &e" + ((Rotatable) b.getBlockData()).getRotation()));
+                p.sendMessage(ChatColors.color("  &dRotation: &e"
+                        + ((Rotatable) b.getBlockData()).getRotation().toString()));
             }
         }
 

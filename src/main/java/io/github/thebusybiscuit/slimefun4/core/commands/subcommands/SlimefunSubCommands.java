@@ -14,6 +14,7 @@ import javax.annotation.Nonnull;
  * a static setup method
  *
  * @author TheBusyBiscuit
+ *
  */
 public final class SlimefunSubCommands {
 

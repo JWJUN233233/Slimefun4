@@ -19,13 +19,15 @@ import org.bukkit.inventory.ItemStack;
 /**
  * The {@link SolarGenerator} is a simple {@link EnergyNetProvider} which generates energy if
  * it has direct contact with sunlight.
- * <p>
+ *
  * Some versions of the {@link SolarGenerator} will even generate energy at night, this is determined by
  * {@link #getNightEnergy()}.
  *
  * @author TheBusyBiscuit
+ *
  * @see EnergyNet
  * @see EnergyNetProvider
+ *
  */
 public class SolarGenerator extends SlimefunItem implements EnergyNetProvider {
 
@@ -118,7 +120,9 @@ public class SolarGenerator extends SlimefunItem implements EnergyNetProvider {
      * This method returns whether a given {@link World} has daytime.
      * It will also return false if a thunderstorm is active in this world.
      *
-     * @param world The {@link World} to check
+     * @param world
+     *            The {@link World} to check
+     *
      * @return Whether the given {@link World} has daytime and no active thunderstorm
      */
     private boolean isDaytime(World world) {

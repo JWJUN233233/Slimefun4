@@ -81,7 +81,8 @@ public class MetricsService {
     /**
      * This constructs a new instance of our {@link MetricsService}.
      *
-     * @param plugin Our {@link Slimefun} instance
+     * @param plugin
+     *            Our {@link Slimefun} instance
      */
     public MetricsService(@Nonnull Slimefun plugin) {
         this.plugin = plugin;
@@ -172,7 +173,9 @@ public class MetricsService {
      * Checks for a new update and compares it against the current version.
      * If there is a new version available then this returns true.
      *
-     * @param currentVersion The current version which is being used.
+     * @param currentVersion
+     *            The current version which is being used.
+     *
      * @return if there is an update available.
      */
     public boolean checkForUpdate(@Nullable String currentVersion) {
@@ -222,7 +225,8 @@ public class MetricsService {
     /**
      * Downloads the version specified to Slimefun's data folder.
      *
-     * @param version The version to download.
+     * @param version
+     *            The version to download.
      */
     private boolean download(int version) {
         File file = new File(parentFolder, "Metrics-" + version + ".jar");

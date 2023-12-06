@@ -59,9 +59,12 @@ public class SlimefunArmorTask extends AbstractArmorTask {
      * Method to handle behavior for pieces of armor.
      * It is called per-player and per piece of armor.
      *
-     * @param p            The {@link Player} wearing the piece of armor
-     * @param sfArmorPiece {@link SlimefunArmorPiece} Slimefun instance of the piece of armor
-     * @param armorPiece   The actual {@link ItemStack} of the armor piece
+     * @param p
+     *            The {@link Player} wearing the piece of armor
+     * @param sfArmorPiece
+     *            {@link SlimefunArmorPiece} Slimefun instance of the piece of armor
+     * @param armorPiece
+     *            The actual {@link ItemStack} of the armor piece
      */
     @ParametersAreNonnullByDefault
     protected void onArmorPieceTick(Player p, SlimefunArmorPiece sfArmorPiece, ItemStack armorPiece) {

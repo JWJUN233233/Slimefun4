@@ -19,7 +19,9 @@ import org.bukkit.inventory.ItemStack;
  * The {@link ElectricDustWasher} serves as an electrical {@link OreWasher}.
  *
  * @author TheBusyBiscuit
+ *
  * @see OreWasher
+ *
  */
 public class ElectricDustWasher extends AContainer {
 

@@ -19,6 +19,7 @@ import org.bukkit.inventory.ItemStack;
  * This is mainly used to prevent the discoloring of leather armor.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class CauldronListener implements SlimefunCraftingListener {
 

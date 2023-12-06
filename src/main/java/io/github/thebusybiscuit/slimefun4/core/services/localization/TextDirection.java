@@ -4,6 +4,7 @@ package io.github.thebusybiscuit.slimefun4.core.services.localization;
  * A simple enum to define the direction of text for a given {@link LanguagePreset}
  *
  * @author TheBusyBiscuit
+ *
  */
 public enum TextDirection {
 

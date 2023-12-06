@@ -16,6 +16,7 @@ import org.bukkit.inventory.ItemStack;
  * These runes are crafted using an {@link AncientAltar}.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class ElementalRune extends SlimefunItem {
 

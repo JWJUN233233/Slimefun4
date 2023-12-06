@@ -30,7 +30,9 @@ import org.bukkit.inventory.meta.EnchantmentStorageMeta;
  * @author Mooy1
  * @author StarWishSama
  * @author martinbrom
+ *
  * @see AutoDisenchanter
+ *
  */
 public class AutoEnchanter extends AbstractEnchantmentMachine {
 

@@ -24,8 +24,10 @@ import org.bukkit.inventory.meta.ItemMeta;
  * to provide some utility methods.
  *
  * @author TheBusyBiscuit
+ *
  * @see BrokenSpawner
  * @see RepairedSpawner
+ *
  */
 public abstract class AbstractMonsterSpawner extends SlimefunItem {
 
@@ -38,7 +40,9 @@ public abstract class AbstractMonsterSpawner extends SlimefunItem {
      * This method tries to obtain an {@link EntityType} from a given {@link ItemStack}.
      * The provided {@link ItemStack} must be a {@link RepairedSpawner} item.
      *
-     * @param item The {@link ItemStack} to extract the {@link EntityType} from
+     * @param item
+     *            The {@link ItemStack} to extract the {@link EntityType} from
+     *
      * @return An {@link Optional} describing the result
      */
     @Nonnull
@@ -70,7 +74,9 @@ public abstract class AbstractMonsterSpawner extends SlimefunItem {
      * to hold and represent the given {@link EntityType}.
      * It updates the lore and {@link BlockStateMeta} to reflect the specified {@link EntityType}.
      *
-     * @param type The {@link EntityType} to apply
+     * @param type
+     *            The {@link EntityType} to apply
+     *
      * @return An {@link ItemStack} for this {@link SlimefunItem} holding that {@link EntityType}
      */
     @Nonnull

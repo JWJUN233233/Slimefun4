@@ -8,7 +8,6 @@ import org.bukkit.command.CommandSender;
 
 /**
  * 聊天相关方法
- *
  * @author ybw0014
  */
 public class ChatUtils {
@@ -18,8 +17,7 @@ public class ChatUtils {
 
     /**
      * 发送带 Slimefun 前缀的消息
-     *
-     * @param sender  消息接收人
+     * @param sender 消息接收人
      * @param message 消息
      */
     public static void sendMessage(CommandSender sender, String message) {
@@ -28,9 +26,8 @@ public class ChatUtils {
 
     /**
      * 发送带 Slimefun 前缀的消息
-     *
-     * @param sender   消息接收人
-     * @param message  消息
+     * @param sender 消息接收人
+     * @param message 消息
      * @param function 对消息进行处理的{@link Function}
      */
     public static void sendMessage(CommandSender sender, String message, UnaryOperator<String> function) {

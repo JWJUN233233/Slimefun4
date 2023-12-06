@@ -27,7 +27,9 @@ import org.bukkit.scheduler.BukkitScheduler;
  * synchronous or not.
  *
  * @author TheBusyBiscuit
+ *
  * @see BlockTicker
+ *
  */
 public class TickerTask implements Runnable {
 
@@ -51,7 +53,8 @@ public class TickerTask implements Runnable {
     /**
      * This method starts the {@link TickerTask} on an asynchronous schedule.
      *
-     * @param plugin The instance of our {@link Slimefun}
+     * @param plugin
+     *            The instance of our {@link Slimefun}
      */
     public void start(@Nonnull Slimefun plugin) {
         this.tickRate = Slimefun.getCfg().getInt("URID.custom-ticker-delay");
@@ -224,7 +227,7 @@ public class TickerTask implements Runnable {
      * This method returns a <strong>read-only</strong> {@link Map}
      * representation of every {@link ChunkPosition} and its corresponding
      * {@link Set} of ticking {@link Location Locations}.
-     * <p>
+     *
      * This does include any {@link Location} from an unloaded {@link Chunk} too!
      *
      * @return A {@link Map} representation of all ticking {@link Location Locations}
@@ -240,7 +243,9 @@ public class TickerTask implements Runnable {
      * The {@link Chunk} does not have to be loaded.
      * If no {@link Location} is present, the returned {@link Set} will be empty.
      *
-     * @param chunk The {@link Chunk}
+     * @param chunk
+     *            The {@link Chunk}
+     *
      * @return A {@link Set} of all ticking {@link Location Locations}
      */
     @Nonnull
@@ -254,7 +259,8 @@ public class TickerTask implements Runnable {
     /**
      * This enables the ticker at the given {@link Location} and adds it to our "queue".
      *
-     * @param l The {@link Location} to activate
+     * @param l
+     *            The {@link Location} to activate
      */
     public void enableTicker(@Nonnull Location l) {
         Validate.notNull(l, "Location cannot be null!");
@@ -272,7 +278,8 @@ public class TickerTask implements Runnable {
      * This method disables the ticker at the given {@link Location} and removes it from our internal
      * "queue".
      *
-     * @param l The {@link Location} to remove
+     * @param l
+     *            The {@link Location} to remove
      */
     public void disableTicker(@Nonnull Location l) {
         Validate.notNull(l, "Location cannot be null!");

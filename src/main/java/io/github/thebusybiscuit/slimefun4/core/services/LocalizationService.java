@@ -35,7 +35,9 @@ import org.bukkit.persistence.PersistentDataType;
  * It is used for managing the {@link Language} of a {@link Player} and the entire {@link Server}.
  *
  * @author TheBusyBiscuit
+ *
  * @see Language
+ *
  */
 public class LocalizationService extends SlimefunLocalization {
 
@@ -132,7 +134,9 @@ public class LocalizationService extends SlimefunLocalization {
     /**
      * This returns whether the given {@link Language} is loaded or not.
      *
-     * @param id The id of that {@link Language}
+     * @param id
+     *            The id of that {@link Language}
+     *
      * @return Whether or not this {@link Language} is loaded
      */
     public boolean isLanguageLoaded(@Nonnull String id) {
@@ -223,7 +227,9 @@ public class LocalizationService extends SlimefunLocalization {
      * The progress is determined by the amount of translated strings divided by the amount
      * of strings in the english {@link Language} file and multiplied by 100.0
      *
-     * @param lang The {@link Language} to get the progress of
+     * @param lang
+     *            The {@link Language} to get the progress of
+     *
      * @return A percentage {@code (0.0 - 100.0)} for the progress of translation of that {@link Language}
      */
     public double calculateProgress(@Nonnull Language lang) {

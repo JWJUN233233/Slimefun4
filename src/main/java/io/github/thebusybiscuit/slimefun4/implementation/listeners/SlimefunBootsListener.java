@@ -29,6 +29,7 @@ import org.bukkit.event.player.PlayerInteractEvent;
  *
  * @author TheBusyBiscuit
  * @author Walshy
+ *
  */
 public class SlimefunBootsListener implements Listener {
 

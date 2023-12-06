@@ -20,8 +20,10 @@ import org.bukkit.inventory.ItemStack;
  * of {@link SlimefunGuideImplementation} that abstracts away the actual implementation.
  *
  * @author TheBusyBiscuit
+ *
  * @see SlimefunGuideImplementation
  * @see SurvivalSlimefunGuide
+ *
  */
 public final class SlimefunGuide {
 
@@ -105,7 +107,9 @@ public final class SlimefunGuide {
     /**
      * This method checks if a given {@link ItemStack} is a {@link SlimefunGuide}.
      *
-     * @param item The {@link ItemStack} to check
+     * @param item
+     *            The {@link ItemStack} to check
+     *
      * @return Whether this {@link ItemStack} represents a {@link SlimefunGuide}
      */
     public static boolean isGuideItem(@Nullable ItemStack item) {

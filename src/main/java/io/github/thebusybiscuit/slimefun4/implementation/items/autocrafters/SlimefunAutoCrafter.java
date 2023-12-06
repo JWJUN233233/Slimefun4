@@ -32,7 +32,9 @@ import org.bukkit.persistence.PersistentDataType;
  * it theoretically works for any {@link RecipeType}.
  *
  * @author TheBusyBiscuit
+ *
  * @see EnhancedAutoCrafter
+ *
  */
 public class SlimefunAutoCrafter extends AbstractAutoCrafter {
 
@@ -114,6 +116,7 @@ public class SlimefunAutoCrafter extends AbstractAutoCrafter {
                     menu.open(p);
 
                     SoundEffect.AUTO_CRAFTER_UPDATE_RECIPE.playAt(b);
+                    ;
 
                     if (!task.isEmpty()) {
                         task.start(menu.toInventory());

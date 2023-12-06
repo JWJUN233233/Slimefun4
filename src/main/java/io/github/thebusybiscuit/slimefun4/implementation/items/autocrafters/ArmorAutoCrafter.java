@@ -12,10 +12,12 @@ import org.bukkit.inventory.ItemStack;
  * It can craft items that are crafted using the {@link ArmorForge}.
  *
  * @author TheBusyBiscuit
+ *
  * @see ArmorForge
  * @see AbstractAutoCrafter
  * @see SlimefunAutoCrafter
  * @see SlimefunItemRecipe
+ *
  */
 public class ArmorAutoCrafter extends SlimefunAutoCrafter {
 

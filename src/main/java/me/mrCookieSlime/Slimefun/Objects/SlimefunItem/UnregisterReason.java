@@ -9,8 +9,10 @@ import me.mrCookieSlime.Slimefun.Objects.SlimefunBlockHandler;
  * {@link me.mrCookieSlime.Slimefun.Objects.SlimefunBlockHandler#onBreak(org.bukkit.entity.Player, org.bukkit.block.Block, SlimefunItem, UnregisterReason)}.
  *
  * @author TheBusyBiscuit
- * @see SlimefunBlockHandler
+ *
  * @deprecated This enum is no longer needed
+ *
+ * @see SlimefunBlockHandler
  */
 @Deprecated
 public enum UnregisterReason {

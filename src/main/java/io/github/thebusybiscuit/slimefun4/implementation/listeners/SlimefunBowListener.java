@@ -24,7 +24,9 @@ import org.bukkit.event.entity.ProjectileHitEvent;
  * {@link SlimefunBow}.
  *
  * @author TheBusyBiscuit
+ *
  * @see SlimefunBow
+ *
  */
 public class SlimefunBowListener implements Listener {
 

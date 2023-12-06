@@ -20,11 +20,12 @@ import org.bukkit.inventory.RecipeChoice.MaterialChoice;
 /**
  * A {@link AsyncRecipeChoiceTask} is an asynchronously repeating task that cycles
  * through the different variants of {@link Material} that a {@link MaterialChoice} or {@link Tag} can represent.
- * <p>
+ *
  * It is used in the {@link SurvivalSlimefunGuide} for any {@link ItemStack} from Minecraft
  * that accepts more than one {@link Material} in its {@link Recipe}.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class AsyncRecipeChoiceTask implements Runnable {
 
@@ -39,7 +40,8 @@ public class AsyncRecipeChoiceTask implements Runnable {
     /**
      * This will start this task for the given {@link Inventory}.
      *
-     * @param inv The {@link Inventory} to start this task for
+     * @param inv
+     *            The {@link Inventory} to start this task for
      */
     public void start(@Nonnull Inventory inv) {
         Validate.notNull(inv, "Inventory must not be null");

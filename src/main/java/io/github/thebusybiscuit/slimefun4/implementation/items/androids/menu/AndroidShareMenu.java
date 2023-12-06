@@ -221,7 +221,7 @@ public final class AndroidShareMenu {
     /**
      * Checks user is in trusted users list.
      *
-     * @param b    the block of Android
+     * @param b the block of Android
      * @param uuid user's UUID
      * @return user trusted status
      */

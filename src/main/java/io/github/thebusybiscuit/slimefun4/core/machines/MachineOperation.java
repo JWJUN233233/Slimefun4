@@ -7,15 +7,18 @@ import io.github.thebusybiscuit.slimefun4.core.attributes.MachineProcessHolder;
  * by a {@link MachineProcessor}.
  *
  * @author TheBusyBiscuit
+ *
  * @see MachineProcessor
  * @see MachineProcessHolder
+ *
  */
 public interface MachineOperation {
 
     /**
      * This method adds the given amount of ticks to the progress.
      *
-     * @param ticks The amount of ticks to add to the progress
+     * @param ticks
+     *            The amount of ticks to add to the progress
      */
     void addProgress(int ticks);
 

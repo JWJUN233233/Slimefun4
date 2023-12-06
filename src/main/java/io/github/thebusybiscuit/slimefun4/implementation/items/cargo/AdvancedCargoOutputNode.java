@@ -11,6 +11,7 @@ import org.bukkit.inventory.ItemStack;
  * {@link CargoOutputNode}. It comes with the option to filter items.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class AdvancedCargoOutputNode extends AbstractFilterNode {
 

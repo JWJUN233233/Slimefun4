@@ -16,6 +16,7 @@ import org.bukkit.plugin.Plugin;
  * to check for updates and to download them automatically.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class UpdaterService {
 
@@ -39,9 +40,12 @@ public class UpdaterService {
      * This will create a new {@link UpdaterService} for the given {@link Slimefun}.
      * The {@link File} should be the result of the getFile() operation of that {@link Plugin}.
      *
-     * @param plugin  The instance of Slimefun
-     * @param version The current version of Slimefun
-     * @param file    The {@link File} of this {@link Plugin}
+     * @param plugin
+     *            The instance of Slimefun
+     * @param version
+     *            The current version of Slimefun
+     * @param file
+     *            The {@link File} of this {@link Plugin}
      */
     public UpdaterService(@Nonnull Slimefun plugin, @Nonnull String version, @Nonnull File file) {
         this.plugin = plugin;

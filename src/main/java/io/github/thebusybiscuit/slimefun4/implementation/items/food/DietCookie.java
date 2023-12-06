@@ -18,8 +18,10 @@ import org.bukkit.potion.PotionEffectType;
  * when consumed.
  *
  * @author Linox
+ *
  * @see FortuneCookie
  * @see ItemConsumptionHandler
+ *
  */
 public class DietCookie extends SimpleSlimefunItem<ItemConsumptionHandler> {
 

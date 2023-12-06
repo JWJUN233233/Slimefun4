@@ -20,7 +20,9 @@ import org.bukkit.inventory.ItemStack;
  * you to turn various Slimefun Ingots back into their dusts.
  *
  * @author John000708
+ *
  * @see ElectricIngotFactory
+ *
  */
 public class ElectricIngotPulverizer extends AContainer implements RecipeDisplayItem, NotHopperable {
 

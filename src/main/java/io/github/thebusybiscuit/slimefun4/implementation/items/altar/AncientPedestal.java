@@ -41,9 +41,11 @@ import org.bukkit.util.Vector;
  * @author Redemption198
  * @author TheBusyBiscuit
  * @author JustAHuman
+ *
  * @see AncientAltar
  * @see AncientAltarListener
  * @see AncientAltarTask
+ *
  */
 public class AncientPedestal extends SimpleSlimefunItem<BlockDispenseHandler> implements NotHopperable {
 

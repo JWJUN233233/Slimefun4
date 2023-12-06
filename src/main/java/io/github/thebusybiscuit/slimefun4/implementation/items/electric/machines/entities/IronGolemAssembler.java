@@ -19,7 +19,9 @@ import org.bukkit.inventory.ItemStack;
  * a {@link IronGolem} if the required ingredients have been provided.
  *
  * @author TheBusyBiscuit
+ *
  * @see WitherAssembler
+ *
  */
 public class IronGolemAssembler extends AbstractEntityAssembler<IronGolem> {
 

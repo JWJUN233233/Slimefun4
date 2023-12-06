@@ -12,6 +12,7 @@ import org.bukkit.inventory.ItemStack;
  * By default, this class sets items to be not disenchantable.
  *
  * @author Fury_Phoenix
+ *
  */
 public class EnchantedItem extends SlimefunItem {
 

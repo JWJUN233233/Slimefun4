@@ -21,7 +21,9 @@ import org.bukkit.plugin.Plugin;
  * {@link ItemStack} at all times.
  *
  * @author TheBusyBiscuit
+ *
  * @see SlimefunItemStack
+ *
  */
 public class CustomItemDataService implements Keyed {
 
@@ -34,8 +36,10 @@ public class CustomItemDataService implements Keyed {
      * This creates a new {@link CustomItemDataService} for the given {@link Plugin} and the
      * provided data key.
      *
-     * @param plugin The {@link Plugin} for this service to use
-     * @param key    The key under which to store data
+     * @param plugin
+     *            The {@link Plugin} for this service to use
+     * @param key
+     *            The key under which to store data
      */
     public CustomItemDataService(@Nonnull Plugin plugin, @Nonnull String key) {
         // Null-Validation is performed in the NamespacedKey constructor
@@ -51,8 +55,10 @@ public class CustomItemDataService implements Keyed {
      * This method stores the given id on the provided {@link ItemStack} via
      * persistent data.
      *
-     * @param item The {@link ItemStack} to store data on
-     * @param id   The id to store on the {@link ItemStack}
+     * @param item
+     *            The {@link ItemStack} to store data on
+     * @param id
+     *            The id to store on the {@link ItemStack}
      */
     public void setItemData(@Nonnull ItemStack item, @Nonnull String id) {
         Validate.notNull(item, "The Item cannot be null!");
@@ -67,8 +73,10 @@ public class CustomItemDataService implements Keyed {
      * This method stores the given id on the provided {@link ItemMeta} via
      * persistent data.
      *
-     * @param meta The {@link ItemMeta} to store data on
-     * @param id   The id to store on the {@link ItemMeta}
+     * @param meta
+     *            The {@link ItemMeta} to store data on
+     * @param id
+     *            The id to store on the {@link ItemMeta}
      */
     public void setItemData(@Nonnull ItemMeta meta, @Nonnull String id) {
         Validate.notNull(meta, "The ItemMeta cannot be null!");
@@ -83,7 +91,9 @@ public class CustomItemDataService implements Keyed {
      * The {@link Optional} will be empty if the given {@link ItemStack} is null, doesn't have any {@link ItemMeta}
      * or if the requested data simply does not exist on that {@link ItemStack}.
      *
-     * @param item The {@link ItemStack} to check
+     * @param item
+     *            The {@link ItemStack} to check
+     *
      * @return An {@link Optional} describing the result
      */
     public @Nonnull Optional<String> getItemData(@Nullable ItemStack item) {
@@ -98,7 +108,9 @@ public class CustomItemDataService implements Keyed {
      * This method returns an {@link Optional}, either empty or holding the data stored
      * on the given {@link ItemMeta}.
      *
-     * @param meta The {@link ItemMeta} to check
+     * @param meta
+     *            The {@link ItemMeta} to check
+     *
      * @return An {@link Optional} describing the result
      */
     public @Nonnull Optional<String> getItemData(@Nonnull ItemMeta meta) {
@@ -113,8 +125,11 @@ public class CustomItemDataService implements Keyed {
      * This method will only return {@literal true} if both {@link ItemMeta}s contain
      * custom data and if both of their data values are equal.
      *
-     * @param meta1 The first {@link ItemMeta}
-     * @param meta2 The second {@link ItemMeta}
+     * @param meta1
+     *            The first {@link ItemMeta}
+     * @param meta2
+     *            The second {@link ItemMeta}
+     *
      * @return Whether both metas have data on them and its the same.
      */
     public boolean hasEqualItemData(@Nonnull ItemMeta meta1, @Nonnull ItemMeta meta2) {

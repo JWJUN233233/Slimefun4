@@ -23,8 +23,10 @@ import org.bukkit.inventory.ItemStack;
  * {@link EnergyNet}.
  *
  * @author TheBusyBiscuit
+ *
  * @see EnergyNet
  * @see EnergyNetComponent
+ *
  */
 public class EnergyRegulator extends SlimefunItem implements HologramOwner {
 

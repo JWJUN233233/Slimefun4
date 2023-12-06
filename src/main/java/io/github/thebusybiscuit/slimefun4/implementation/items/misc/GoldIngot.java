@@ -16,7 +16,9 @@ import org.bukkit.inventory.ItemStack;
  * It can be obtained via gold dust and other gold ingots in a {@link Smeltery}.
  *
  * @author TheBusyBiscuit
+ *
  * @see Smeltery
+ *
  */
 public class GoldIngot extends SlimefunItem {
 
@@ -45,7 +47,7 @@ public class GoldIngot extends SlimefunItem {
      * 18k = 75% gold.
      * 12k = 50% gold.
      * </pre>
-     * <p>
+     *
      * and so on...
      *
      * @return The carat rating of this {@link GoldIngot}

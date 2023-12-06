@@ -16,6 +16,7 @@ import org.bukkit.potion.PotionEffect;
  * <i>Yes, you just found a Portal reference :P</i>
  *
  * @author TheBusyBiscuit
+ *
  */
 public class LongFallBoots extends SlimefunArmorPiece {
 

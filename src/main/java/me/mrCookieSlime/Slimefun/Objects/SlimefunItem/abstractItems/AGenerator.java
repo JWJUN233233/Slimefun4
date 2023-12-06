@@ -247,7 +247,9 @@ public abstract class AGenerator extends AbstractEnergyProvider implements Machi
      * This method <strong>must</strong> be called before registering the item
      * and only before registering.
      *
-     * @param capacity The amount of energy this machine can store
+     * @param capacity
+     *            The amount of energy this machine can store
+     *
      * @return This method will return the current instance of {@link AGenerator}, so that can be chained.
      */
     public final AGenerator setCapacity(int capacity) {
@@ -264,7 +266,9 @@ public abstract class AGenerator extends AbstractEnergyProvider implements Machi
     /**
      * This method sets the energy produced by this machine per tick.
      *
-     * @param energyProduced The energy produced per tick
+     * @param energyProduced
+     *            The energy produced per tick
+     *
      * @return This method will return the current instance of {@link AGenerator}, so that can be chained.
      */
     public final AGenerator setEnergyProduction(int energyProduced) {

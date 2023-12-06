@@ -41,9 +41,11 @@ import org.bukkit.entity.Player;
  * It also holds the backpacks of a {@link Player}.
  *
  * @author TheBusyBiscuit
+ *
  * @see Research
  * @see Waypoint
  * @see HashedArmorpiece
+ *
  */
 public class PlayerProfile {
 
@@ -146,8 +148,10 @@ public class PlayerProfile {
      * This method sets the Player's "researched" status for this Research.
      * Use the boolean to unlock or lock the {@link Research}
      *
-     * @param research The {@link Research} that should be unlocked or locked
-     * @param unlock   Whether the {@link Research} should be unlocked or locked
+     * @param research
+     *            The {@link Research} that should be unlocked or locked
+     * @param unlock
+     *            Whether the {@link Research} should be unlocked or locked
      */
     public void setResearched(@Nonnull Research research, boolean unlock) {
         Validate.notNull(research, "Research must not be null!");
@@ -166,7 +170,9 @@ public class PlayerProfile {
     /**
      * This method returns whether the {@link Player} has unlocked the given {@link Research}
      *
-     * @param research The {@link Research} that is being queried
+     * @param research
+     *            The {@link Research} that is being queried
+     *
      * @return Whether this {@link Research} has been unlocked
      */
     public boolean hasUnlocked(@Nullable Research research) {
@@ -218,7 +224,8 @@ public class PlayerProfile {
      * This adds the given {@link Waypoint} to the {@link List} of {@link Waypoint Waypoints}
      * of this {@link PlayerProfile}.
      *
-     * @param waypoint The {@link Waypoint} to add
+     * @param waypoint
+     *            The {@link Waypoint} to add
      */
     public void addWaypoint(@Nonnull Waypoint waypoint) {
         Validate.notNull(waypoint, "Cannot add a 'null' waypoint!");
@@ -242,7 +249,8 @@ public class PlayerProfile {
      * This removes the given {@link Waypoint} from the {@link List} of {@link Waypoint Waypoints}
      * of this {@link PlayerProfile}.
      *
-     * @param waypoint The {@link Waypoint} to remove
+     * @param waypoint
+     *            The {@link Waypoint} to remove
      */
     public void removeWaypoint(@Nonnull Waypoint waypoint) {
         Validate.notNull(waypoint, "Cannot remove a 'null' waypoint!");
@@ -345,8 +353,11 @@ public class PlayerProfile {
     /**
      * Get the {@link PlayerProfile} for a {@link OfflinePlayer} asynchronously.
      *
-     * @param p        The {@link OfflinePlayer} who's {@link PlayerProfile} to retrieve
-     * @param callback The callback with the {@link PlayerProfile}
+     * @param p
+     *            The {@link OfflinePlayer} who's {@link PlayerProfile} to retrieve
+     * @param callback
+     *            The callback with the {@link PlayerProfile}
+     *
      * @return If the {@link OfflinePlayer} was cached or not.
      */
     public static boolean get(@Nonnull OfflinePlayer p, @Nonnull Consumer<PlayerProfile> callback) {
@@ -368,7 +379,9 @@ public class PlayerProfile {
      * This requests an instance of {@link PlayerProfile} to be loaded for the given {@link OfflinePlayer}.
      * This method will return true if the {@link PlayerProfile} was already found.
      *
-     * @param p The {@link OfflinePlayer} to request the {@link PlayerProfile} for.
+     * @param p
+     *            The {@link OfflinePlayer} to request the {@link PlayerProfile} for.
+     *
      * @return Whether the {@link PlayerProfile} was already loaded
      */
     public static boolean request(@Nonnull OfflinePlayer p) {
@@ -389,7 +402,9 @@ public class PlayerProfile {
      * The result of this method is an {@link Optional}, if no {@link PlayerProfile} was found, an empty
      * {@link Optional} will be returned.
      *
-     * @param p The {@link OfflinePlayer} to get the {@link PlayerProfile} for
+     * @param p
+     *            The {@link OfflinePlayer} to get the {@link PlayerProfile} for
+     *
      * @return An {@link Optional} describing the result
      */
     public static @Nonnull Optional<PlayerProfile> find(@Nonnull OfflinePlayer p) {

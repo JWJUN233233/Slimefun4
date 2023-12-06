@@ -136,7 +136,7 @@ public abstract class AContainer extends SlimefunItem
     /**
      * This method returns the title that is used for the {@link Inventory} of an
      * {@link AContainer} that has been opened by a Player.
-     * <p>
+     *
      * Override this method to set the title.
      *
      * @return The title of the {@link Inventory} of this {@link AContainer}
@@ -149,7 +149,7 @@ public abstract class AContainer extends SlimefunItem
     /**
      * This method returns the {@link ItemStack} that this {@link AContainer} will
      * use as a progress bar.
-     * <p>
+     *
      * Override this method to set the progress bar.
      *
      * @return The {@link ItemStack} to use as the progress bar
@@ -191,7 +191,9 @@ public abstract class AContainer extends SlimefunItem
      * This method <strong>must</strong> be called before registering the item
      * and only before registering.
      *
-     * @param capacity The amount of energy this machine can store
+     * @param capacity
+     *            The amount of energy this machine can store
+     *
      * @return This method will return the current instance of {@link AContainer}, so that can be chained.
      */
     public final AContainer setCapacity(int capacity) {
@@ -208,7 +210,9 @@ public abstract class AContainer extends SlimefunItem
     /**
      * This sets the speed of this machine.
      *
-     * @param speed The speed multiplier for this machine, must be above zero
+     * @param speed
+     *            The speed multiplier for this machine, must be above zero
+     *
      * @return This method will return the current instance of {@link AContainer}, so that can be chained.
      */
     public final AContainer setProcessingSpeed(int speed) {
@@ -221,7 +225,9 @@ public abstract class AContainer extends SlimefunItem
     /**
      * This method sets the energy consumed by this machine per tick.
      *
-     * @param energyConsumption The energy consumed per tick
+     * @param energyConsumption
+     *            The energy consumed per tick
+     *
      * @return This method will return the current instance of {@link AContainer}, so that can be chained.
      */
     public final AContainer setEnergyConsumption(int energyConsumption) {
@@ -264,7 +270,7 @@ public abstract class AContainer extends SlimefunItem
     /**
      * This method returns an internal identifier that is used to identify this {@link AContainer}
      * and its recipes.
-     * <p>
+     *
      * When adding recipes to an {@link AContainer} we will use this identifier to
      * identify all instances of the same {@link AContainer}.
      * This way we can add the recipes to all instances of the same machine.
@@ -382,7 +388,8 @@ public abstract class AContainer extends SlimefunItem
     /**
      * This method will remove charge from a location if it is chargeable.
      *
-     * @param l location to try to remove charge from
+     * @param l
+     *            location to try to remove charge from
      * @return Whether charge was taken if its chargeable
      */
     protected boolean takeCharge(@Nonnull Location l) {

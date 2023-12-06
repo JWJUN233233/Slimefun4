@@ -16,7 +16,9 @@ import org.bukkit.inventory.ItemStack;
  * The {@link ChargingBench} is a powered machine that can be used to charge any {@link Rechargeable} item.
  *
  * @author TheBusyBiscuit
+ *
  * @see Rechargeable
+ *
  */
 public class ChargingBench extends AContainer {
 

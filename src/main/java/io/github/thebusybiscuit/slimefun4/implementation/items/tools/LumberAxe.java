@@ -29,6 +29,7 @@ import org.bukkit.inventory.ItemStack;
  * Similarly stripping a log will strip all attached logs too.
  *
  * @author TheBusyBiscuit
+ *
  */
 public class LumberAxe extends SlimefunItem implements NotPlaceable {
 

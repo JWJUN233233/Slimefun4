@@ -16,7 +16,9 @@ import org.bukkit.block.Biome;
  * and {@link OilPump}.
  *
  * @author TheBusyBiscuit
+ *
  * @see OilPump
+ *
  */
 class OilResource extends AbstractResource {
 
