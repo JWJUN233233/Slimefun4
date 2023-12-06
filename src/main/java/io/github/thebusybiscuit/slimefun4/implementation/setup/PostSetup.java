@@ -28,7 +28,7 @@ public final class PostSetup {
     private PostSetup() {}
 
     public static void setupWiki() {
-        Slimefun.logger().log(Level.INFO, "加载 Wiki 页面...");
+        Slimefun.logger().log(Level.INFO, "Loading Wiki pages...");
 
         WikiUtils.setupJson(Slimefun.instance(), (page) -> page.replace("#", "?id="));
     }
@@ -61,30 +61,17 @@ public final class PostSetup {
         int slimefunOnly = countNonAddonItems();
 
         sender.sendMessage("");
-        sender.sendMessage(ChatColor.GREEN
-                + "######################### - Slimefun v"
-                + Slimefun.getVersion()
-                + " - #########################");
+        sender.sendMessage(ChatColor.GREEN + "######################### - Slimefun v" + Slimefun.getVersion() + " - #########################");
         sender.sendMessage("");
-        sender.sendMessage(ChatColor.GREEN
-                + "成功加载了 "
-                + total
-                + " 个物品和 "
-                + Slimefun.getRegistry().getResearches().size()
-                + " 个研究");
-        sender.sendMessage(ChatColor.GREEN
-                + "( "
-                + slimefunOnly
-                + " 物品来自本体, "
-                + (total - slimefunOnly)
-                + " 个物品来自 "
-                + Slimefun.getInstalledAddons().size()
-                + " 扩展 )");
+        sender.sendMessage(ChatColor.GREEN + "Successfully loaded " + total + " Items and " + Slimefun.getRegistry().getResearches().size() + " Researches");
+        sender.sendMessage(ChatColor.GREEN + "( " + slimefunOnly + " Items from Slimefun, " + (total - slimefunOnly) + " Items from " + Slimefun.getInstalledAddons().size() + " Addons )");
         sender.sendMessage("");
+        sender.sendMessage(ChatColor.GREEN + "Slimefun is an Open-Source project that is kept alive by a large community.");
+        sender.sendMessage(ChatColor.GREEN + "Consider helping us maintain this project by contributing on GitHub!");
 
         sender.sendMessage("");
-        sender.sendMessage(ChatColor.GREEN + " - 源码:      https://github.com/StarWishsama/Slimefun4");
-        sender.sendMessage(ChatColor.GREEN + " - Bug 反馈:  https://github.com/StarWishsama/Slimefun4/issues");
+        sender.sendMessage(ChatColor.GREEN + " - Source Code:  https://github.com/Slimefun/Slimefun4");
+        sender.sendMessage(ChatColor.GREEN + " - Bug Reports:  https://github.com/Slimefun/Slimefun4/issues");
 
         sender.sendMessage("");
 
