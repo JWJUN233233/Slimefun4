@@ -119,7 +119,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.MenuListener;
-import net.guizhanss.slimefun4.updater.AutoUpdateTask;
 import org.apache.commons.lang.Validate;
 import org.bukkit.Bukkit;
 import org.bukkit.Server;
@@ -336,7 +335,10 @@ public final class Slimefun extends JavaPlugin implements SlimefunAddon, ICompat
 
         // Make sure that the network size is a valid input
         if (networkSize < 1) {
-            logger.log(Level.WARNING, "Your 'networks.max-size' setting is misconfigured! It must be at least 1, it was set to: {0}", networkSize);
+            logger.log(
+                    Level.WARNING,
+                    "Your 'networks.max-size' setting is misconfigured! It must be at least 1, it was set to: {0}",
+                    networkSize);
             networkSize = 1;
         }
 
@@ -419,8 +421,8 @@ public final class Slimefun extends JavaPlugin implements SlimefunAddon, ICompat
 
         if (cfgManager.isAutoUpdate()) {
             // 汉化版自动更新
-            //临时停用自动更新
-            //Bukkit.getScheduler().scheduleSyncDelayedTask(this, new AutoUpdateTask(this, getFile()));
+            // 临时停用自动更新
+            // Bukkit.getScheduler().scheduleSyncDelayedTask(this, new AutoUpdateTask(this, getFile()));
         }
 
         // Hooray!
@@ -582,7 +584,11 @@ public final class Slimefun extends JavaPlugin implements SlimefunAddon, ICompat
                         getLogger(), version, getDescription().getVersion());
                 return true;
             } else {
-                getLogger().log(Level.WARNING, "We could not determine the version of Minecraft you were using? (1.{0}.x)", version);
+                getLogger()
+                        .log(
+                                Level.WARNING,
+                                "We could not determine the version of Minecraft you were using? (1.{0}.x)",
+                                version);
 
                 /*
                  * If we are unsure about it, we will assume "supported".

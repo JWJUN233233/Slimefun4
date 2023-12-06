@@ -61,12 +61,16 @@ public final class PostSetup {
         int slimefunOnly = countNonAddonItems();
 
         sender.sendMessage("");
-        sender.sendMessage(ChatColor.GREEN + "######################### - Slimefun v" + Slimefun.getVersion() + " - #########################");
+        sender.sendMessage(ChatColor.GREEN + "######################### - Slimefun v" + Slimefun.getVersion()
+                + " - #########################");
         sender.sendMessage("");
-        sender.sendMessage(ChatColor.GREEN + "Successfully loaded " + total + " Items and " + Slimefun.getRegistry().getResearches().size() + " Researches");
-        sender.sendMessage(ChatColor.GREEN + "( " + slimefunOnly + " Items from Slimefun, " + (total - slimefunOnly) + " Items from " + Slimefun.getInstalledAddons().size() + " Addons )");
+        sender.sendMessage(ChatColor.GREEN + "Successfully loaded " + total + " Items and "
+                + Slimefun.getRegistry().getResearches().size() + " Researches");
+        sender.sendMessage(ChatColor.GREEN + "( " + slimefunOnly + " Items from Slimefun, " + (total - slimefunOnly)
+                + " Items from " + Slimefun.getInstalledAddons().size() + " Addons )");
         sender.sendMessage("");
-        sender.sendMessage(ChatColor.GREEN + "Slimefun is an Open-Source project that is kept alive by a large community.");
+        sender.sendMessage(
+                ChatColor.GREEN + "Slimefun is an Open-Source project that is kept alive by a large community.");
         sender.sendMessage(ChatColor.GREEN + "Consider helping us maintain this project by contributing on GitHub!");
 
         sender.sendMessage("");
