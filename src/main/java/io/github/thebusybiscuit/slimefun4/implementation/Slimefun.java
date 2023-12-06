@@ -419,7 +419,8 @@ public final class Slimefun extends JavaPlugin implements SlimefunAddon, ICompat
 
         if (cfgManager.isAutoUpdate()) {
             // 汉化版自动更新
-            Bukkit.getScheduler().scheduleSyncDelayedTask(this, new AutoUpdateTask(this, getFile()));
+            //临时停用自动更新
+            //Bukkit.getScheduler().scheduleSyncDelayedTask(this, new AutoUpdateTask(this, getFile()));
         }
 
         // Hooray!
