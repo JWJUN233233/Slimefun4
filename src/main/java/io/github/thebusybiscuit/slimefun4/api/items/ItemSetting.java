@@ -151,7 +151,7 @@ public class ItemSetting<T> {
      * @return An error message which is displayed when this {@link ItemSetting} is misconfigured.
      */
     protected @Nonnull String getErrorMessage() {
-        return "请使用在 '" + defaultValue.getClass().getSimpleName() + "' 范围内的值!";
+        return "Only '" + defaultValue.getClass().getSimpleName() + "' values are allowed!";
     }
 
     /**
@@ -175,17 +175,10 @@ public class ItemSetting<T> {
                 this.value = newValue;
             } else {
                 // @formatter:off
-                item.warn("发现在 Items.yml 中有无效的物品设置!"
-                        + "\n  在 \""
-                        + item.getId()
-                        + "."
-                        + getKey()
-                        + "\""
-                        + "\n  "
-                        + configuredValue
-                        + " 不是一个有效值!"
-                        + "\n"
-                        + getErrorMessage());
+                item.warn("We have found an invalid config setting in your Items.yml!"
+                        + "\n  at \"" + item.getId() + "." + getKey() + "\""
+                        + "\n  " + configuredValue + " is not a valid input!"
+                        + "\n" + getErrorMessage());
                 // @formatter:on
             }
         } else {
@@ -195,18 +188,16 @@ public class ItemSetting<T> {
                     : configuredValue.getClass().getSimpleName();
 
             // @formatter:off
-            item.warn("发现在 Items.yml 中有无效的物品设置!"
-                    + "\n请只设置有效的值."
-                    + "\n  在 \""
+            item.warn("We have found an invalid config setting in your Items.yml!"
+                    + "\nPlease only use settings that are valid."
+                    + "\n  at \""
                     + item.getId()
-                    + "."
-                    + getKey()
+                    + "." + getKey()
                     + "\""
-                    + "\n  期望值为 \""
+                    + "\n  Expected \""
                     + defaultValue.getClass().getSimpleName()
-                    + "\" 但填写了: \""
-                    + found
-                    + "\"");
+                    + "\" but found: \""
+                    + found + "\"");
             // @formatter:on
         }
     }
