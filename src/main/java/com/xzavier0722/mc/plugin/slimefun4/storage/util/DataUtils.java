@@ -6,6 +6,8 @@ import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
 import java.util.logging.Level;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.io.BukkitObjectInputStream;
@@ -51,22 +53,26 @@ public class DataUtils {
     }
 
     public static String blockDataBase64(String text) {
-        return Slimefun.getDatabaseManager().isBlockDataBase64Enabled() ? Base64Coder.encodeString(text) : text;
+        return Slimefun.getDatabaseManager().isBlockDataBase64Enabled() ? base64Encode(text) : text;
     }
 
     public static String blockDataDebase64(String base64Str) {
-        return Slimefun.getDatabaseManager().isBlockDataBase64Enabled()
-                ? Base64Coder.decodeString(base64Str)
-                : base64Str;
+        return Slimefun.getDatabaseManager().isBlockDataBase64Enabled() ? base64Decode(base64Str) : base64Str;
     }
 
     public static String profileDataBase64(String text) {
-        return Slimefun.getDatabaseManager().isProfileDataBase64Enabled() ? Base64Coder.encodeString(text) : text;
+        return Slimefun.getDatabaseManager().isProfileDataBase64Enabled() ? base64Encode(text) : text;
     }
 
     public static String profileDataDebase64(String base64Str) {
-        return Slimefun.getDatabaseManager().isProfileDataBase64Enabled()
-                ? Base64Coder.decodeString(base64Str)
-                : base64Str;
+        return Slimefun.getDatabaseManager().isProfileDataBase64Enabled() ? base64Decode(base64Str) : base64Str;
+    }
+
+    public static String base64Encode(String text) {
+        return Base64.getEncoder().encodeToString(text.getBytes(StandardCharsets.UTF_8));
+    }
+
+    public static String base64Decode(String base64Str) {
+        return new String(Base64.getDecoder().decode(base64Str), StandardCharsets.UTF_8);
     }
 }

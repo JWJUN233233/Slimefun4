@@ -14,11 +14,4 @@ if ! [ -x "$(command -v mvn)" ]; then
   exit 1
 fi
 
-files=`git status --porcelain | cut -c 4-`
-fulllist=''
-for f in $files; do
-    fulllist+=(.*)$(basename $f)$'\n'
-done;
-list=`echo "${fulllist}" | paste -s -d, /dev/stdin`
-echo Working on $list
-mvn spotless:apply -Dspotless.check.skip=false -DspotlessFiles=$list
+mvn spotless:apply

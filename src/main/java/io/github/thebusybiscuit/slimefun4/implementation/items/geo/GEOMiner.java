@@ -22,7 +22,7 @@ import io.github.thebusybiscuit.slimefun4.core.machines.MachineProcessor;
 import io.github.thebusybiscuit.slimefun4.core.networks.energy.EnergyNetComponentType;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.implementation.handlers.SimpleBlockBreakHandler;
-import io.github.thebusybiscuit.slimefun4.implementation.operations.MiningOperation;
+import io.github.thebusybiscuit.slimefun4.implementation.operations.GEOMiningOperation;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
 import java.util.LinkedList;
 import java.util.List;
@@ -56,7 +56,7 @@ public class GEOMiner extends SlimefunItem
                 EnergyNetComponent,
                 InventoryBlock,
                 HologramOwner,
-                MachineProcessHolder<MiningOperation> {
+                MachineProcessHolder<GEOMiningOperation> {
 
     private static final int[] BORDER = {
         0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 26, 27, 35, 36, 44, 45, 53
@@ -66,7 +66,7 @@ public class GEOMiner extends SlimefunItem
 
     private static final int PROCESSING_TIME = 14;
 
-    private final MachineProcessor<MiningOperation> processor = new MachineProcessor<>(this);
+    private final MachineProcessor<GEOMiningOperation> processor = new MachineProcessor<>(this);
 
     private int energyConsumedPerTick = -1;
     private int energyCapacity = -1;
@@ -82,7 +82,7 @@ public class GEOMiner extends SlimefunItem
     }
 
     @Override
-    public MachineProcessor<MiningOperation> getMachineProcessor() {
+    public @Nonnull MachineProcessor<GEOMiningOperation> getMachineProcessor() {
         return processor;
     }
 
@@ -309,7 +309,7 @@ public class GEOMiner extends SlimefunItem
 
     protected void tick(@Nonnull Block b) {
         BlockMenu inv = StorageCacheUtils.getMenu(b.getLocation());
-        MiningOperation operation = processor.getOperation(b);
+        GEOMiningOperation operation = processor.getOperation(b);
 
         if (operation != null) {
             if (!operation.isFinished()) {
@@ -362,8 +362,7 @@ public class GEOMiner extends SlimefunItem
                         return;
                     }
 
-                    processor.startOperation(
-                            b, new MiningOperation(resource.getItem().clone(), PROCESSING_TIME));
+                    processor.startOperation(b, new GEOMiningOperation(resource, PROCESSING_TIME));
                     Slimefun.getGPSNetwork()
                             .getResourceManager()
                             .setSupplies(resource, b.getWorld(), b.getX() >> 4, b.getZ() >> 4, supplies - 1);

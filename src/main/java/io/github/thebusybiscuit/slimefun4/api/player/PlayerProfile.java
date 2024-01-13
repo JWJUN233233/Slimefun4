@@ -17,6 +17,7 @@ import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.implementation.items.armor.SlimefunArmorPiece;
 import io.github.thebusybiscuit.slimefun4.utils.NumberUtils;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -291,23 +292,46 @@ public class PlayerProfile {
         Slimefun.getDatabaseManager().getProfileDataController().saveProfileBackpackCount(this);
     }
 
+    private int countNonEmptyResearches(@Nonnull Collection<Research> researches) {
+        int count = 0;
+        for (Research research : researches) {
+            if (research.hasEnabledItems()) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    /**
+     * This method gets the research title, as defined in {@code config.yml},
+     * of this {@link PlayerProfile} based on the fraction
+     * of unlocked {@link Research}es of this player.
+     *
+     * @return The research title of this {@link PlayerProfile}
+     */
     public @Nonnull String getTitle() {
         List<String> titles = Slimefun.getRegistry().getResearchRanks();
 
-        float fraction = (float) researches.size()
-                / Slimefun.getRegistry().getResearches().size();
+        int allResearches = countNonEmptyResearches(Slimefun.getRegistry().getResearches());
+        float fraction = (float) countNonEmptyResearches(researches) / allResearches;
         int index = (int) (fraction * (titles.size() - 1));
 
         return titles.get(index);
     }
 
+    /**
+     * This sends the statistics for the specified {@link CommandSender}
+     * to the {@link CommandSender}. This includes research title, research progress
+     * and total xp spent.
+     *
+     * @param sender The {@link CommandSender} for which to get the statistics and send them to.
+     */
     public void sendStats(@Nonnull CommandSender sender) {
-        Set<Research> unlockedResearches = getResearches();
-        int levels =
-                unlockedResearches.stream().mapToInt(Research::getLevelCost).sum();
-        int allResearches = nonEmptyResearches();
+        int unlockedResearches = countNonEmptyResearches(getResearches());
+        int levels = getResearches().stream().mapToInt(Research::getLevelCost).sum();
+        int allResearches = countNonEmptyResearches(Slimefun.getRegistry().getResearches());
 
-        float progress = Math.round(((unlockedResearches.size() * 100.0F) / allResearches) * 100.0F) / 100.0F;
+        float progress = Math.round(((unlockedResearches * 100.0F) / allResearches) * 100.0F) / 100.0F;
 
         sender.sendMessage("");
         sender.sendMessage(ChatColors.color("&7Statistics for Player: &b" + owner.getName()));
@@ -319,7 +343,7 @@ public class PlayerProfile {
                 + " &r% "
                 + ChatColor.YELLOW
                 + '('
-                + unlockedResearches.size()
+                + unlockedResearches
                 + " / "
                 + allResearches
                 + ')'));

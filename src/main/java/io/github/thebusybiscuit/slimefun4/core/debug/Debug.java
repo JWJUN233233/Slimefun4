@@ -107,7 +107,7 @@ public final class Debug {
             // Substring up to the opening brace `{`, add the variable for this and add the rest of the
             // message
             msg = msg.substring(0, i) + vars[idx] + msg.substring(i + 2);
-            idx++;
+            i += String.valueOf(vars[idx++]).length();
         }
 
         return msg;
