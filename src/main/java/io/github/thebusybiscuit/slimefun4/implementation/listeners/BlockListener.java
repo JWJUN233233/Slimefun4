@@ -4,6 +4,7 @@ import com.xzavier0722.mc.plugin.slimefun4.storage.callback.IAsyncReadCallback;
 import com.xzavier0722.mc.plugin.slimefun4.storage.controller.SlimefunBlockData;
 import com.xzavier0722.mc.plugin.slimefun4.storage.util.StorageCacheUtils;
 import io.github.bakedlibs.dough.protection.Interaction;
+import io.github.thebusybiscuit.slimefun4.api.MinecraftVersion;
 import io.github.thebusybiscuit.slimefun4.api.events.ExplosiveToolBreakBlocksEvent;
 import io.github.thebusybiscuit.slimefun4.api.events.SlimefunBlockBreakEvent;
 import io.github.thebusybiscuit.slimefun4.api.events.SlimefunBlockPlaceEvent;
@@ -25,6 +26,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
+import org.bukkit.block.BlockState;
+import org.bukkit.block.data.BlockData;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -47,6 +50,10 @@ import org.bukkit.inventory.meta.ItemMeta;
  * @see ToolUseHandler
  */
 public class BlockListener implements Listener {
+
+    private static final BlockFace[] CARDINAL_BLOCKFACES = new BlockFace[] {
+        BlockFace.WEST, BlockFace.EAST, BlockFace.NORTH, BlockFace.SOUTH, BlockFace.DOWN, BlockFace.UP
+    };
 
     public BlockListener(@Nonnull Slimefun plugin) {
         plugin.getServer().getPluginManager().registerEvents(this, plugin);
@@ -157,6 +164,8 @@ public class BlockListener implements Listener {
         }
 
         if (!e.isCancelled()) {
+            // Checks for Slimefun sensitive blocks above, using Slimefun Tags
+            // TODO: merge this with the vanilla sensitive block check (when 1.18- is dropped)
             checkForSensitiveBlockAbove(e.getPlayer(), e.getBlock(), heldItem);
 
             if (blockData == null || blockData.isPendingRemove()) {
@@ -190,6 +199,9 @@ public class BlockListener implements Listener {
                 blockData.setPendingRemove(false);
             }
             dropItems(e, drops);
+
+            // Checks for vanilla sensitive blocks everywhere
+            checkForSensitiveBlocks(e.getBlock(), 0, e.isDropItems());
         }
     }
 
@@ -300,6 +312,61 @@ public class BlockListener implements Listener {
                 }
                 blockAbove.setType(Material.AIR);
             }
+        }
+    }
+
+    /**
+     * This method checks recursively for any sensitive blocks
+     * that are no longer supported due to this block breaking
+     *
+     * @param block
+     *      The {@link Block} in question
+     * @param count
+     *      The amount of times this has been recursively called
+     */
+    @ParametersAreNonnullByDefault
+    private void checkForSensitiveBlocks(Block block, Integer count, boolean isDropItems) {
+        if (count >= Bukkit.getServer().getMaxChainedNeighborUpdates()) {
+            return;
+        }
+
+        BlockState state = block.getState();
+        // We set the block to air to make use of BlockData#isSupported.
+        block.setType(Material.AIR, false);
+        for (BlockFace face : CARDINAL_BLOCKFACES) {
+            if (!isSupported(block.getRelative(face).getBlockData(), block.getRelative(face))) {
+                Block relative = block.getRelative(face);
+                if (!isDropItems) {
+                    for (ItemStack drop : relative.getDrops()) {
+                        block.getWorld().dropItemNaturally(relative.getLocation(), drop);
+                    }
+                }
+                checkForSensitiveBlocks(relative, ++count, isDropItems);
+            }
+        }
+        // Set the BlockData back: this makes it so containers and spawners drop correctly. This is a hacky fix.
+        block.setBlockData(state.getBlockData(), false);
+        state.update(true, false);
+    }
+
+    /**
+     * This method checks if the {@link BlockData} would be
+     * supported at the given {@link Block}.
+     *
+     * @param blockData
+     *      The {@link BlockData} to check
+     * @param block
+     *      The {@link Block} the {@link BlockData} would be at
+     * @return
+     *      Whether the {@link BlockData} would be supported at the given {@link Block}
+     */
+    @ParametersAreNonnullByDefault
+    private boolean isSupported(BlockData blockData, Block block) {
+        if (Slimefun.getMinecraftVersion().isAtLeast(MinecraftVersion.MINECRAFT_1_19)) {
+            return blockData.isSupported(block);
+        } else {
+            // TODO: Make 1.16-1.18 version. BlockData::isSupported is 1.19+.
+            return true;
         }
     }
 
