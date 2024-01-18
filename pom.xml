@@ -279,9 +279,9 @@
 
         <!-- Shaded packages -->
         <dependency>
-            <groupId>com.github.StarWishsama.dough</groupId>
+            <groupId>com.github.starwishsama.dough</groupId>
             <artifactId>dough-api</artifactId>
-            <version>3133cafa80</version>
+            <version>20dcab228c</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
@@ -441,6 +441,12 @@
                     <artifactId>*</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.mojang</groupId>
+            <artifactId>authlib</artifactId>
+            <version>1.5.25</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- TODO: Remove this dependency -->

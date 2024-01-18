@@ -164,6 +164,11 @@ public abstract class ADataController {
         readExecutor.submit(run);
     }
 
+    protected void scheduleWriteTask(Runnable run) {
+        checkDestroy();
+        writeExecutor.submit(run);
+    }
+
     protected List<RecordSet> getData(RecordKey key) {
         return getData(key, false);
     }
@@ -178,6 +183,13 @@ public abstract class ADataController {
 
     protected void deleteData(RecordKey key) {
         dataAdapter.deleteData(key);
+    }
+
+    protected void abortScopeTask(ScopeKey key) {
+        var task = scheduledWriteTasks.remove(key);
+        if (task != null) {
+            task.abort();
+        }
     }
 
     public final DataType getDataType() {

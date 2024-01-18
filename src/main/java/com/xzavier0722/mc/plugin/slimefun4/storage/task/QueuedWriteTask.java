@@ -10,11 +10,16 @@ public class QueuedWriteTask implements Runnable {
     private final Queue<RecordKey> queue = new LinkedList<>();
     private final Map<RecordKey, Runnable> tasks = new HashMap<>();
     private volatile boolean done = false;
+    private volatile boolean aborted = false;
 
     @Override
     public final void run() {
+        if (aborted) {
+            return;
+        }
+
         var task = next();
-        while (task != null) {
+        while (!aborted && task != null) {
             try {
                 task.run();
             } catch (Throwable e) {
@@ -35,7 +40,7 @@ public class QueuedWriteTask implements Runnable {
     protected void onError(Throwable e) {}
 
     public synchronized boolean queue(RecordKey key, Runnable next) {
-        if (done) {
+        if (done || aborted) {
             return false;
         }
 
@@ -43,6 +48,10 @@ public class QueuedWriteTask implements Runnable {
             return queue.offer(key);
         }
         return true;
+    }
+
+    public void abort() {
+        aborted = true;
     }
 
     private synchronized Runnable next() {

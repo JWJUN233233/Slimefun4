@@ -94,12 +94,16 @@ public class SlimefunChunkData extends ASlimefunDataContainer {
         return re;
     }
 
+    void removeAllCacheInternal() {
+        sfBlocks.clear();
+    }
+
     boolean hasBlockCache(String lKey) {
         return sfBlocks.containsKey(lKey);
     }
 
     SlimefunBlockData removeBlockDataCacheInternal(String lKey) {
-        var re = sfBlocks.put(lKey, INVALID_BLOCK_DATA);
+        var re = isDataLoaded() ? sfBlocks.remove(lKey) : sfBlocks.put(lKey, INVALID_BLOCK_DATA);
         return re == INVALID_BLOCK_DATA ? null : re;
     }
 
@@ -119,5 +123,13 @@ public class SlimefunChunkData extends ASlimefunDataContainer {
 
     public Set<SlimefunBlockData> getAllBlockData() {
         return getAllCacheInternal();
+    }
+
+    @Override
+    protected void setIsDataLoaded(boolean isDataLoaded) {
+        super.setIsDataLoaded(isDataLoaded);
+        if (isDataLoaded) {
+            sfBlocks.entrySet().removeIf(entry -> entry.getValue() == INVALID_BLOCK_DATA);
+        }
     }
 }
