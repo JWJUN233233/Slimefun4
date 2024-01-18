@@ -178,13 +178,10 @@ public class BlockDataController extends ADataController {
     public void removeBlock(Location l) {
         checkDestroy();
 
-        var removed = getChunkDataCache(l.getChunk(), true).removeBlockData(l);
         Slimefun.getNetworkManager().updateAllNetworks(l);
-        if (removed == null) {
-            return;
-        }
 
-        if (!removed.isDataLoaded()) {
+        var removed = getChunkDataCache(l.getChunk(), true).removeBlockData(l);
+        if (removed == null) {
             return;
         }
 
@@ -281,7 +278,7 @@ public class BlockDataController extends ADataController {
 
         var hasTicker = false;
 
-        if (blockData.isDataLoaded() && Slimefun.getRegistry().getTickerBlocks().contains(blockData.getSfId())) {
+        if (Slimefun.getRegistry().getTickerBlocks().contains(blockData.getSfId())) {
             Slimefun.getTickerTask().disableTicker(blockData.getLocation());
             hasTicker = true;
         }
@@ -376,7 +373,12 @@ public class BlockDataController extends ADataController {
             chunkData.addBlockCacheInternal(blockData, false);
 
             if (sfItem.loadDataByDefault()) {
-                scheduleReadTask(() -> loadBlockData(blockData));
+                scheduleReadTask(() -> {
+                    loadBlockData(blockData);
+                    if (sfItem.isTicking()) {
+                        Slimefun.getTickerTask().enableTicker(blockData.getLocation());
+                    }
+                });
             }
         });
         Bukkit.getPluginManager().callEvent(new SlimefunChunkDataLoadEvent(chunkData));
@@ -468,11 +470,6 @@ public class BlockDataController extends ADataController {
                     invSnapshots.put(blockData.getKey(), InvStorageUtils.getInvSnapshot(content));
                 }
             }
-
-            var sfItem = SlimefunItem.getById(blockData.getSfId());
-            if (sfItem != null && sfItem.isTicking()) {
-                Slimefun.getTickerTask().enableTicker(blockData.getLocation());
-            }
         } finally {
             lock.unlock(key);
         }
@@ -538,60 +535,6 @@ public class BlockDataController extends ADataController {
 
     public Set<SlimefunChunkData> getAllLoadedChunkData() {
         return new HashSet<>(loadedChunk.values());
-    }
-
-    public void removeAllDataInChunk(Chunk chunk) {
-        var cKey = LocationUtils.getChunkKey(chunk);
-        var cache = loadedChunk.remove(cKey);
-
-        if (cache != null && cache.isDataLoaded()) {
-            cache.getAllBlockData().forEach(this::clearBlockCacheAndTasks);
-        }
-        deleteChunkAndBlockDataDirectly(cKey);
-    }
-
-    public void removeAllDataInChunkAsync(Chunk chunk, Runnable onFinishedCallback) {
-        scheduleWriteTask(() -> {
-            removeAllDataInChunk(chunk);
-            onFinishedCallback.run();
-        });
-    }
-
-    public void removeAllDataInWorld(World world) {
-        // 1. remove block cache
-        var loadedBlockData = new HashSet<SlimefunBlockData>();
-        for (var chunkData : getAllLoadedChunkData(world)) {
-            loadedBlockData.addAll(chunkData.getAllBlockData());
-            chunkData.removeAllCacheInternal();
-        }
-
-        // 2. remove ticker and delayed tasks
-        loadedBlockData.forEach(this::clearBlockCacheAndTasks);
-
-        // 3. remove from database
-        var prefix = world.getName() + ";";
-        deleteChunkAndBlockDataDirectly(prefix + "%");
-
-        // 4. remove chunk cache
-        loadedChunk.entrySet().removeIf(entry -> entry.getKey().startsWith(prefix));
-    }
-
-    public void removeAllDataInWorldAsync(World world, Runnable onFinishedCallback) {
-        scheduleWriteTask(() -> {
-            removeAllDataInWorld(world);
-            onFinishedCallback.run();
-        });
-    }
-
-    public Set<SlimefunChunkData> getAllLoadedChunkData(World world) {
-        var prefix = world.getName() + ";";
-        var re = new HashSet<SlimefunChunkData>();
-        loadedChunk.forEach((k, v) -> {
-            if (k.startsWith(prefix)) {
-                re.add(v);
-            }
-        });
-        return re;
     }
 
     private void scheduleDelayedBlockInvUpdate(SlimefunBlockData blockData, int slot) {
@@ -727,27 +670,5 @@ public class BlockDataController extends ADataController {
                     return re;
                 })
                 : loadedChunk.get(LocationUtils.getChunkKey(chunk));
-    }
-
-    private void deleteChunkAndBlockDataDirectly(String cKey) {
-        var req = new RecordKey(DataScope.BLOCK_DATA);
-        req.addCondition(FieldKey.CHUNK, cKey);
-        deleteData(req);
-
-        req = new RecordKey(DataScope.CHUNK_DATA);
-        req.addCondition(FieldKey.CHUNK, cKey);
-        deleteData(req);
-    }
-
-    private void clearBlockCacheAndTasks(SlimefunBlockData blockData) {
-        var l = blockData.getLocation();
-        if (blockData.isDataLoaded() && Slimefun.getRegistry().getTickerBlocks().contains(blockData.getSfId())) {
-            Slimefun.getTickerTask().disableTicker(l);
-        }
-        Slimefun.getNetworkManager().updateAllNetworks(l);
-
-        var scopeKey = new LocationKey(DataScope.NONE, l);
-        removeDelayedBlockDataUpdates(scopeKey);
-        abortScopeTask(scopeKey);
     }
 }
